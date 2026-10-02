@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurelia Fine Jewellery | Handcrafted Gold, Polki & Certified Diamond Jewellery</title>
+    <meta name="description" content="Discover timeless handcrafted luxury jewellery at Aurelia Fine Jewellery. Explore 22K/24K BIS 916 hallmarked gold, bridal polki sets, conflict-free diamond solitaires, and bespoke custom heirlooms." />
+    <meta name="keywords" content="luxury jewellery, bridal jewellery, 22k gold necklace, solitaire rings, diamond bangles, polki jewellery, BIS hallmarked gold, Mumbai jewellers, Jaipur jewels" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aureliajewels.com/" />
+    <meta property="og:title" content="Aurelia Fine Jewellery | Timeless Heritage, Crafted with Passion" />
+    <meta property="og:description" content="Explore our bespoke collection of handcrafted gold, bridal polki, and certified solitaire jewellery. Chat directly with our master concierges on WhatsApp." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1200&auto=format&fit=crop" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Aurelia Fine Jewellery | Handcrafted Luxury" />
+    <meta property="twitter:description" content="Timeless heirloom jewellery, crafted with love & certified purity. Enquire on WhatsApp." />
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1200&auto=format&fit=crop" />
+
+    <!-- Theme & PWA -->
+    <meta name="theme-color" content="#FAF7F2" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Google Fonts: Inter, Playfair Display, Cinzel, Cormorant Garamond -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+    <!-- Structured Data (JSON-LD) for LocalBusiness / JewelryStore -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "JewelryStore",
+      "name": "Aurelia Fine Jewellery",
+      "image": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1200&auto=format&fit=crop",
+      "@id": "https://aureliajewels.com",
+      "url": "https://aureliajewels.com",
+      "telephone": "+91-9876543210",
+      "priceRange": "₹₹₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "14 Heritage Opera House, M.G. Road",
+        "addressLocality": "Mumbai",
+        "postalCode": "400004",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 18.9553,
+        "longitude": 72.8187
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "10:30",
+          "closes": "20:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "11:00",
+          "closes": "18:00"
+        }
+      ],
+      "sameAs": [
+        "https://instagram.com/aureliafinejewels",
+        "https://facebook.com/aureliafinejewels"
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-ivory text-charcoal font-sans antialiased selection:bg-gold selection:text-white overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Service Worker registration for PWA offline capability
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(err => {
+            console.log('SW registration skipped:', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

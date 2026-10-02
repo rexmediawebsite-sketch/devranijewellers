@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-white: #FFFFFF;
+    --color-porcelain: #F5F4F2;
+    --color-navy: #14213D;
+    --color-slate: #6B7280;
+    --color-champagne: #B89B72;
+    --color-champagne-light: #D4BE9B;
+    --color-champagne-dark: #9A7D55;
+    --color-border: #E5E3DF;
+    --color-whatsapp: #25D366;
+
+    /* Legacy semantic aliases */
+    --color-ivory: #F5F4F2;
+    --color-ivory-light: #FFFFFF;
+    --color-charcoal: #14213D;
+    --color-espresso: #14213D;
+    --color-gold: #B89B72;
+    --color-gold-light: #D4BE9B;
+    --color-gold-dark: #9A7D55;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #FFFFFF;
+    color: #14213D;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #F5F4F2;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #B89B72;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9A7D55;
+  }
+}
+
+/* Utilities for hiding scrollbars cleanly */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Gold glow and metallic utilities */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FAF6F0 0%, #D4BE9B 30%, #B89B72 65%, #9A7D55 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-ruby-gradient {
+  background: linear-gradient(135deg, #14213D 0%, #1F2F52 50%, #0C1527 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-metallic-gold {
+  background: linear-gradient(135deg, #FAF6F0 0%, #D4BE9B 25%, #B89B72 60%, #9A7D55 100%);
+}
+
+.gold-hairline {
+  border: 1px solid #E5E3DF;
+}
+
+.gold-hairline:hover {
+  border-color: #B89B72;
+}
+
+/* Luxury button sheen sweep */
+.btn-gold-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  transition: none;
+}
+
+.btn-gold-shimmer:hover::after {
+  left: 200%;
+  transition: left 0.85s ease-in-out;
+}
+
+/* Safe area padding for mobile bottom bar */
+.safe-area-pb {
+  padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* Mobile phone touch & animation optimizations */
+html {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+body {
+  overflow-x: hidden;
+}

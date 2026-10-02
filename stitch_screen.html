@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>
+@layer base {
+  html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
+  body { overscroll-behavior: none; }
+  main > :first-child { margin-top: 0 !important; }
+  main > :last-child { margin-bottom: 0 !important; }
+}
+::-webkit-scrollbar { display: none; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes subtleShimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-gentle-float {
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
+.btn-shimmer-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shimmer-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+  transform: translateX(-150%);
+  pointer-events: none;
+}
+.btn-shimmer-wrap:hover::after {
+  animation: subtleShimmer 1.1s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-fixed":"#66ff8e","on-primary-fixed":"#0d1b36","on-secondary":"#ffffff","surface-container-lowest":"#ffffff","secondary-fixed-dim":"#e1c296","surface-tint":"#525e7d","on-tertiary-fixed-variant":"#005322","on-secondary-fixed-variant":"#594321","on-error-container":"#93000a","on-secondary-fixed":"#281800","on-primary-container":"#7c89aa","tertiary":"#000e03","surface-dim":"#dbdad8","secondary":"#725a37","inverse-on-surface":"#f1f1ef","on-surface-variant":"#45464d","primary-fixed-dim":"#b9c6ea","outline":"#75777e","primary-fixed":"#d9e2ff","surface-container":"#efeeec","surface":"#faf9f7","secondary-fixed":"#ffddb0","error":"#ba1a1a","surface-container-highest":"#e3e2e0","background":"#faf9f7","on-tertiary-fixed":"#002109","primary":"#000a24","on-error":"#ffffff","tertiary-fixed-dim":"#3de273","surface-bright":"#faf9f7","on-primary-fixed-variant":"#3a4664","surface-container-high":"#e9e8e6","primary-container":"#14213d","on-surface":"#1a1c1b","outline-variant":"#c5c6ce","inverse-primary":"#b9c6ea","on-background":"#1a1c1b","error-container":"#ffdad6","on-primary":"#ffffff","on-tertiary-container":"#009e47","secondary-container":"#fcdbad","inverse-surface":"#2f3130","surface-variant":"#e3e2e0","on-tertiary":"#ffffff","surface-container-low":"#f4f3f1","tertiary-container":"#00280d","on-secondary-container":"#775f3a"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"margin-mobile":"1.25rem","gutter-desktop":"2.5rem","space-xl":"3rem","space-lg":"1.5rem","gutter-mobile":"1rem","space-xs":"0.25rem",margin:"1.5rem","margin-desktop":"6rem","space-sm":"0.5rem","margin-tablet":"3rem",gutter:"1.5rem","space-md":"1rem"},fontFamily:{"display-mobile":["Playfair Display"],"body-md":["Inter"],"body-lg":["Inter"],"label-lg":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"title-md":["Inter"],"headline-md":["Playfair Display"],"label-sm":["Inter"],"title-lg":["Inter"],"headline-lg-mobile":["Playfair Display"],"headline-sm":["Playfair Display"],display:["Playfair Display"],"headline-lg":["Playfair Display"]},fontSize:{"display-mobile":["36px",{lineHeight:"46px",letterSpacing:"-0.01em",fontWeight:"400"}],"body-md":["14px",{lineHeight:"24px",letterSpacing:"0.01em",fontWeight:"400"}],"body-lg":["16px",{lineHeight:"28px",letterSpacing:"0.01em",fontWeight:"400"}],"label-lg":["13px",{lineHeight:"18px",letterSpacing:"0.14em",fontWeight:"600"}],"label-md":["11px",{lineHeight:"16px",letterSpacing:"0.18em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"20px",letterSpacing:"0.02em",fontWeight:"400"}],"title-md":["16px",{lineHeight:"24px",letterSpacing:"0.01em",fontWeight:"500"}],"headline-md":["28px",{lineHeight:"38px",letterSpacing:"0em",fontWeight:"500"}],"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.22em",fontWeight:"600"}],"title-lg":["18px",{lineHeight:"26px",letterSpacing:"0.01em",fontWeight:"500"}],"headline-lg-mobile":["28px",{lineHeight:"38px",letterSpacing:"0em",fontWeight:"400"}],"headline-sm":["22px",{lineHeight:"30px",letterSpacing:"0em",fontWeight:"500"}],display:["56px",{lineHeight:"68px",letterSpacing:"-0.02em",fontWeight:"400"}],"headline-lg":["40px",{lineHeight:"52px",letterSpacing:"-0.01em",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"><div class="bg-surface-container-high border-b border-surface-variant/80"><div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-8 flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant overflow-x-auto whitespace-nowrap scrollbar-none"><div class="flex items-center gap-space-sm"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="text-on-surface font-medium">22K Gold: ₹6,740/g</span><span class="text-outline-variant">|</span><span class="text-on-surface font-medium">24K Gold: ₹7,350/g</span><span class="text-outline-variant">|</span><span class="text-on-surface font-medium">Silver: ₹89.50/g</span><span class="text-outline-variant">•</span><div class="inline-flex items-center"><span class="relative flex h-2 w-2 mr-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span></span><span>Updated Today, 10:30 AM IST</span></div></div><div class="hidden md:flex items-center gap-space-xs uppercase tracking-wider text-secondary"><span class="material-symbols-outlined text-[14px]">verified</span><span>100% BIS Hallmarked 916 Gold</span></div></div></div><div class="h-20 bg-surface/95 backdrop-blur-md border-b border-surface-variant transition-colors"><div class="h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="Aurelia Fine Jewellery Logo" class="h-8 w-auto object-contain transition-transform duration-300 hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1Vnb6HDR2Fr6EiCgr5ekZVTaZb_oBGdXagTfu75MYF5wX_F5Mokr8-CTpQ6DZ4ghV1gFXA4zKveNVklXgPRF_FCHld7mgIQ8_AohxoBiBriFvvTUoBtmbaXJBRMJ-ZqXARXm2ykag3n5yOIkoBmavbVab5AayW_-9_dO7V-SNrWS6X9OXYpEpj8ypGgPqRcttWeRIQ8CgunwsSXVmTGhoN5E7BJqfXV2U0ZCenX4ZtWQNdSgzrBEmkxfHw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-wide leading-tight">AURELIA</span><span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Fine Jewellery</span></div></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary border-b border-secondary font-semibold"><a aria-current="page" class="font-label-md text-label-md uppercase transition-colors py-1 text-primary border-b border-secondary font-semibold relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1.5px] after:bg-[#B89B72]" data-path="collections" href="#">Collections</a><a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-[#B89B72] hover:after:w-full after:transition-all after:duration-300" data-path="featured" href="#">Featured</a><a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-[#B89B72] hover:after:w-full after:transition-all after:duration-300" data-path="our-story" href="#">Our Story</a><a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-[#B89B72] hover:after:w-full after:transition-all after:duration-300" data-path="bespoke-atelier" href="#">Bespoke Atelier</a><a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-[#B89B72] hover:after:w-full after:transition-all after:duration-300" data-path="visit-us" href="#">Visit Us</a><a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-[#B89B72] hover:after:w-full after:transition-all after:duration-300" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm sm:gap-space-md shrink-0"><button aria-label="Search" class="w-9 h-9 rounded flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all duration-200 hover:scale-105 active:scale-95" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><button aria-label="Wishlist" class="group relative w-9 h-9 rounded flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all duration-200 hover:scale-105 active:scale-95" type="button"><span class="material-symbols-outlined text-[20px] transition-transform duration-200 group-hover:scale-110">favorite</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm flex items-center justify-center leading-none transition-transform duration-300 group-hover:scale-125">2</span></button><button aria-label="Boutique Locator" class="w-9 h-9 rounded flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all duration-200 hover:scale-105 active:scale-95" type="button"><span class="material-symbols-outlined text-[20px]">distance</span></button><a class="btn-shimmer-wrap hidden sm:inline-flex items-center gap-space-xs bg-primary-container hover:bg-secondary text-on-primary font-label-md text-label-md uppercase px-4 py-2 rounded-lg transition-all duration-300 hover:shadow-md hover:scale-[1.02] active:scale-[0.98]" href="https://api.whatsapp.com" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">chat</span><span>Enquire on WhatsApp</span></a><div class="pl-space-xs border-l border-surface-variant flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-surface-variant transition-transform duration-300 hover:scale-110 cursor-pointer" src="https://lh3.googleusercontent.com/aida/AEtjO1Wo9DJmuod5y55o1Slg_-MvY3PF8AlCAZBpnNdG_Q23wTEP-lP7_UK0nv_NPA8294EMf706wHbiD3PskugEepfCSJ5IaYalzaOK9WJRV4Ugwdru4hwNG00d0zRsXktELaY-t6BJSJy-xNg4iwpB0vap86twi6IR24PZP69jTcvaM-nmsnNOLqKpKbUFuiVmfVUfKoL6PYOAhoPg0fxtZ5nDvOOTNxrtXQsXPyhodSZc9LUGFN3Jc-jtfng"/></div></div></div></div></header><main class="w-full pt-28 bg-surface min-h-[calc(100vh-28rem)]"><div class="flex flex-col w-full">
+<!-- SECTION 1: HERO SECTION -->
+<section class="w-full relative overflow-hidden bg-surface py-12 md:py-20 lg:py-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Left Editorial Narrative Column -->
+<div class="lg:col-span-6 space-y-8 animate-fade-in-up">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm uppercase tracking-widest transition-transform duration-300 hover:scale-105">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>BIS Hallmarked • 100% Ethically Sourced • Est. 1984</span>
+</div>
+<div class="space-y-4">
+<h1 class="font-headline-lg text-headline-lg lg:text-[48px] lg:leading-[58px] text-primary tracking-tight">
+              Timeless Heirlooms, Reimagined for Modern Grace.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl font-normal leading-relaxed">
+              Masterfully crafted 22K and 24K gold, untreated royal uncut polki diamonds, and certified solitaires made to cherish across generations with unyielding provenance.
+            </p>
+</div>
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="btn-shimmer-wrap inline-flex items-center justify-center px-8 py-3.5 bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider rounded transition-all duration-300 hover:bg-secondary hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]" href="#collections">
+              Explore Collections
+            </a>
+<a class="btn-shimmer-wrap inline-flex items-center gap-2.5 px-6 py-3.5 bg-surface-container text-on-surface hover:text-on-primary hover:bg-[#25D366] font-label-md text-label-md uppercase tracking-wider rounded transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]" href="https://api.whatsapp.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Chat with Stylist on WhatsApp</span>
+</a>
+</div>
+<!-- Micro-Trust Metrics -->
+<div class="pt-6 grid grid-cols-2 gap-4">
+<div class="flex items-center gap-3 p-2 rounded-lg transition-transform duration-300 hover:translate-x-1">
+<span class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-title-md text-title-md transition-transform duration-300 hover:rotate-12">★</span>
+<div>
+<p class="font-title-md text-title-md text-primary font-semibold">4.9 / 5.0 Rating</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Over 4,200+ patrons nationwide</p>
+</div>
+</div>
+<div class="flex items-center gap-3 p-2 rounded-lg transition-transform duration-300 hover:translate-x-1">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary transition-transform duration-300 hover:scale-110">
+<span class="material-symbols-outlined text-[18px]">shield</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-primary font-semibold">Insured Pan-India</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Complimentary express transit</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Visual Showcase Column -->
+<div class="lg:col-span-6 relative">
+<div class="group relative mx-auto max-w-lg lg:max-w-none rounded-xl overflow-hidden bg-surface-container shadow-xl transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-2xl">
+<img alt="Haute couture Indian bridal model adorned in 22K Kundan choker and polki earrings" class="w-full h-auto object-cover aspect-[3/4] transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VbtbOlg-EiQ1x56rX_gi9Su6pZDj1cqBZ57oLcmQl9cbf2eNF1EjLPiWxJm-2HLX7eN7-lrlb2Rg_y4VcRB-VLRyM8_IN0g38hUhBYswt5CNTe22GWg742NlB1da8fT5Uk6lb9toLHA1spAd_3ncnFKeehDmCK0WqxJ60E6Mrn2f4wxc6rxdA07YD-ys_YdKMS3XDkf1J3_L0XoiR_tcw4ISFmMx0_fyiNma6rKq7ScR4eQ7wr61D4uMY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent transition-opacity duration-500 group-hover:opacity-80"></div>
+<!-- Floating Pill Badge -->
+<div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-surface/90 backdrop-blur-md shadow-lg flex items-center justify-between transition-all duration-300 group-hover:bg-surface/95">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Archival Edition</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Royal Kundan Choker</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">22K Yellow Gold (91.6% BIS Purity) • Untreated Polki</p>
+</div>
+<a class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center hover:bg-secondary transition-all duration-300 hover:scale-110 active:scale-95 shadow-sm" href="#quickview" title="Inspect details">
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: TRUST STRIP -->
+<section class="w-full bg-surface-container-low py-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-4">
+<div class="flex items-center gap-3 p-2 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:bg-surface/60">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center shrink-0 text-secondary transition-transform duration-300 hover:scale-110">
+<span class="material-symbols-outlined text-[20px]">architecture</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-primary">Master Karigars</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">40+ hours benchwork</p>
+</div>
+</div>
+<div class="flex items-center gap-3 p-2 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:bg-surface/60">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center shrink-0 text-secondary transition-transform duration-300 hover:scale-110">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-primary">BIS Hallmarked</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">916 &amp; 999 HUID purity</p>
+</div>
+</div>
+<div class="flex items-center gap-3 p-2 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:bg-surface/60">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center shrink-0 text-secondary transition-transform duration-300 hover:scale-110">
+<span class="material-symbols-outlined text-[20px]">diamond</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-primary">IGI &amp; GIA Certified</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Natural natural stones</p>
+</div>
+</div>
+<div class="flex items-center gap-3 p-2 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:bg-surface/60">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center shrink-0 text-secondary transition-transform duration-300 hover:scale-110">
+<span class="material-symbols-outlined text-[20px]">palette</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-primary">Bespoke Atelier</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Custom bridal creation</p>
+</div>
+</div>
+<div class="flex items-center gap-3 col-span-2 md:col-span-1 p-2 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:bg-surface/60">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center shrink-0 text-secondary transition-transform duration-300 hover:scale-110">
+<span class="material-symbols-outlined text-[20px]">sync</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-primary">Lifetime Buyback</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Transparent gold exchange</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: COLLECTIONS SHOWCASE (CURATED CATEGORIES) -->
+<section class="w-full bg-surface py-20" id="collections">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Boutique Repertoire</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-1">Curated Categories</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Explore handcrafted purity across every silhouette, from sacred ceremonies to daily distinction.</p>
+</div>
+<a class="group font-label-md text-label-md uppercase tracking-wider text-primary hover:text-secondary flex items-center gap-1 transition-colors" href="#featured">
+<span>View Complete Catalog</span>
+<span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:translate-x-1">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Category 1 -->
+<a class="group relative overflow-hidden rounded-lg bg-surface-container aspect-square shadow-sm flex flex-col justify-end p-6 transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-xl" href="#featured">
+<img alt="Bridal Polki &amp; Jadau" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VbtbOlg-EiQ1x56rX_gi9Su6pZDj1cqBZ57oLcmQl9cbf2eNF1EjLPiWxJm-2HLX7eN7-lrlb2Rg_y4VcRB-VLRyM8_IN0g38hUhBYswt5CNTe22GWg742NlB1da8fT5Uk6lb9toLHA1spAd_3ncnFKeehDmCK0WqxJ60E6Mrn2f4wxc6rxdA07YD-ys_YdKMS3XDkf1J3_L0XoiR_tcw4ISFmMx0_fyiNma6rKq7ScR4eQ7wr61D4uMY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent transition-opacity duration-500 group-hover:opacity-90"></div>
+<div class="relative z-10 text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">142 Creations</span>
+<h3 class="font-headline-md text-headline-md mt-1 transition-transform duration-300 group-hover:translate-x-1">Bridal Polki &amp; Jadau</h3>
+<p class="font-body-sm text-body-sm text-surface-container-high mt-1 opacity-90">Sacred Mughal setting &amp; Basra pearls</p>
+</div>
+</a>
+<!-- Category 2 -->
+<a class="group relative overflow-hidden rounded-lg bg-surface-container aspect-square shadow-sm flex flex-col justify-end p-6 transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-xl" href="#featured">
+<img alt="Royal Necklaces &amp; Chokers" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1XLtbb9JkHq_A1l0yTJGjqSYIrAHB0H7TzFUPTJNK1pb5dMDY5a59G7cYrmVLhyo0CyjFhR67_f8KWzb_Ex1BwoPsmQvIHkGRXTY_OPzesKHGn6cUz9eLewBlWjMHgpLKFoRjpdcx83d69BDGaCpYjeD3lXOOfh55_g_DPxa4wy5jMDPDREza7jjC9fjoQvjZ9cxXdI35GMHZEDeLoLa-AtehHLJUi0WE3_MILJIcQwKKJ0HJQqaOfnKLo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent transition-opacity duration-500 group-hover:opacity-90"></div>
+<div class="relative z-10 text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">98 Creations</span>
+<h3 class="font-headline-md text-headline-md mt-1 transition-transform duration-300 group-hover:translate-x-1">Royal Necklaces &amp; Chokers</h3>
+<p class="font-body-sm text-body-sm text-surface-container-high mt-1 opacity-90">Emerald drops &amp; 22K intricate mesh</p>
+</div>
+</a>
+<!-- Category 3 -->
+<a class="group relative overflow-hidden rounded-lg bg-surface-container aspect-square shadow-sm flex flex-col justify-end p-6 transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-xl" href="#featured">
+<img alt="Uncut Diamond &amp; Gold Earrings" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VTwwNVlBOpTvNZxiNSkMKtKFqaF3TrmwGSw9TC1m08Z3xH9YtfVAVmmDQA_dZ54eDcgRjsA5Dc7VJZGWufIH8RPpa0vuBIIOeqZYtt1_gr2TXAU6ninVKgVe_klfd0Ht1hnaIQ6abelcq7UURYEjS-HA5NkipHLoZLEs8xOboWBfyjG-4j-ZpGiTXWFoc5PKvaDajb6uxd5AdVtPth7DSUj8ty5RKnf4V2kO1Alv-dt7DSvULdbZjxmbE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent transition-opacity duration-500 group-hover:opacity-90"></div>
+<div class="relative z-10 text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">120 Creations</span>
+<h3 class="font-headline-md text-headline-md mt-1 transition-transform duration-300 group-hover:translate-x-1">Uncut Diamond &amp; Gold Earrings</h3>
+<p class="font-body-sm text-body-sm text-surface-container-high mt-1 opacity-90">Antique jhumkas and statement chandeliers</p>
+</div>
+</a>
+<!-- Category 4 -->
+<a class="group relative overflow-hidden rounded-lg bg-surface-container aspect-square shadow-sm flex flex-col justify-end p-6 transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-xl" href="#featured">
+<img alt="Diamond Solitaire Rings" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1W3gN_X-iBs9zYa7KmP2M3ZeNl0I4SlA1w22CW4DzyZenQvt0NPej0lpupfFM-ZmaHDXo10oQ6FM8Owa25o36qcYFvcUGfo-KrdCvlhvH2SpdYlIURXut0zGlFpG3R6nkY0QJnHt5UouQJkTaaKDyPhaMTV-UVMc7NQq2-n_1sY15c1iLWQ_nWvyfwns0E6blqBV99OyrXJZG2BiUoLhPMdC7NeTgX3smbB4ovOkKZlYoYrnbeRO7wUzw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent transition-opacity duration-500 group-hover:opacity-90"></div>
+<div class="relative z-10 text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">84 Creations</span>
+<h3 class="font-headline-md text-headline-md mt-1 transition-transform duration-300 group-hover:translate-x-1">Diamond Solitaire Rings</h3>
+<p class="font-body-sm text-body-sm text-surface-container-high mt-1 opacity-90">IGI triple excellent cut engagement bands</p>
+</div>
+</a>
+<!-- Category 5 -->
+<a class="group relative overflow-hidden rounded-lg bg-surface-container aspect-square shadow-sm flex flex-col justify-end p-6 transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-xl" href="#featured">
+<img alt="Heritage Filigree Bangles (Kadas)" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1XVzVNn-9sL0q1VyuEbRZIZat4zwdG4gV2aRgnPsBlTP96KgjqNJGciL5EAth0hBjFA9B_dCxFwz98TaluCHytPPNxJQiEfGDc2t4qT1qvbXAti04j5OwXzPMet03xzJcRLreMrmXmyWCpleOi2FkCf_V0n3di8xT1Qeu1Emv2Q1GBrBNWMUB1ERs967VS6kM5c7WZRqaOxO84nvVYLfu2gwynQ_KYOaPFQTt1zazwaM5Luh2qu8q6T9Xw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent transition-opacity duration-500 group-hover:opacity-90"></div>
+<div class="relative z-10 text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">66 Creations</span>
+<h3 class="font-headline-md text-headline-md mt-1 transition-transform duration-300 group-hover:translate-x-1">Heritage Filigree Bangles (Kadas)</h3>
+<p class="font-body-sm text-body-sm text-surface-container-high mt-1 opacity-90">Solid screw mechanism and nakshi carving</p>
+</div>
+</a>
+<!-- Category 6 -->
+<a class="group relative overflow-hidden rounded-lg bg-surface-container aspect-square shadow-sm flex flex-col justify-end p-6 transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-xl" href="#featured">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container via-primary to-surface-variant transition-transform duration-700 ease-out group-hover:scale-105"></div>
+<div class="relative z-10 text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">110 Creations</span>
+<h3 class="font-headline-md text-headline-md mt-1 transition-transform duration-300 group-hover:translate-x-1">Artisanal Daily 22K Gold</h3>
+<p class="font-body-sm text-body-sm text-surface-container-high mt-1 opacity-90">Minimalist mangalsutras, cuffs &amp; textured chains</p>
+<div class="mt-4 flex items-center gap-2 text-secondary-fixed-dim font-label-md text-label-md uppercase">
+<span>Explore Lightweight Range</span>
+<span class="material-symbols-outlined text-[14px] transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+</div>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- SECTION 4: SHOP BY OCCASION & GIFT GUIDE WITH BUDGET CHIPS -->
+<section class="w-full bg-surface-container-low py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+<div class="text-center max-w-2xl mx-auto space-y-3">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Curated Occasion Matcher</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Sacred Moments &amp; Gift Guide</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Discover handcrafted heirloom suites designed for each milestone with transparent valuation.</p>
+</div>
+<!-- Occasion Navigation Tabs -->
+<div class="flex flex-wrap justify-center items-center gap-3">
+<button class="px-5 py-2.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105 active:scale-95">
+          Grand Wedding
+        </button>
+<button class="px-5 py-2.5 rounded-full bg-surface text-on-surface hover:bg-surface-container-high font-label-md text-label-md uppercase tracking-wider transition-all duration-300 hover:border-[#14213D] hover:scale-105 active:scale-95 border border-transparent">
+          Festive Celebrations
+        </button>
+<button class="px-5 py-2.5 rounded-full bg-surface text-on-surface hover:bg-surface-container-high font-label-md text-label-md uppercase tracking-wider transition-all duration-300 hover:border-[#14213D] hover:scale-105 active:scale-95 border border-transparent">
+          Contemporary Daily Wear
+        </button>
+<button class="px-5 py-2.5 rounded-full bg-surface text-on-surface hover:bg-surface-container-high font-label-md text-label-md uppercase tracking-wider transition-all duration-300 hover:border-[#14213D] hover:scale-105 active:scale-95 border border-transparent">
+          Timeless Gifting
+        </button>
+</div>
+<!-- Budget Selector Chips -->
+<div class="bg-surface rounded-xl p-6 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 transition-all duration-300 hover:shadow-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">filter_alt</span>
+<span class="font-title-md text-title-md text-primary font-medium">Filter by Investment:</span>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<button class="px-4 py-2 rounded-lg bg-surface-container-high text-on-surface-variant font-label-md text-label-md uppercase hover:bg-surface-container transition-all duration-200 hover:border-[#14213D] border border-transparent hover:scale-105 active:scale-95">
+            Under ₹25,000
+          </button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-high text-on-surface-variant font-label-md text-label-md uppercase hover:bg-surface-container transition-all duration-200 hover:border-[#14213D] border border-transparent hover:scale-105 active:scale-95">
+            ₹25,000 - ₹50,000
+          </button>
+<button class="px-4 py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md uppercase shadow-sm transition-all duration-200 hover:scale-105 active:scale-95">
+            ₹50,000 - ₹1,50,000
+          </button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-high text-on-surface-variant font-label-md text-label-md uppercase hover:bg-surface-container transition-all duration-200 hover:border-[#14213D] border border-transparent hover:scale-105 active:scale-95">
+            ₹1,50,000+ (High Atelier)
+          </button>
+</div>
+</div>
+<!-- 3 Preview Occasion Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group relative overflow-hidden bg-surface rounded-xl shadow-sm flex flex-col transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-xl">
+<div class="relative aspect-square bg-surface-container overflow-hidden">
+<img alt="Necklace on travertine" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1XLtbb9JkHq_A1l0yTJGjqSYIrAHB0H7TzFUPTJNK1pb5dMDY5a59G7cYrmVLhyo0CyjFhR67_f8KWzb_Ex1BwoPsmQvIHkGRXTY_OPzesKHGn6cUz9eLewBlWjMHgpLKFoRjpdcx83d69BDGaCpYjeD3lXOOfh55_g_DPxa4wy5jMDPDREza7jjC9fjoQvjZ9cxXdI35GMHZEDeLoLa-AtehHLJUi0WE3_MILJIcQwKKJ0HJQqaOfnKLo"/>
+<span class="absolute top-4 left-4 px-3 py-1 bg-surface/90 backdrop-blur rounded font-label-sm text-label-sm text-primary uppercase shadow-sm">Wedding Edit</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary transition-colors group-hover:text-secondary">Avani Emerald Collar</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">22K Yellow Gold • 58.2g with uncut emerald accents</p>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Pricing</span>
+<p class="font-title-md text-title-md text-primary font-semibold">₹3,92,000*</p>
+</div>
+<a class="btn-shimmer-wrap inline-flex items-center gap-1.5 px-3 py-2 bg-primary-container text-on-primary hover:bg-secondary rounded font-label-sm text-label-sm uppercase transition-all duration-300 hover:scale-105 active:scale-95" href="https://api.whatsapp.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>WhatsApp</span>
+</a>
+</div>
+</div>
+</div>
+<div class="group relative overflow-hidden bg-surface rounded-xl shadow-sm flex flex-col transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-xl">
+<div class="relative aspect-square bg-surface-container overflow-hidden">
+<img alt="Polki Jhumkas" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VTwwNVlBOpTvNZxiNSkMKtKFqaF3TrmwGSw9TC1m08Z3xH9YtfVAVmmDQA_dZ54eDcgRjsA5Dc7VJZGWufIH8RPpa0vuBIIOeqZYtt1_gr2TXAU6ninVKgVe_klfd0Ht1hnaIQ6abelcq7UURYEjS-HA5NkipHLoZLEs8xOboWBfyjG-4j-ZpGiTXWFoc5PKvaDajb6uxd5AdVtPth7DSUj8ty5RKnf4V2kO1Alv-dt7DSvULdbZjxmbE"/>
+<span class="absolute top-4 left-4 px-3 py-1 bg-surface/90 backdrop-blur rounded font-label-sm text-label-sm text-primary uppercase shadow-sm">Celebration</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary transition-colors group-hover:text-secondary">Meera Polki Chandbalis</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">22K Gold • Certified Syndicate Uncut Diamonds</p>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Pricing</span>
+<p class="font-title-md text-title-md text-primary font-semibold">₹1,85,000*</p>
+</div>
+<a class="btn-shimmer-wrap inline-flex items-center gap-1.5 px-3 py-2 bg-primary-container text-on-primary hover:bg-secondary rounded font-label-sm text-label-sm uppercase transition-all duration-300 hover:scale-105 active:scale-95" href="https://api.whatsapp.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>WhatsApp</span>
+</a>
+</div>
+</div>
+</div>
+<div class="group relative overflow-hidden bg-surface rounded-xl shadow-sm flex flex-col transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-xl">
+<div class="relative aspect-square bg-surface-container overflow-hidden">
+<img alt="Diamond Solitaire" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1W3gN_X-iBs9zYa7KmP2M3ZeNl0I4SlA1w22CW4DzyZenQvt0NPej0lpupfFM-ZmaHDXo10oQ6FM8Owa25o36qcYFvcUGfo-KrdCvlhvH2SpdYlIURXut0zGlFpG3R6nkY0QJnHt5UouQJkTaaKDyPhaMTV-UVMc7NQq2-n_1sY15c1iLWQ_nWvyfwns0E6blqBV99OyrXJZG2BiUoLhPMdC7NeTgX3smbB4ovOkKZlYoYrnbeRO7wUzw"/>
+<span class="absolute top-4 left-4 px-3 py-1 bg-surface/90 backdrop-blur rounded font-label-sm text-label-sm text-primary uppercase shadow-sm">Milestone Gift</span>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary transition-colors group-hover:text-secondary">Aura Solitaire Band</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">18K Two-Tone Gold • 1.05ct IGI Certified VVS</p>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Pricing</span>
+<p class="font-title-md text-title-md text-primary font-semibold">₹1,45,000*</p>
+</div>
+<a class="btn-shimmer-wrap inline-flex items-center gap-1.5 px-3 py-2 bg-primary-container text-on-primary hover:bg-secondary rounded font-label-sm text-label-sm uppercase transition-all duration-300 hover:scale-105 active:scale-95" href="https://api.whatsapp.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>WhatsApp</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: FEATURED PIECES & INTERACTIVE PRODUCT GRID -->
+<section class="w-full bg-surface py-20" id="featured">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Flagship Showcase</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-1">Featured High Jewellery</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Every creation accompanied by physical BIS HUID documentation and gemological lab seals.</p>
+</div>
+<!-- Filter & Search Controls -->
+<div class="flex flex-wrap items-center gap-3">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[18px]">search</span>
+<input class="bg-surface-container pl-9 pr-4 py-2 rounded text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-all duration-200 border border-transparent focus:border-secondary" placeholder="Search piece, carat..." type="text"/>
+</div>
+<select class="bg-surface-container px-4 py-2 rounded text-body-sm text-on-surface focus:outline-none transition-all duration-200 border border-transparent focus:border-secondary">
+<option>Sort: Featured Editions</option>
+<option>Purity: 24K to 22K</option>
+<option>Gross Weight: High to Low</option>
+</select>
+</div>
+</div>
+<!-- Category Filter Pills -->
+<div class="flex flex-wrap gap-2 pt-2">
+<button class="px-4 py-1.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider transition-all duration-200 hover:scale-105 active:scale-95 shadow-sm">All Pieces</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm uppercase tracking-wider transition-all duration-200 hover:border-[#14213D] border border-transparent hover:scale-105 active:scale-95">Necklaces</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm uppercase tracking-wider transition-all duration-200 hover:border-[#14213D] border border-transparent hover:scale-105 active:scale-95">Earrings</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm uppercase tracking-wider transition-all duration-200 hover:border-[#14213D] border border-transparent hover:scale-105 active:scale-95">Rings</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm uppercase tracking-wider transition-all duration-200 hover:border-[#14213D] border border-transparent hover:scale-105 active:scale-95">Kadas &amp; Bangles</button>
+</div>
+<!-- 4-Column Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="group relative overflow-hidden bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-xl">
+<div class="relative aspect-square bg-surface-container overflow-hidden">
+<img alt="The Sitaara Emerald Drop Haar" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1XLtbb9JkHq_A1l0yTJGjqSYIrAHB0H7TzFUPTJNK1pb5dMDY5a59G7cYrmVLhyo0CyjFhR67_f8KWzb_Ex1BwoPsmQvIHkGRXTY_OPzesKHGn6cUz9eLewBlWjMHgpLKFoRjpdcx83d69BDGaCpYjeD3lXOOfh55_g_DPxa4wy5jMDPDREza7jjC9fjoQvjZ9cxXdI35GMHZEDeLoLa-AtehHLJUi0WE3_MILJIcQwKKJ0HJQqaOfnKLo"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/90 text-primary flex items-center justify-center hover:text-error transition-all duration-200 hover:scale-110 active:scale-95 shadow-sm" title="Save to wishlist">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<span class="absolute bottom-3 left-3 px-2.5 py-1 rounded bg-primary-container/90 text-on-primary font-label-sm text-label-sm uppercase">22K • 68.4g</span>
+</div>
+<div class="p-5 space-y-3 flex-1 flex flex-col justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Bridal Haar</p>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1 transition-colors group-hover:text-secondary">The Sitaara Emerald Drop Haar</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Untreated Zambian emerald drops with fine nakshi detail</p>
+</div>
+<div class="space-y-3 pt-3">
+<p class="font-title-md text-title-md text-primary font-semibold">Price on Enquiry</p>
+<div class="grid grid-cols-2 gap-2">
+<a class="py-2 rounded bg-surface-container text-on-surface hover:bg-surface-container-high text-center font-label-sm text-label-sm uppercase transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]" href="#quickview">Quick View</a>
+<a class="btn-shimmer-wrap py-2 rounded bg-[#25D366] text-white text-center font-label-sm text-label-sm uppercase flex items-center justify-center gap-1 hover:opacity-90 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]" href="https://api.whatsapp.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>WhatsApp</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative overflow-hidden bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-xl">
+<div class="relative aspect-square bg-surface-container overflow-hidden">
+<img alt="Aria Diamond Solitaire 1.5ct" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1W3gN_X-iBs9zYa7KmP2M3ZeNl0I4SlA1w22CW4DzyZenQvt0NPej0lpupfFM-ZmaHDXo10oQ6FM8Owa25o36qcYFvcUGfo-KrdCvlhvH2SpdYlIURXut0zGlFpG3R6nkY0QJnHt5UouQJkTaaKDyPhaMTV-UVMc7NQq2-n_1sY15c1iLWQ_nWvyfwns0E6blqBV99OyrXJZG2BiUoLhPMdC7NeTgX3smbB4ovOkKZlYoYrnbeRO7wUzw"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/90 text-primary flex items-center justify-center hover:text-error transition-all duration-200 hover:scale-110 active:scale-95 shadow-sm" title="Save to wishlist">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<span class="absolute bottom-3 left-3 px-2.5 py-1 rounded bg-primary-container/90 text-on-primary font-label-sm text-label-sm uppercase">18K • 1.50ct</span>
+</div>
+<div class="p-5 space-y-3 flex-1 flex flex-col justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Solitaire Ring</p>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1 transition-colors group-hover:text-secondary">Aria Diamond Solitaire 1.5ct</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">VVS1 Clarity • Triple Excellent Cut • GIA Laser Code</p>
+</div>
+<div class="space-y-3 pt-3">
+<p class="font-title-md text-title-md text-primary font-semibold">Price on Enquiry</p>
+<div class="grid grid-cols-2 gap-2">
+<a class="py-2 rounded bg-surface-container text-on-surface hover:bg-surface-container-high text-center font-label-sm text-label-sm uppercase transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]" href="#quickview">Quick View</a>
+<a class="btn-shimmer-wrap py-2 rounded bg-[#25D366] text-white text-center font-label-sm text-label-sm uppercase flex items-center justify-center gap-1 hover:opacity-90 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]" href="https://api.whatsapp.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>WhatsApp</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative overflow-hidden bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-xl">
+<div class="relative aspect-square bg-surface-container overflow-hidden">
+<img alt="Mayura Royal Polki Jhumkas" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VTwwNVlBOpTvNZxiNSkMKtKFqaF3TrmwGSw9TC1m08Z3xH9YtfVAVmmDQA_dZ54eDcgRjsA5Dc7VJZGWufIH8RPpa0vuBIIOeqZYtt1_gr2TXAU6ninVKgVe_klfd0Ht1hnaIQ6abelcq7UURYEjS-HA5NkipHLoZLEs8xOboWBfyjG-4j-ZpGiTXWFoc5PKvaDajb6uxd5AdVtPth7DSUj8ty5RKnf4V2kO1Alv-dt7DSvULdbZjxmbE"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/90 text-primary flex items-center justify-center hover:text-error transition-all duration-200 hover:scale-110 active:scale-95 shadow-sm" title="Save to wishlist">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<span class="absolute bottom-3 left-3 px-2.5 py-1 rounded bg-primary-container/90 text-on-primary font-label-sm text-label-sm uppercase">22K • 42.1g</span>
+</div>
+<div class="p-5 space-y-3 flex-1 flex flex-col justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Heritage Jhumka</p>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1 transition-colors group-hover:text-secondary">Mayura Royal Polki Jhumkas</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Uncut Natural Diamonds &amp; Certified Natural Basra Pearls</p>
+</div>
+<div class="space-y-3 pt-3">
+<p class="font-title-md text-title-md text-primary font-semibold">Price on Enquiry</p>
+<div class="grid grid-cols-2 gap-2">
+<a class="py-2 rounded bg-surface-container text-on-surface hover:bg-surface-container-high text-center font-label-sm text-label-sm uppercase transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]" href="#quickview">Quick View</a>
+<a class="btn-shimmer-wrap py-2 rounded bg-[#25D366] text-white text-center font-label-sm text-label-sm uppercase flex items-center justify-center gap-1 hover:opacity-90 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]" href="https://api.whatsapp.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>WhatsApp</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative overflow-hidden bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-xl">
+<div class="relative aspect-square bg-surface-container overflow-hidden">
+<img alt="Devika Filigree Antique Bangles" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1XVzVNn-9sL0q1VyuEbRZIZat4zwdG4gV2aRgnPsBlTP96KgjqNJGciL5EAth0hBjFA9B_dCxFwz98TaluCHytPPNxJQiEfGDc2t4qT1qvbXAti04j5OwXzPMet03xzJcRLreMrmXmyWCpleOi2FkCf_V0n3di8xT1Qeu1Emv2Q1GBrBNWMUB1ERs967VS6kM5c7WZRqaOxO84nvVYLfu2gwynQ_KYOaPFQTt1zazwaM5Luh2qu8q6T9Xw"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/90 text-primary flex items-center justify-center hover:text-error transition-all duration-200 hover:scale-110 active:scale-95 shadow-sm" title="Save to wishlist">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<span class="absolute bottom-3 left-3 px-2.5 py-1 rounded bg-primary-container/90 text-on-primary font-label-sm text-label-sm uppercase">22K • 74.8g (Pair)</span>
+</div>
+<div class="p-5 space-y-3 flex-1 flex flex-col justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Nakshi Kadas</p>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1 transition-colors group-hover:text-secondary">Devika Filigree Antique Bangles</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Handcrafted temple motifs with reinforced internal spring hinges</p>
+</div>
+<div class="space-y-3 pt-3">
+<p class="font-title-md text-title-md text-primary font-semibold">Price on Enquiry</p>
+<div class="grid grid-cols-2 gap-2">
+<a class="py-2 rounded bg-surface-container text-on-surface hover:bg-surface-container-high text-center font-label-sm text-label-sm uppercase transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]" href="#quickview">Quick View</a>
+<a class="btn-shimmer-wrap py-2 rounded bg-[#25D366] text-white text-center font-label-sm text-label-sm uppercase flex items-center justify-center gap-1 hover:opacity-90 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]" href="https://api.whatsapp.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>WhatsApp</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: INTEGRATED QUICK-VIEW MODAL PREVIEW -->
+<section class="w-full bg-surface-container py-16" id="quickview">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-surface rounded-2xl p-6 sm:p-10 shadow-xl space-y-8 transition-all duration-300">
+<div class="flex items-center justify-between pb-4">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase">Interactive Atelier Inspection</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ref: AUR-8921 • In-Stock at Mumbai Atelier</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<button class="p-2 hover:bg-surface-container rounded-full transition-all duration-200 hover:scale-110 active:scale-95" title="Share Piece">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+<button class="p-2 hover:bg-surface-container rounded-full transition-all duration-200 hover:scale-110 active:scale-95" title="Save">
+<span class="material-symbols-outlined text-[20px]">favorite_border</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<!-- Gallery Left -->
+<div class="lg:col-span-6 space-y-4">
+<div class="aspect-square rounded-xl bg-surface-container overflow-hidden group shadow-inner">
+<img alt="The Sitaara Emerald Drop Haar inspection preview" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1XLtbb9JkHq_A1l0yTJGjqSYIrAHB0H7TzFUPTJNK1pb5dMDY5a59G7cYrmVLhyo0CyjFhR67_f8KWzb_Ex1BwoPsmQvIHkGRXTY_OPzesKHGn6cUz9eLewBlWjMHgpLKFoRjpdcx83d69BDGaCpYjeD3lXOOfh55_g_DPxa4wy5jMDPDREza7jjC9fjoQvjZ9cxXdI35GMHZEDeLoLa-AtehHLJUi0WE3_MILJIcQwKKJ0HJQqaOfnKLo"/>
+</div>
+<!-- Thumbnails -->
+<div class="grid grid-cols-4 gap-3">
+<div class="aspect-square rounded-lg bg-surface-container overflow-hidden shadow-sm ring-2 ring-secondary cursor-pointer transition-all duration-300 hover:scale-105">
+<img alt="Thumb 1" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XLtbb9JkHq_A1l0yTJGjqSYIrAHB0H7TzFUPTJNK1pb5dMDY5a59G7cYrmVLhyo0CyjFhR67_f8KWzb_Ex1BwoPsmQvIHkGRXTY_OPzesKHGn6cUz9eLewBlWjMHgpLKFoRjpdcx83d69BDGaCpYjeD3lXOOfh55_g_DPxa4wy5jMDPDREza7jjC9fjoQvjZ9cxXdI35GMHZEDeLoLa-AtehHLJUi0WE3_MILJIcQwKKJ0HJQqaOfnKLo"/>
+</div>
+<div class="aspect-square rounded-lg bg-surface-container overflow-hidden opacity-70 hover:opacity-100 ring-1 ring-transparent hover:ring-secondary cursor-pointer transition-all duration-300 hover:scale-105">
+<img alt="Thumb 2" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VbtbOlg-EiQ1x56rX_gi9Su6pZDj1cqBZ57oLcmQl9cbf2eNF1EjLPiWxJm-2HLX7eN7-lrlb2Rg_y4VcRB-VLRyM8_IN0g38hUhBYswt5CNTe22GWg742NlB1da8fT5Uk6lb9toLHA1spAd_3ncnFKeehDmCK0WqxJ60E6Mrn2f4wxc6rxdA07YD-ys_YdKMS3XDkf1J3_L0XoiR_tcw4ISFmMx0_fyiNma6rKq7ScR4eQ7wr61D4uMY"/>
+</div>
+<div class="aspect-square rounded-lg bg-surface-container overflow-hidden opacity-70 hover:opacity-100 ring-1 ring-transparent hover:ring-secondary cursor-pointer transition-all duration-300 hover:scale-105">
+<img alt="Thumb 3" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WwgggQ8BUNaTowbuFKBHZ-nU-haPh7Y2kxNgCbhh4aYSPOhBaaCPNu3Bf_SuZ8v9-JCizO9zKy1lwJ4S0qzaVI-ZoYQ5poaAcGMXDMwd2AGQgzm7M9TBT0Gjz_VSJUAQ9ESTlz5lZS9YDcUTtsqIDuFbU8pl309k2nASWWMn06ANtLSkNRSZdskBb0-uOOHVCuRfnSLEAHWUooqRLuSmbZ95hfktuQRJ_5coxnp9EAF1uOTvEK1EUsE2M"/>
+</div>
+<div class="aspect-square rounded-lg bg-surface-container overflow-hidden opacity-70 hover:opacity-100 ring-1 ring-transparent hover:ring-secondary cursor-pointer transition-all duration-300 hover:scale-105">
+<img alt="Thumb 4" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VTwwNVlBOpTvNZxiNSkMKtKFqaF3TrmwGSw9TC1m08Z3xH9YtfVAVmmDQA_dZ54eDcgRjsA5Dc7VJZGWufIH8RPpa0vuBIIOeqZYtt1_gr2TXAU6ninVKgVe_klfd0Ht1hnaIQ6abelcq7UURYEjS-HA5NkipHLoZLEs8xOboWBfyjG-4j-ZpGiTXWFoc5PKvaDajb6uxd5AdVtPth7DSUj8ty5RKnf4V2kO1Alv-dt7DSvULdbZjxmbE"/>
+</div>
+</div>
+</div>
+<!-- Specifications Right -->
+<div class="lg:col-span-6 space-y-6">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Masterwork Certificate No. HUID-916-MUM-773</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">The Sitaara Emerald Drop Haar</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+                Hand-forged in 22K (916) pure yellow gold. Features untreated natural emerald drop cabochons selected for deep green hue, framed by antique micro-nakshi repoussé detailing.
+              </p>
+</div>
+<!-- Technical Spec Table -->
+<div class="bg-surface-container-low rounded-xl p-5 space-y-3">
+<div class="grid grid-cols-2 gap-4 text-body-sm text-body-sm">
+<div>
+<span class="text-on-surface-variant">Gross Weight:</span>
+<p class="font-title-md text-title-md text-primary font-medium">68.420 Grams</p>
+</div>
+<div>
+<span class="text-on-surface-variant">Net Gold Weight:</span>
+<p class="font-title-md text-title-md text-primary font-medium">54.180 Grams (22K)</p>
+</div>
+<div>
+<span class="text-on-surface-variant">Emerald Gemstones:</span>
+<p class="font-title-md text-title-md text-primary font-medium">14.240 Carats (Natural)</p>
+</div>
+<div>
+<span class="text-on-surface-variant">Certification:</span>
+<p class="font-title-md text-title-md text-primary font-medium">BIS Hallmarked + IGI</p>
+</div>
+</div>
+</div>
+<!-- Ring / Chain Length Selector Preview -->
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Select Neckline Extension Fit:</label>
+<div class="flex gap-2">
+<button class="px-4 py-2 rounded bg-primary-container text-on-primary font-label-sm text-label-sm transition-all duration-200 hover:scale-105 active:scale-95 shadow-sm">Standard 16" Collar</button>
+<button class="px-4 py-2 rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm transition-all duration-200 hover:border-[#14213D] border border-transparent hover:scale-105 active:scale-95">Extended 18" Fit</button>
+<button class="px-4 py-2 rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm transition-all duration-200 hover:border-[#14213D] border border-transparent hover:scale-105 active:scale-95">Bespoke Cord Length</button>
+</div>
+</div>
+<!-- WhatsApp Pre-filled Action Box -->
+<div class="p-4 rounded-xl bg-surface-container-lowest space-y-3">
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Pre-Formatted Concierge Inquiry:</p>
+<div class="p-3 bg-surface rounded text-body-sm text-on-surface font-mono">
+                "Hi Aurelia, I would like to enquire about the Sitaara Emerald Drop Haar (Ref: AUR-8921) with video inspection availability."
+              </div>
+<a class="btn-shimmer-wrap w-full inline-flex items-center justify-center gap-2 py-3 bg-[#25D366] text-white rounded font-label-md text-label-md uppercase tracking-wider shadow-sm hover:opacity-95 transition-all duration-200 hover:scale-[1.01] active:scale-[0.99]" href="https://api.whatsapp.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Enquire this Piece on WhatsApp Now</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: OUR STORY & CRAFTSMANSHIP -->
+<section class="w-full bg-surface py-20 lg:py-28" id="our-story">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Atelier Image Left -->
+<div class="lg:col-span-6 relative">
+<div class="group rounded-xl overflow-hidden shadow-lg bg-surface-container transition-all duration-500 hover:shadow-2xl">
+<img alt="Master artisan goldsmith setting uncut polki diamonds into gold in a luxury studio" class="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1WwgggQ8BUNaTowbuFKBHZ-nU-haPh7Y2kxNgCbhh4aYSPOhBaaCPNu3Bf_SuZ8v9-JCizO9zKy1lwJ4S0qzaVI-ZoYQ5poaAcGMXDMwd2AGQgzm7M9TBT0Gjz_VSJUAQ9ESTlz5lZS9YDcUTtsqIDuFbU8pl309k2nASWWMn06ANtLSkNRSZdskBb0-uOOHVCuRfnSLEAHWUooqRLuSmbZ95hfktuQRJ_5coxnp9EAF1uOTvEK1EUsE2M"/>
+</div>
+<div class="hidden sm:block absolute -bottom-6 -right-6 p-6 rounded-xl bg-surface shadow-xl max-w-xs transition-transform duration-300 hover:-translate-y-1">
+<p class="font-headline-sm text-headline-sm text-primary">Sacred Karigari</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Preserving royal techniques passed through four generations of Rajasthani master artisans.</p>
+</div>
+</div>
+<!-- Story Narrative Right -->
+<div class="lg:col-span-6 space-y-8">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Atelier Legacy</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-1">Four Decades of Devotion to the Goldsmith’s Art</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-4 leading-relaxed">
+              Founded in 1984, Aurelia operates with a singular artistic creed: gold is not merely precious metal, but a vessel for family memory and timeless grace. Our karigars blend ancient Jadau techniques—using pure 24K gold foil setting—with contemporary Swiss micro-pave tolerances.
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 leading-relaxed">
+              Every creation is cast in zero-impurity recycled gold, tested through multi-point XRF spectrometry, and laser inscribed with individual Bureau of Indian Standards HUID certifications.
+            </p>
+</div>
+<!-- Heritage Metric Counters -->
+<div class="grid grid-cols-3 gap-4 pt-4">
+<div class="p-4 rounded-lg bg-surface-container transition-transform duration-300 hover:-translate-y-1 hover:bg-surface-container-high">
+<p class="font-headline-md text-headline-md text-primary font-semibold">40+</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Years of Atelier Heritage</p>
+</div>
+<div class="p-4 rounded-lg bg-surface-container transition-transform duration-300 hover:-translate-y-1 hover:bg-surface-container-high">
+<p class="font-headline-md text-headline-md text-primary font-semibold">18.5k+</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Heirlooms Crafted</p>
+</div>
+<div class="p-4 rounded-lg bg-surface-container transition-transform duration-300 hover:-translate-y-1 hover:bg-surface-container-high">
+<p class="font-headline-md text-headline-md text-primary font-semibold">100%</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Certified Ethical Gold</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8: WHY CHOOSE US -->
+<section class="w-full bg-surface-container-low py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+<div class="text-center max-w-2xl mx-auto space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">The Aurelia Guarantee</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Uncompromising Principles</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Built on four foundational pillars of transparency, masterwork skill, and bespoke patronage.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-surface rounded-xl p-8 space-y-4 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary transition-transform duration-300 hover:scale-110">
+<span class="material-symbols-outlined text-[24px]">receipt_long</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary font-semibold">Transparent Gold Billing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Exact breakdown of metal weight, prevailing daily bullion rates, individual stone weights, and zero inflated hidden making charges.
+          </p>
+</div>
+<div class="bg-surface rounded-xl p-8 space-y-4 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary transition-transform duration-300 hover:scale-110">
+<span class="material-symbols-outlined text-[24px]">qr_code_2</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary font-semibold">BIS Hallmark Authenticity</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Every piece is laser inscribed with official Bureau of Indian Standards 6-digit HUID code, verifiable on the BIS Care portal.
+          </p>
+</div>
+<div class="bg-surface rounded-xl p-8 space-y-4 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary transition-transform duration-300 hover:scale-110">
+<span class="material-symbols-outlined text-[24px]">video_call</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary font-semibold">WhatsApp Stylist Vault</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Direct 1-on-1 private video calls with senior jewellery consultants featuring 4K live close-up views of gemstones and draping.
+          </p>
+</div>
+<div class="bg-surface rounded-xl p-8 space-y-4 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary transition-transform duration-300 hover:scale-110">
+<span class="material-symbols-outlined text-[24px]">auto_fix_high</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary font-semibold">Bespoke Customization</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Transform heirloom ancestral gold into contemporary silhouettes with our in-house 3D CAD artists and veteran master karigars.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 9: EDITORIAL LOOKBOOK -->
+<section class="w-full bg-surface py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Autumn / Winter Edition</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-1">The 2025 Royal Solitaire &amp; Bridal Anthology</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">A photographic study in sculptural gold volumes and natural polki clarity.</p>
+</div>
+<a class="btn-shimmer-wrap inline-flex items-center gap-2 px-6 py-3 bg-primary-container text-on-primary rounded font-label-md text-label-md uppercase tracking-wider hover:bg-secondary transition-all duration-300 hover:shadow-lg hover:scale-105 active:scale-95" href="https://api.whatsapp.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+<span>Request Lookbook Catalog via WhatsApp</span>
+</a>
+</div>
+<!-- Mosaic Lookbook Strip -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+<div class="group md:col-span-7 rounded-xl overflow-hidden bg-surface-container relative min-h-[420px] shadow-sm transition-all duration-500 hover:shadow-xl">
+<img alt="Bridal anthology portrait" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VbtbOlg-EiQ1x56rX_gi9Su6pZDj1cqBZ57oLcmQl9cbf2eNF1EjLPiWxJm-2HLX7eN7-lrlb2Rg_y4VcRB-VLRyM8_IN0g38hUhBYswt5CNTe22GWg742NlB1da8fT5Uk6lb9toLHA1spAd_3ncnFKeehDmCK0WqxJ60E6Mrn2f4wxc6rxdA07YD-ys_YdKMS3XDkf1J3_L0XoiR_tcw4ISFmMx0_fyiNma6rKq7ScR4eQ7wr61D4uMY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent flex flex-col justify-end p-8 text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">Look 01 • The Maharani Choker</span>
+<p class="font-headline-sm text-headline-sm mt-1 transition-transform duration-300 group-hover:translate-x-1">Symmetric Mughal geometry layered over hand-strung South Sea pearls</p>
+</div>
+</div>
+<div class="md:col-span-5 flex flex-col gap-6">
+<div class="group flex-1 rounded-xl overflow-hidden bg-surface-container relative min-h-[200px] shadow-sm transition-all duration-500 hover:shadow-xl">
+<img alt="Filigree details" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1XVzVNn-9sL0q1VyuEbRZIZat4zwdG4gV2aRgnPsBlTP96KgjqNJGciL5EAth0hBjFA9B_dCxFwz98TaluCHytPPNxJQiEfGDc2t4qT1qvbXAti04j5OwXzPMet03xzJcRLreMrmXmyWCpleOi2FkCf_V0n3di8xT1Qeu1Emv2Q1GBrBNWMUB1ERs967VS6kM5c7WZRqaOxO84nvVYLfu2gwynQ_KYOaPFQTt1zazwaM5Luh2qu8q6T9Xw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent flex flex-col justify-end p-6 text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">Look 02 • Temple Filigree</span>
+<p class="font-title-lg text-title-lg transition-transform duration-300 group-hover:translate-x-1">Antique finish 22K kadas with screw locks</p>
+</div>
+</div>
+<div class="group flex-1 rounded-xl overflow-hidden bg-surface-container relative min-h-[200px] shadow-sm transition-all duration-500 hover:shadow-xl">
+<img alt="Solitaire ring look" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1W3gN_X-iBs9zYa7KmP2M3ZeNl0I4SlA1w22CW4DzyZenQvt0NPej0lpupfFM-ZmaHDXo10oQ6FM8Owa25o36qcYFvcUGfo-KrdCvlhvH2SpdYlIURXut0zGlFpG3R6nkY0QJnHt5UouQJkTaaKDyPhaMTV-UVMc7NQq2-n_1sY15c1iLWQ_nWvyfwns0E6blqBV99OyrXJZG2BiUoLhPMdC7NeTgX3smbB4ovOkKZlYoYrnbeRO7wUzw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent flex flex-col justify-end p-6 text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">Look 03 • Solitaire Radiance</span>
+<p class="font-title-lg text-title-lg transition-transform duration-300 group-hover:translate-x-1">1.5ct Cushion cut in two-tone precious metal</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 10: BESPOKE CUSTOM DESIGN REQUEST SUITE -->
+<section class="w-full bg-surface-container-low py-20" id="bespoke-atelier">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-surface rounded-2xl p-8 sm:p-12 shadow-lg space-y-8 transition-all duration-300">
+<div class="text-center space-y-3">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Atelier Commission</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Bespoke Design Suite</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto">
+            Bring your sketch, family heirloom reimagination, or bridal dream to life. Our chief designer responds within 4 hours.
+          </p>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Occasion Archetype</label>
+<select class="w-full h-12 bg-surface-container px-4 rounded text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest transition-all duration-200 border border-transparent focus:border-secondary">
+<option>Bridal Trousseau Suite</option>
+<option>Milestone Anniversary</option>
+<option>Contemporary Engagement Solitaire</option>
+<option>Daily Luxury / Mangalsutra Redesign</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Preferred Metal Purity</label>
+<select class="w-full h-12 bg-surface-container px-4 rounded text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest transition-all duration-200 border border-transparent focus:border-secondary">
+<option>22K Royal Yellow Gold (916 BIS)</option>
+<option>24K Pure Temple Bullion (999 BIS)</option>
+<option>18K Rose Gold &amp; Diamonds</option>
+<option>Platinum 950 &amp; Solitaires</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Target Budget Range (₹ INR)</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+<label class="p-3 bg-surface-container rounded cursor-pointer text-center hover:bg-surface-container-high transition-all duration-200 hover:scale-105 active:scale-95 border border-transparent hover:border-secondary">
+<input checked="" class="hidden" name="budget" type="radio"/>
+<span class="font-label-sm text-label-sm uppercase text-primary font-medium">₹1L - ₹2.5L</span>
+</label>
+<label class="p-3 bg-surface-container rounded cursor-pointer text-center hover:bg-surface-container-high transition-all duration-200 hover:scale-105 active:scale-95 border border-transparent hover:border-secondary">
+<input class="hidden" name="budget" type="radio"/>
+<span class="font-label-sm text-label-sm uppercase text-primary font-medium">₹2.5L - ₹5L</span>
+</label>
+<label class="p-3 bg-surface-container rounded cursor-pointer text-center hover:bg-surface-container-high transition-all duration-200 hover:scale-105 active:scale-95 border border-transparent hover:border-secondary">
+<input class="hidden" name="budget" type="radio"/>
+<span class="font-label-sm text-label-sm uppercase text-primary font-medium">₹5L - ₹10L</span>
+</label>
+<label class="p-3 bg-surface-container rounded cursor-pointer text-center hover:bg-surface-container-high transition-all duration-200 hover:scale-105 active:scale-95 border border-transparent hover:border-secondary">
+<input class="hidden" name="budget" type="radio"/>
+<span class="font-label-sm text-label-sm uppercase text-primary font-medium">₹10L+ Heirloom</span>
+</label>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Special Design Notes &amp; Ancestral Gold Remodelling Details</label>
+<textarea class="w-full bg-surface-container p-4 rounded text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-all duration-200 border border-transparent focus:border-secondary" placeholder="Describe the motif, stone preferences (emeralds, polki, diamonds), or if you plan to supply family bullion for refining..." rows="3"></textarea>
+</div>
+<div class="p-4 rounded-lg bg-surface-container flex items-center justify-between transition-colors hover:bg-surface-container-high">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[24px]">cloud_upload</span>
+<div>
+<p class="font-title-md text-title-md text-primary font-medium">Upload Reference Photos or Sketches</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Accepts PNG, JPG, or PDF up to 25MB</p>
+</div>
+</div>
+<button class="px-4 py-2 bg-surface-container-highest rounded font-label-sm text-label-sm uppercase text-primary transition-all duration-200 hover:scale-105 active:scale-95" type="button">Browse Files</button>
+</div>
+<div class="pt-2">
+<button class="btn-shimmer-wrap w-full py-4 bg-primary-container hover:bg-secondary text-on-primary rounded font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-2 shadow-md transition-all duration-300 hover:scale-[1.01] active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Send Custom Brief to Atelier via WhatsApp</span>
+</button>
+<p class="text-center font-body-sm text-body-sm text-on-surface-variant mt-2">
+              Instant routing to Master Goldsmith Atelier with non-disclosure protection.
+            </p>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- SECTION 11: BOOK A PRIVATE BOUTIQUE STORE VISIT -->
+<section class="w-full bg-surface py-20" id="visit-us">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+<div class="text-center max-w-2xl mx-auto space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Private Viewing Salon</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Book an Atelier Experience</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Private velvet salon suites reserved exclusively for you and your family.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<div class="lg:col-span-7 bg-surface-container-low rounded-2xl p-8 space-y-6">
+<div class="space-y-3">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">1. Choose Boutique Salon</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="p-4 rounded-xl bg-surface shadow-sm cursor-pointer border-2 border-secondary transition-all duration-300 hover:scale-105">
+<span class="material-symbols-outlined text-secondary text-[20px]">storefront</span>
+<p class="font-title-md text-title-md text-primary font-semibold mt-2">Bandra Atelier, Mumbai</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Waterfield Road, Bandra West</p>
+</div>
+<div class="p-4 rounded-xl bg-surface shadow-sm cursor-pointer opacity-70 hover:opacity-100 transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-secondary">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">storefront</span>
+<p class="font-title-md text-title-md text-primary font-semibold mt-2">Jubilee Hills, Hyderabad</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Road No. 36, Private Reserve</p>
+</div>
+</div>
+</div>
+<div class="space-y-3">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">2. Select Preferred Time Slot</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+<button class="py-3 bg-surface rounded text-center font-label-md text-label-md uppercase text-on-surface-variant hover:bg-surface-container-high transition-all duration-200 hover:scale-105 active:scale-95 border border-transparent hover:border-secondary">11:00 AM</button>
+<button class="py-3 bg-primary-container text-on-primary rounded text-center font-label-md text-label-md uppercase shadow-sm transition-all duration-200 hover:scale-105 active:scale-95">02:00 PM</button>
+<button class="py-3 bg-surface rounded text-center font-label-md text-label-md uppercase text-on-surface-variant hover:bg-surface-container-high transition-all duration-200 hover:scale-105 active:scale-95 border border-transparent hover:border-secondary">04:30 PM</button>
+<button class="py-3 bg-surface rounded text-center font-label-md text-label-md uppercase text-on-surface-variant hover:bg-surface-container-high transition-all duration-200 hover:scale-105 active:scale-95 border border-transparent hover:border-secondary">06:00 PM</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Guest Count</label>
+<select class="w-full h-12 bg-surface px-4 rounded text-body-md text-on-surface focus:outline-none transition-all duration-200 border border-transparent focus:border-secondary">
+<option>1 - 2 Guests (Private Salon)</option>
+<option>3 - 5 Guests (Family Bridal Suite)</option>
+<option>6+ Guests (Complete Floor Reserved)</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Direct WhatsApp / Mobile</label>
+<input class="w-full h-12 bg-surface px-4 rounded text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none transition-all duration-200 border border-transparent focus:border-secondary" placeholder="+91 98765 43210" type="tel"/>
+</div>
+</div>
+<button class="btn-shimmer-wrap w-full py-4 bg-primary-container hover:bg-secondary text-on-primary rounded font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-lg hover:scale-[1.01] active:scale-[0.99]">
+<span class="material-symbols-outlined text-[18px]">event_available</span>
+<span>Confirm Private Viewing via WhatsApp Concierge</span>
+</button>
+</div>
+<div class="lg:col-span-5 space-y-6">
+<div class="bg-surface-container rounded-2xl p-6 space-y-4">
+<h3 class="font-headline-sm text-headline-sm text-primary">The Boutique Experience</h3>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span>Valet parking and private security reception upon arrival.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span>Microscope gemstone verification with our certified gemologist.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span>Curated beverage and artisanal tea service in velvet private suites.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span>No minimum purchase obligation—explore at your own serene pace.</span>
+</li>
+</ul>
+</div>
+<div class="p-6 rounded-2xl bg-secondary-fixed text-on-secondary-fixed space-y-2 transition-transform duration-300 hover:scale-[1.02]">
+<p class="font-title-md text-title-md font-semibold">Urgent Consultation Today?</p>
+<p class="font-body-sm text-body-sm">Call the salon front desk directly for same-day walk-in confirmation: <strong class="underline">+91 22 2640 8900</strong></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 12: INTERACTIVE SIZE GUIDE & CALCULATOR -->
+<section class="w-full bg-surface-container-low py-20">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+<div class="text-center max-w-xl mx-auto space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Precision Fitting</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Atelier Size Guide &amp; Converter</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Accurate ring sizing and kada diameter calculations to ensure an effortless heirloom fit.</p>
+</div>
+<div class="bg-surface rounded-2xl p-6 sm:p-10 shadow-sm space-y-8">
+<!-- Selector Toggle -->
+<div class="flex justify-center gap-4 border-b border-surface-variant pb-6">
+<button class="font-label-md text-label-md uppercase tracking-wider text-primary border-b-2 border-primary pb-2 font-semibold transition-all duration-200">Ring Size Chart</button>
+<button class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant pb-2 hover:text-primary transition-all duration-200 border-b-2 border-transparent hover:border-secondary">Bangle &amp; Kada Diameter</button>
+</div>
+<!-- Ring Size Conversion Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-high text-primary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="p-3">Indian Size</th>
+<th class="p-3">Circumference (mm)</th>
+<th class="p-3">Diameter (mm)</th>
+<th class="p-3">US Size</th>
+<th class="p-3">UK / Europe</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high text-on-surface">
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-3 font-semibold text-primary">10</td>
+<td class="p-3">50.0 mm</td>
+<td class="p-3">15.9 mm</td>
+<td class="p-3">5.5</td>
+<td class="p-3">K 1/2</td>
+</tr>
+<tr class="bg-surface-container-lowest hover:bg-surface-container-high/50 transition-colors">
+<td class="p-3 font-semibold text-primary">12</td>
+<td class="p-3">52.0 mm</td>
+<td class="p-3">16.5 mm</td>
+<td class="p-3">6.0</td>
+<td class="p-3">L 1/2</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-3 font-semibold text-primary">14 (Most Popular)</td>
+<td class="p-3">54.0 mm</td>
+<td class="p-3">17.2 mm</td>
+<td class="p-3">7.0</td>
+<td class="p-3">N 1/2</td>
+</tr>
+<tr class="bg-surface-container-lowest hover:bg-surface-container-high/50 transition-colors">
+<td class="p-3 font-semibold text-primary">16</td>
+<td class="p-3">56.0 mm</td>
+<td class="p-3">17.8 mm</td>
+<td class="p-3">7.5</td>
+<td class="p-3">P</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Interactive Measurement Assistant -->
+<div class="p-5 rounded-xl bg-surface-container flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[24px]">straighten</span>
+<p class="font-body-md text-body-md text-on-surface">Unsure of your size? Request a complimentary physical ring sizer mailed discreetly to your home.</p>
+</div>
+<a class="btn-shimmer-wrap px-5 py-2.5 bg-primary-container text-on-primary rounded font-label-sm text-label-sm uppercase tracking-wider shrink-0 hover:bg-secondary transition-all duration-300 hover:scale-105 active:scale-95" href="https://api.whatsapp.com" rel="noopener noreferrer" target="_blank">
+            Request Sizer Kit
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 13: PATRON TESTIMONIALS -->
+<section class="w-full bg-surface py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+<div class="text-center max-w-2xl mx-auto space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Voices of Distinction</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Patron Reflections</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Hear from brides, connoisseurs, and families who entrust their legacies to Aurelia.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm flex flex-col justify-between space-y-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
+<div class="space-y-4">
+<div class="flex text-secondary text-sm">★★★★★</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed">
+              "The bespoke bridal haar Aurelia created for my daughter was beyond breathtaking. What impressed us most was their absolute billing transparency—every milligram of gold and carat of polki had verified lab paperwork."
+            </p>
+</div>
+<div class="flex items-center gap-4 pt-4 border-t border-surface-container">
+<img alt="Gayatri Rao avatar" class="w-12 h-12 rounded-full object-cover transition-transform duration-300 hover:scale-110" src="https://lh3.googleusercontent.com/aida/AEtjO1Wo9DJmuod5y55o1Slg_-MvY3PF8AlCAZBpnNdG_Q23wTEP-lP7_UK0nv_NPA8294EMf706wHbiD3PskugEepfCSJ5IaYalzaOK9WJRV4Ugwdru4hwNG00d0zRsXktELaY-t6BJSJy-xNg4iwpB0vap86twi6IR24PZP69jTcvaM-nmsnNOLqKpKbUFuiVmfVUfKoL6PYOAhoPg0fxtZ5nDvOOTNxrtXQsXPyhodSZc9LUGFN3Jc-jtfng"/>
+<div>
+<p class="font-title-md text-title-md text-primary font-semibold">Gayatri Rao</p>
+<p class="font-body-sm text-body-sm text-secondary">Verified Buyer • Mumbai</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm flex flex-col justify-between space-y-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
+<div class="space-y-4">
+<div class="flex text-secondary text-sm">★★★★★</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed">
+              "I ordered a 1.5ct engagement ring through their WhatsApp concierge while based in London. They scheduled a live video vault preview, showing the diamond under 50x magnification. Delivery was flawlessly insured."
+            </p>
+</div>
+<div class="flex items-center gap-4 pt-4 border-t border-surface-container">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-title-lg font-semibold transition-transform duration-300 hover:scale-110">
+              RK
+            </div>
+<div>
+<p class="font-title-md text-title-md text-primary font-semibold">Rohit Kapoor</p>
+<p class="font-body-sm text-body-sm text-secondary">Verified Buyer • London / Delhi</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm flex flex-col justify-between space-y-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
+<div class="space-y-4">
+<div class="flex text-secondary text-sm">★★★★★</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed">
+              "We remodelled my grandmother's ancestral gold kadas with their atelier team. They preserved the original antique nakshi spirit while transforming the mechanism with modern spring locks. True master artists."
+            </p>
+</div>
+<div class="flex items-center gap-4 pt-4 border-t border-surface-container">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-title-lg font-semibold transition-transform duration-300 hover:scale-110">
+              SM
+            </div>
+<div>
+<p class="font-title-md text-title-md text-primary font-semibold">Sunita Mehra</p>
+<p class="font-body-sm text-body-sm text-secondary">Verified Buyer • Hyderabad</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 14: FREQUENTLY ASKED QUESTIONS -->
+<section class="w-full bg-surface-container-low py-20">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+<div class="text-center space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Inquiries &amp; Clarity</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Frequently Addressed Questions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Clear, transparent answers regarding our certifications, valuation, and custom process.</p>
+</div>
+<div class="space-y-4">
+<details class="bg-surface rounded-xl p-6 shadow-sm group [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer transition-all duration-300 hover:shadow-md" open="">
+<summary class="flex items-center justify-between font-title-lg text-title-lg text-primary font-semibold">
+<span>How do I verify the BIS Hallmark on my jewellery?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4 leading-relaxed">
+            Every piece from Aurelia is micro-laser inscribed with three official marks: the BIS logo, the purity grade (e.g. 22K916 or 24K999), and a unique 6-character alphanumeric HUID (Hallmark Unique Identification). You can enter this HUID directly into the official Government 'BIS CARE' mobile app to verify artisan origin and purity certification in real-time.
+          </p>
+</details>
+<details class="bg-surface rounded-xl p-6 shadow-sm group [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer transition-all duration-300 hover:shadow-md">
+<summary class="flex items-center justify-between font-title-lg text-title-lg text-primary font-semibold">
+<span>How does the WhatsApp consultation and purchase process work?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4 leading-relaxed">
+            Our WhatsApp concierge connects you directly with a senior jewellery specialist. We share high-resolution 4K macro video clips, model draping perspectives, and complete weight-breakdown invoices. Once finalized, payments are processed via encrypted banking gateways, and your piece is dispatched via insured, tamper-evident courier.
+          </p>
+</details>
+<details class="bg-surface rounded-xl p-6 shadow-sm group [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer transition-all duration-300 hover:shadow-md">
+<summary class="flex items-center justify-between font-title-lg text-title-lg text-primary font-semibold">
+<span>Can I bring my ancestral gold to remodel into a modern design?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4 leading-relaxed">
+            Yes. Our Remodelling Atelier conducts non-destructive XRF assay testing in your presence at our boutiques to establish purity. The full bullion value is credited 100% towards your new commission with zero deduction on gold content.
+          </p>
+</details>
+<details class="bg-surface rounded-xl p-6 shadow-sm group [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer transition-all duration-300 hover:shadow-md">
+<summary class="flex items-center justify-between font-title-lg text-title-lg text-primary font-semibold">
+<span>What is your lifetime exchange and valuation policy?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4 leading-relaxed">
+            We provide a transparent lifetime buyback and exchange guarantee: 100% of current gold market rate calculated against net gold weight, and 90% of prevailing diamond value for natural diamonds. Each transaction is accompanied by a formal credit certificate.
+          </p>
+</details>
+<details class="bg-surface rounded-xl p-6 shadow-sm group [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer transition-all duration-300 hover:shadow-md">
+<summary class="flex items-center justify-between font-title-lg text-title-lg text-primary font-semibold">
+<span>Are diamond certificates provided with solitaires?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4 leading-relaxed">
+            Every solitaire above 0.30ct includes an original, verifiable certificate from either the GIA (Gemological Institute of America) or IGI (International Gemological Institute), matching the microscopic laser inscription on the diamond's girdle.
+          </p>
+</details>
+</div>
+</div>
+</section>
+<!-- SECTION 15: VISIT OUR ATELIER & BOUTIQUES -->
+<section class="w-full bg-surface py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Sanctuaries of Artistry</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-1">Our Flagship Salons</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Experience the collections in personal, tranquil luxury.</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="inline-flex w-3 h-3 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+<span class="font-body-sm text-body-sm text-on-surface">Both Salons Open Today: 10:30 AM – 8:00 PM IST</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Mumbai Salon -->
+<div class="bg-surface-container-low rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between transition-all duration-500 hover:-translate-y-1.5 hover:shadow-xl">
+<div class="p-8 space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Flagship Atelier</span>
+<span class="px-2.5 py-1 rounded bg-surface font-label-sm text-label-sm text-primary">Private Vault Access</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Bandra West, Mumbai</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              42 Waterfield Road, Opposite Art Deco Square, Bandra West, Mumbai 400050<br/>
+              Valet Entrance on 16th Crossway
+            </p>
+<div class="space-y-1 pt-2 font-body-sm text-body-sm text-on-surface">
+<p><strong>Telephone:</strong> +91 (22) 2640 8900 / +91 98200 12345</p>
+<p><strong>Email:</strong> bandra@aureliajewellery.com</p>
+</div>
+</div>
+<!-- Static Location Canvas -->
+<div class="group relative w-full h-48 bg-cover bg-center overflow-hidden" data-location="Bandra West, Mumbai, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBWXvI0alsKjNAcv_7nDur99D0jEyy9zpmRMJlByLB4sHLrH_uX8_FfFIqvo6ghCFL-hbPlb9pY66AVB3IudhOnk4EUfLg54PP0HJb-icV9RKO78t2Y0gdfI-nLOuZ-llao3mXFa5QZiHLGuitPk3mmTYU2VNb3RHJL7U2wWZic7PLa2GdZlt5PINJiI-Pz2vdgYjidhSE79ajQ0MOgKh3NhCTuHnKUxiYyFLa_MGHIX3Lf_alPJGC9')">
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="p-6 bg-surface flex items-center justify-between border-t border-surface-container">
+<a class="group font-label-md text-label-md uppercase tracking-wider text-primary hover:text-secondary flex items-center gap-1 transition-colors" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:scale-110">directions</span>
+<span>Google Directions</span>
+</a>
+<a class="group font-label-md text-label-md uppercase tracking-wider text-[#25D366] flex items-center gap-1 hover:opacity-80 transition-opacity" href="https://api.whatsapp.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:scale-110">chat</span>
+<span>Concierge WhatsApp</span>
+</a>
+</div>
+</div>
+<!-- Hyderabad Salon -->
+<div class="bg-surface-container-low rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between transition-all duration-500 hover:-translate-y-1.5 hover:shadow-xl">
+<div class="p-8 space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Southern Atelier</span>
+<span class="px-2.5 py-1 rounded bg-surface font-label-sm text-label-sm text-primary">Polki Heritage Suite</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Jubilee Hills, Hyderabad</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Plot 812, Road No. 36, Landmark Vista, Jubilee Hills, Hyderabad 500033<br/>
+              Private Penthouse Suite
+            </p>
+<div class="space-y-1 pt-2 font-body-sm text-body-sm text-on-surface">
+<p><strong>Telephone:</strong> +91 (40) 4850 9200 / +91 97000 67890</p>
+<p><strong>Email:</strong> hyderabad@aureliajewellery.com</p>
+</div>
+</div>
+<!-- Static Location Canvas -->
+<div class="group relative w-full h-48 bg-cover bg-center overflow-hidden" data-location="Jubilee Hills, Hyderabad, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrsPturd9IhbO1VNpMqdlKOOz1fmxob7GTp7OwjORZbOzVZ_iyy343DmbUOcLa7AilffDh3sYtLszl7Q1OpSTKjSgx2iuQs7_RnYIoOiU1GyHwEEY3ZM_RffxwT6l5L2LCutNDSHFXNgzZMr8zQberpKR0bAMOVnGTCtW9aXIrrJxAVgO4UOTFyZSvdMYdR8qfFNcFF3xsnng4AqUPZvH_E75ie5xP5eyeKUBC-sL0g73Q7VhpxbMn')">
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="p-6 bg-surface flex items-center justify-between border-t border-surface-container">
+<a class="group font-label-md text-label-md uppercase tracking-wider text-primary hover:text-secondary flex items-center gap-1 transition-colors" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:scale-110">directions</span>
+<span>Google Directions</span>
+</a>
+<a class="group font-label-md text-label-md uppercase tracking-wider text-[#25D366] flex items-center gap-1 hover:opacity-80 transition-opacity" href="https://api.whatsapp.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:scale-110">chat</span>
+<span>Concierge WhatsApp</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 16: WISHLIST SLIDE-OUT DRAWER (PREVIEW MODULE) -->
+<section class="w-full bg-surface-container-high py-16">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-surface rounded-2xl p-6 sm:p-8 shadow-xl space-y-6">
+<div class="flex items-center justify-between border-b border-surface-container pb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">bookmark</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Your Curated Wishlist (2 Creations Saved)</h3>
+</div>
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold">Active Session</span>
+</div>
+<div class="space-y-4">
+<!-- Item 1 -->
+<div class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low justify-between transition-all duration-300 hover:bg-surface-container">
+<div class="flex items-center gap-4">
+<img alt="Wishlist item 1" class="w-16 h-16 rounded-lg object-cover transition-transform duration-300 hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1XLtbb9JkHq_A1l0yTJGjqSYIrAHB0H7TzFUPTJNK1pb5dMDY5a59G7cYrmVLhyo0CyjFhR67_f8KWzb_Ex1BwoPsmQvIHkGRXTY_OPzesKHGn6cUz9eLewBlWjMHgpLKFoRjpdcx83d69BDGaCpYjeD3lXOOfh55_g_DPxa4wy5jMDPDREza7jjC9fjoQvjZ9cxXdI35GMHZEDeLoLa-AtehHLJUi0WE3_MILJIcQwKKJ0HJQqaOfnKLo"/>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-medium">The Sitaara Emerald Drop Haar</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">22K Gold • Gross 68.4g • BIS 916</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-title-md text-title-md text-primary font-semibold">Price on Enquiry</p>
+<button class="font-label-sm text-label-sm uppercase text-error hover:underline transition-opacity hover:opacity-80">Remove</button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low justify-between transition-all duration-300 hover:bg-surface-container">
+<div class="flex items-center gap-4">
+<img alt="Wishlist item 2" class="w-16 h-16 rounded-lg object-cover transition-transform duration-300 hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1W3gN_X-iBs9zYa7KmP2M3ZeNl0I4SlA1w22CW4DzyZenQvt0NPej0lpupfFM-ZmaHDXo10oQ6FM8Owa25o36qcYFvcUGfo-KrdCvlhvH2SpdYlIURXut0zGlFpG3R6nkY0QJnHt5UouQJkTaaKDyPhaMTV-UVMc7NQq2-n_1sY15c1iLWQ_nWvyfwns0E6blqBV99OyrXJZG2BiUoLhPMdC7NeTgX3smbB4ovOkKZlYoYrnbeRO7wUzw"/>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-medium">Aria Diamond Solitaire 1.5ct</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">18K White &amp; Yellow • Triple Ex GIA</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-title-md text-title-md text-primary font-semibold">Price on Enquiry</p>
+<button class="font-label-sm text-label-sm uppercase text-error hover:underline transition-opacity hover:opacity-80">Remove</button>
+</div>
+</div>
+</div>
+<!-- Summary & Concierge Send -->
+<div class="p-6 rounded-xl bg-surface-container flex flex-col sm:flex-row items-center justify-between gap-6">
+<div class="space-y-1">
+<p class="font-label-sm text-label-sm uppercase text-secondary font-semibold">Estimated Net Gold Content</p>
+<p class="font-headline-sm text-headline-sm text-primary">~62.8 Grams Hallmarked Gold</p>
+</div>
+<a class="btn-shimmer-wrap w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#25D366] text-white rounded font-label-md text-label-md uppercase tracking-wider shadow-md hover:opacity-95 transition-all duration-300 hover:scale-105 active:scale-95" href="https://api.whatsapp.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Send Curated Wishlist on WhatsApp to Stylist</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</div></main><aside class="fixed bottom-6 right-6 z-50 animate-gentle-float"><a class="btn-shimmer-wrap group flex items-center gap-space-sm bg-primary-container hover:bg-secondary text-on-primary px-space-md py-3 rounded-full shadow-[0_8px_30px_rgba(20,33,61,0.3)] transition-all duration-300 hover:scale-105 active:scale-95" href="https://api.whatsapp.com" rel="noopener noreferrer" target="_blank"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[20px] transition-transform duration-200 group-hover:scale-110">chat_bubble</span><span class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim animate-ping opacity-75"></span><span class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim"></span></div><span class="font-label-md text-label-md uppercase tracking-wider hidden sm:inline-block">Chat with Jewellery Expert</span></a></aside><footer class="w-full bg-primary-container text-surface border-t border-primary-container"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl"><div class="lg:col-span-2 space-y-space-md"><div class="flex flex-col"><span class="font-headline-md text-headline-md text-secondary-fixed tracking-wider">AURELIA</span><span class="font-label-sm text-label-sm uppercase tracking-widest text-on-primary-container">Fine Jewellery Atelier • Est. 1988</span></div><p class="font-body-md text-body-md text-on-primary-container max-w-md">Dedicated to sacred gold artistry and contemporary heirloom creation. Every artifact is handcrafted in 22K/24K BIS hallmarked gold and certified natural gemstones.</p><div class="pt-space-xs flex items-center gap-space-md text-secondary-fixed-dim font-label-md text-label-md uppercase"><span class="material-symbols-outlined text-[18px]">verified_user</span><span>BIS Hallmarked 916</span><span class="text-on-primary-container">•</span><span>IGI / GIA Certified</span></div></div><div class="space-y-space-sm"><h3 class="font-label-md text-label-md uppercase tracking-widest text-secondary-fixed">Boutiques</h3><div class="space-y-space-sm font-body-sm text-body-sm text-on-primary-container"><div class="space-y-1"><p class="text-surface font-medium">Mumbai Atelier</p><p>Waterfield Road, Bandra West, Mumbai 400050</p></div><div class="space-y-1 pt-2"><p class="text-surface font-medium">Hyderabad Atelier</p><p>Road No. 36, Jubilee Hills, Hyderabad 500033</p></div></div></div><div class="space-y-space-sm"><h3 class="font-label-md text-label-md uppercase tracking-widest text-secondary-fixed">Private Concierge</h3><div class="space-y-space-xs font-body-sm text-body-sm text-on-primary-container"><p>Bespoke Bridal Consultations</p><p>Private Vault Viewings</p><p>HUID &amp; Hallmark Verification</p><a class="inline-block pt-space-xs text-secondary-fixed-dim hover:text-surface transition-colors font-label-md text-label-md uppercase underline underline-offset-4" data-path="bespoke-atelier" href="#">Book Atelier Appointment</a></div></div><div class="space-y-space-sm"><h3 class="font-label-md text-label-md uppercase tracking-widest text-secondary-fixed">Privilege Journal</h3><p class="font-body-sm text-body-sm text-on-primary-container">Receive private salon invitations and curated previews of high jewellery releases.</p><div class="pt-space-xs flex"><input class="w-full bg-surface-container-lowest/10 border border-on-primary-container/40 rounded-l px-space-md py-2 font-body-sm text-body-sm text-surface placeholder:text-on-primary-container focus:outline-none focus:border-secondary-fixed transition-colors" placeholder="Your email address" type="email"/><button class="bg-secondary hover:bg-secondary-fixed hover:text-on-secondary-fixed text-on-secondary px-space-md py-2 rounded-r font-label-md text-label-md uppercase transition-all duration-200 shrink-0 hover:scale-105 active:scale-95" type="button">Join</button></div></div></div><div class="mt-16 pt-8 border-t border-on-primary-container/20 flex flex-col sm:flex-row items-center justify-between gap-space-md font-label-sm text-label-sm text-on-primary-container"><p>© 2025 Aurelia Fine Jewellery Private Limited. All rights reserved.</p><div class="flex items-center gap-space-lg"><a class="hover:text-surface transition-colors" href="#">BIS Certification Registry</a><a class="hover:text-surface transition-colors" href="#">Privacy Charter</a><a class="hover:text-surface transition-colors" href="#">Atelier Terms</a></div></div></div></footer></body></html>

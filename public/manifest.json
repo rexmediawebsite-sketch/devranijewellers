@@ -1,0 +1,16 @@
+{
+  "name": "Aurelia Fine Jewellery",
+  "short_name": "Aurelia Jewels",
+  "description": "Handcrafted Luxury Gold, Polki & Certified Diamond Jewellery Showcase",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#FAF7F2",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
