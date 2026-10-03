@@ -37,12 +37,12 @@ export const CONFIG = {
       hoursHi: "प्रतिदिन (सोम - रवि): सुबह 10:00 AM से रात 8:00 PM",
       phone: "+91 98350 75841",
       phoneSecondary: "+91 92048 58261",
-      mapUrl: "https://www.google.com/maps/search/?api=1&query=Sonapatti+Road+Badi+Bazar+Sitamarhi+Bihar+843302",
+      mapUrl: "https://maps.app.goo.gl/9b3mSjSSaxLzwm688",
     }
   ],
   
-  // Google Maps Embed Iframe URL for Sonapatti Road, Badi Bazar, Sitamarhi
-  mapEmbedUrl: "https://maps.google.com/maps?q=Sonapatti%20Road,%20Badi%20Bazar,%20Sitamarhi,%20Bihar%20843302&t=&z=16&ie=UTF8&iwloc=&output=embed",
+  // Official Google Maps Embed for Devrani Jewellers (DRJ)
+  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3568.1723145452294!2d85.482006!3d26.5938809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ecf110659e6e5d%3A0x8349e01d9753e40b!2sDevrani%20Jewellers%20(DRJ)!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin",
 
   // Real Showroom Gallery Photos (Added by User)
   shopGallery: [

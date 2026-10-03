@@ -135,17 +135,32 @@ export function StoreVisit() {
           </div>
 
           {/* Right: Google Maps Embed Iframe */}
-          <div className="lg:col-span-6 min-h-[420px] bg-white border border-[#E5E3DF] shadow-md rounded-2xl overflow-hidden relative">
+          <div className="lg:col-span-6 min-h-[440px] bg-white border border-[#E5E3DF] shadow-md rounded-2xl overflow-hidden relative flex flex-col">
+            <div className="py-2.5 px-4 bg-[#14213D] text-white flex items-center justify-between text-xs border-b border-[#E5E3DF]/20">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-[#B89B72]" />
+                <span className="font-medium font-sans">Devrani Jewellers (DRJ) • Sitamarhi</span>
+              </div>
+              <a
+                href={CONFIG.locations[0].mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#B89B72] hover:bg-[#D4BE9B] text-[#14213D] font-semibold text-[11px] transition-all"
+              >
+                <span>Open Google Maps</span>
+                <Navigation className="w-3 h-3" />
+              </a>
+            </div>
             <iframe
-              title="Devrani Jewellers Showroom Map"
+              title="Devrani Jewellers (DRJ) Official Google Map"
               src={CONFIG.mapEmbedUrl}
               width="100%"
               height="100%"
-              style={{ border: 0, minHeight: '450px' }}
+              style={{ border: 0, minHeight: '440px' }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-full"
+              className="w-full flex-1"
             />
           </div>
         </div>
