@@ -60,7 +60,7 @@
   scrollbar-width: none;
 }
 
-/* Golden Text Shining / Shimmer Animation */
+/* Golden Text Shining / Shimmer Animation (GPU Accelerated for 60/120fps) */
 @keyframes goldTextShine {
   0% {
     background-position: -200% center;
@@ -87,6 +87,10 @@
   -webkit-text-fill-color: transparent;
   animation: goldTextShine 3.5s linear infinite;
   display: inline-block;
+  will-change: background-position;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .text-gold-shine-slow {
@@ -105,6 +109,48 @@
   -webkit-text-fill-color: transparent;
   animation: goldTextShine 5s linear infinite;
   display: inline-block;
+  will-change: background-position;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Smooth mobile responsiveness and touch performance */
+@media (max-width: 768px) {
+  .text-gold-shine {
+    animation-duration: 4s; /* slightly gentler cycle on mobile for battery preservation */
+  }
+}
+
+/* Accessibility: Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .text-gold-shine,
+  .text-gold-shine-slow,
+  .animate-marquee,
+  .animate-spin,
+  .animate-pulse {
+    animation: none !important;
+    background-position: center !important;
+  }
+}
+
+/* Mobile Touch & Safe Area Utilities */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button, a, input, select, textarea {
+  touch-action: manipulation;
+}
+
+.safe-area-pb {
+  padding-bottom: max(0.65rem, env(safe-area-inset-bottom));
+}
+
+.gpu-accelerate {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 /* Gold glow and metallic utilities */

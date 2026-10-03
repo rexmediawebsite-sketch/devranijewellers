@@ -15,8 +15,12 @@ import {
 } from 'lucide-react';
 import { CONFIG } from '../config';
 import { openWhatsApp } from '../utils/whatsapp';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export function LegalPage({ initialTab = 'terms' }) {
+  const { lang } = useLanguage();
+  const isHi = lang === 'hi';
+
   const [searchParams, setSearchParams] = useSearchParams();
   const queryTab = searchParams.get('tab');
   const [activeTab, setActiveTab] = useState(queryTab || initialTab);
@@ -36,27 +40,29 @@ export function LegalPage({ initialTab = 'terms' }) {
   };
 
   const tabs = [
-    { id: 'security', label: 'Security & Purity', icon: ShieldCheck },
-    { id: 'terms', label: 'Terms & Conditions', icon: FileText },
-    { id: 'privacy', label: 'Privacy Policy', icon: Lock },
-    { id: 'returns', label: 'Return & Exchange', icon: RefreshCw },
-    { id: 'cookies', label: 'Cookie Policy', icon: Cookie },
+    { id: 'security', label: isHi ? 'सुरक्षा व शुद्धता' : 'Security & Purity', icon: ShieldCheck },
+    { id: 'terms', label: isHi ? 'नियम व शर्तें' : 'Terms & Conditions', icon: FileText },
+    { id: 'privacy', label: isHi ? 'गोपनीयता नीति' : 'Privacy Policy', icon: Lock },
+    { id: 'returns', label: isHi ? 'एक्सचेंज व बायबैक' : 'Return & Exchange', icon: RefreshCw },
+    { id: 'cookies', label: isHi ? 'कुकी नीति' : 'Cookie Policy', icon: Cookie },
   ];
 
   return (
     <div className="bg-[#FAF7F2] min-h-screen text-[#14213D] pt-24 pb-20">
       {/* Hero Header */}
-      <section className="bg-[#14213D] text-white py-16 px-4 sm:px-6 lg:px-8 border-b border-[#B89B72]/30 relative overflow-hidden">
+      <section className="bg-[#14213D] text-white py-14 sm:py-16 px-4 sm:px-6 lg:px-8 border-b border-[#B89B72]/30 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#B89B72]/10 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-4xl mx-auto text-center relative z-10 space-y-3">
           <span className="text-xs uppercase tracking-[0.25em] text-gold-shine font-semibold">
-            Trust, Security & Transparency
+            {isHi ? 'शुद्धता, सुरक्षा एवं पारदर्शिता' : 'Trust, Security & Transparency'}
           </span>
-          <h1 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-normal tracking-wide">
-            Customer Policies & Security
+          <h1 className="font-cinzel text-2xl sm:text-4xl lg:text-5xl font-normal tracking-wide">
+            {isHi ? 'ग्राहक सुरक्षा व नियम नीतियां' : 'Customer Policies & Security'}
           </h1>
-          <p className="text-slate-300 text-sm sm:text-base font-light max-w-2xl mx-auto">
-            At {CONFIG.shopName}, your trust, privacy, and peace of mind are our highest priority. Everything is written in plain, simple English with zero hidden conditions.
+          <p className="text-slate-300 text-xs sm:text-base font-light max-w-2xl mx-auto">
+            {isHi 
+              ? `देवरानी ज्वेलर्स (DRJ) में आपकी संतुष्टि, आभूषण शुद्धता और पूर्ण गोपनीयता हमारी सर्वोच्च प्राथमिकता है।`
+              : `At ${CONFIG.shopName}, your trust, privacy, and peace of mind are our highest priority. Everything is written in plain, simple English with zero hidden conditions.`}
           </p>
         </div>
       </section>

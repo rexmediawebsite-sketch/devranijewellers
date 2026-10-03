@@ -39,7 +39,7 @@ export function StoreVisit() {
                 </h3>
 
                 <p className="mt-2 text-xs sm:text-sm text-[#14213D]/90 font-medium leading-relaxed">
-                  {loc.address}
+                  {lang === 'hi' && loc.addressHi ? loc.addressHi : loc.address}
                 </p>
 
                 {loc.landmark && (
@@ -63,7 +63,9 @@ export function StoreVisit() {
                 <div className="mt-5 pt-4 border-t border-[#E5E3DF] space-y-2.5 text-xs text-[#6B7280]">
                   <div className="flex items-center gap-2">
                     <Clock className="w-4 h-4 text-[#B89B72] shrink-0" />
-                    <span className="font-medium text-[#14213D]">{loc.hours}</span>
+                    <span className="font-medium text-[#14213D]">
+                      {lang === 'hi' && loc.hoursHi ? loc.hoursHi : loc.hours}
+                    </span>
                   </div>
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
                     <div className="flex items-center gap-2">
@@ -95,11 +97,11 @@ export function StoreVisit() {
                   </a>
 
                   <button
-                    onClick={() => openWhatsApp({ customText: `Hello Devrani Jewellers, I would like to visit your showroom on Sona Patti Road, Badi Bazar. Could you guide me?` })}
+                    onClick={() => openWhatsApp({ customText: `Namaste Devrani Jewellers, I would like to visit your showroom on Sona Patti Road, Badi Bazar.` })}
                     className="btn-gold-action inline-flex items-center gap-1.5 px-5 py-2.5 active:scale-95 text-white text-xs uppercase tracking-[0.16em] font-semibold shadow-sm transition-all rounded-full"
                   >
                     <MessageCircle className="w-3.5 h-3.5 fill-white text-white" />
-                    <span>WhatsApp Showroom</span>
+                    <span>{lang === 'hi' ? 'व्हाट्सएप करें' : 'WhatsApp Showroom'}</span>
                   </button>
                   
                   <a
@@ -107,7 +109,7 @@ export function StoreVisit() {
                     className="inline-flex items-center gap-1.5 px-4 py-2.5 bg-[#14213D] hover:bg-[#1f2f52] active:scale-95 text-white text-xs uppercase tracking-wider font-semibold shadow-sm transition-all rounded-full"
                   >
                     <Phone className="w-3.5 h-3.5 text-[#B89B72]" />
-                    <span>Call Now</span>
+                    <span>{lang === 'hi' ? 'कॉल करें' : 'Call Now'}</span>
                   </a>
                 </div>
               </div>
