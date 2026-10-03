@@ -18,29 +18,21 @@ export function BestDesignsShowcase() {
   const [isHovered, setIsHovered] = useState(false);
   const [showHandPrompt, setShowHandPrompt] = useState(true);
 
-  // Curated showcase pieces featuring the emerald octagonal jewel and luxury pieces
-  const showcaseList = [
-    {
-      id: 'aur-emerald',
-      name: 'The Emerald Sultan Solitaire Pendant',
-      category: 'necklaces',
-      categoryName: 'Pendants',
-      purity: '18K Yellow Gold (BIS 916)',
-      priceDisplay: 'Starting ₹88,000',
-      image: 'https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=900&auto=format&fit=crop',
-    },
-    ...PRODUCTS.slice(0, 7),
-    {
-      id: 'aur-emerald-2',
-      name: 'The Emerald Sultan Solitaire Pendant',
-      category: 'necklaces',
-      categoryName: 'Pendants',
-      purity: '18K Yellow Gold (BIS 916)',
-      priceDisplay: 'Starting ₹88,000',
-      image: 'https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=900&auto=format&fit=crop',
-    },
-    ...PRODUCTS.slice(0, 7),
-  ];
+  // Curated boutique mix for the 3D rotating showcase (Earrings, Necklaces, Mangalsutra, Bangles, Pendants, Rings)
+  const curatedShowcaseItems = [
+    PRODUCTS.find((p) => p.id === 'aur-03') || PRODUCTS[1], // Royal Gold Jhumkas (Earrings)
+    PRODUCTS.find((p) => p.id === 'aur-01') || PRODUCTS[0], // Royal Polki Choker (Necklace)
+    PRODUCTS.find((p) => p.id === 'aur-14') || PRODUCTS[5], // Vedic Mangalsutra (Mangalsutra)
+    PRODUCTS.find((p) => p.id === 'aur-04') || PRODUCTS[2], // Empress Heritage Kangan (Bangles)
+    PRODUCTS.find((p) => p.id === 'aur-22') || PRODUCTS[9], // Auspicious Peacock Pendant (Pendants)
+    PRODUCTS.find((p) => p.id === 'aur-09') || PRODUCTS[7], // Classic Drop Danglers (Earrings)
+    PRODUCTS.find((p) => p.id === 'aur-02') || PRODUCTS[4], // Solitaire Ring (Rings)
+    PRODUCTS.find((p) => p.id === 'aur-06') || PRODUCTS[8], // Laser-Cut Gold Kada (Bangles)
+    PRODUCTS.find((p) => p.id === 'aur-05') || PRODUCTS[6], // Traditional Rani Haar (Bridal / Necklace)
+    PRODUCTS.find((p) => p.id === 'aur-20') || PRODUCTS[12], // Chandbali Earrings (Earrings)
+  ].filter(Boolean);
+
+  const showcaseList = [...curatedShowcaseItems, ...curatedShowcaseItems];
 
   const totalCards = showcaseList.length;
   const cardWidth = 280;
