@@ -1,7 +1,6 @@
 import React from 'react';
 import { PageBanner } from '../components/common/PageBanner';
 import { StoreVisit } from '../sections/StoreVisit';
-import { ShopGallery } from '../components/common/ShopGallery';
 import { useModals } from '../context/ModalContext';
 import { openWhatsApp } from '../utils/whatsapp';
 import { Calendar, MessageCircle, MapPin, Coffee, ShieldCheck } from 'lucide-react';
@@ -68,9 +67,6 @@ export function VisitPage() {
           </div>
         </div>
       </section>
-
-      {/* Real Showroom Photo Gallery */}
-      <ShopGallery />
 
       {/* Flagship Showroom Details & Interactive Map */}
       <StoreVisit />
