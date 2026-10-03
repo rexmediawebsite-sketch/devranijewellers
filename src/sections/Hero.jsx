@@ -53,7 +53,7 @@ export function Hero() {
                 <span className="font-cinzel text-3xl sm:text-4xl lg:text-[46px] font-semibold text-[#14213D] tracking-[0.06em] uppercase block leading-[1.18]">
                   {t.hero?.titleLine1 || 'Timeless Heirlooms,'}
                 </span>
-                <span className="font-serif italic font-normal text-3xl sm:text-5xl lg:text-[52px] text-[#B89B72] block leading-[1.16]">
+                <span className="font-serif italic font-normal text-3xl sm:text-5xl lg:text-[52px] text-gold-shine-slow block leading-[1.16]">
                   {t.hero?.titleLine2 || 'Sculpted in Pure Gold.'}
                 </span>
               </motion.h1>

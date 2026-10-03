@@ -39,7 +39,7 @@ export function Footer() {
                 {CONFIG.shopName}
               </h3>
             </Link>
-            <p className="text-xs uppercase tracking-[0.22em] text-[#B89B72] font-semibold font-sans">
+            <p className="text-xs uppercase tracking-[0.22em] text-gold-shine font-semibold font-sans">
               Purity & Trust • BIS Hallmarked
             </p>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-light font-sans max-w-sm">

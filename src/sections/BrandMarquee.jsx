@@ -21,7 +21,7 @@ export function BrandMarquee() {
             <span className="font-sans text-[11px] sm:text-xs tracking-[0.14em] uppercase font-semibold flex items-center gap-2">
               <TrendingUp className="w-3.5 h-3.5 text-[#B89B72] shrink-0" />
               <span className="text-white/75">{item.label}:</span>
-              <span className="text-[#D4BE9B] font-bold tabular-nums">{item.value}</span>
+              <span className="text-gold-shine font-bold tabular-nums">{item.value}</span>
             </span>
             <LuxuryDiamondIcon className="w-2.5 h-2.5 text-[#B89B72]/60" />
           </div>

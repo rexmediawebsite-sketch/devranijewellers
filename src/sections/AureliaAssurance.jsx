@@ -20,12 +20,12 @@ export function AureliaAssurance() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="text-center lg:text-left shrink-0 max-w-lg"
           >
-            <span className="text-[11px] font-sans font-semibold uppercase tracking-[0.28em] text-[#B89B72] block mb-2">
+            <span className="text-[11px] font-sans font-semibold uppercase tracking-[0.28em] text-gold-shine block mb-2">
               The DRJ Standard
             </span>
-            <h2 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-normal text-[#14213D] tracking-tight">
+            <h2 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-normal text-[#14213D] tracking-[0.06em] uppercase">
               <span>DRJ </span>
-              <span className="text-[#B89B72] font-cinzel font-medium">Assurance</span>
+              <span className="text-gold-shine font-cinzel font-medium">Assurance</span>
             </h2>
             <p className="mt-3 font-serif text-lg sm:text-xl text-[#6B7280] font-light italic">
               Crafted by experts, cherished by you

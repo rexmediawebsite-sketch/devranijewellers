@@ -107,7 +107,7 @@ export function Navbar() {
             <span className="font-cinzel text-xl sm:text-2xl tracking-[0.16em] uppercase transition-colors font-medium text-[#14213D] group-hover:text-[#B89B72]">
               {CONFIG.shopName}
             </span>
-            <span className="text-[9px] uppercase tracking-[0.26em] font-sans font-semibold text-[#B89B72] mt-0.5">
+            <span className="text-[9px] uppercase tracking-[0.26em] font-sans font-semibold text-gold-shine mt-0.5">
               Pure Gold & Silver
             </span>
           </Link>

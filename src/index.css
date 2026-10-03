@@ -60,6 +60,53 @@
   scrollbar-width: none;
 }
 
+/* Golden Text Shining / Shimmer Animation */
+@keyframes goldTextShine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.text-gold-shine,
+.text-gold-shimmer {
+  background: linear-gradient(
+    110deg,
+    #9A7D55 0%,
+    #B89B72 20%,
+    #D4BE9B 40%,
+    #FFFDF7 50%,
+    #D4BE9B 60%,
+    #B89B72 80%,
+    #9A7D55 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldTextShine 3.5s linear infinite;
+  display: inline-block;
+}
+
+.text-gold-shine-slow {
+  background: linear-gradient(
+    110deg,
+    #9A7D55 0%,
+    #B89B72 20%,
+    #D4BE9B 40%,
+    #FFFDF7 50%,
+    #D4BE9B 60%,
+    #B89B72 80%,
+    #9A7D55 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldTextShine 5s linear infinite;
+  display: inline-block;
+}
+
 /* Gold glow and metallic utilities */
 .text-gold-gradient {
   background: linear-gradient(135deg, #FAF6F0 0%, #D4BE9B 30%, #B89B72 65%, #9A7D55 100%);

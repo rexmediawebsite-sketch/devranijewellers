@@ -13,8 +13,8 @@ export function SectionHeading({
       {eyebrow && (
         <div className={`inline-flex items-center gap-2 px-3.5 py-1 rounded-full mb-3 text-[10px] sm:text-[11px] uppercase tracking-[0.24em] font-sans font-semibold border transition-all ${
           dark 
-            ? 'border-[#E5E3DF]/30 bg-white/10 text-[#D4BE9B] shadow-sm' 
-            : 'border-[#E5E3DF] bg-[#F5F4F2] text-[#B89B72] shadow-2xs'
+            ? 'border-[#E5E3DF]/30 bg-white/10 text-gold-shine shadow-sm' 
+            : 'border-[#E5E3DF] bg-[#F5F4F2] text-gold-shine shadow-2xs'
         }`}>
           <span className="w-1.5 h-1.5 rounded-full bg-[#B89B72] shrink-0" />
           <span>{eyebrow}</span>
