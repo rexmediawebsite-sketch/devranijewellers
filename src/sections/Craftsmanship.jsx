@@ -22,17 +22,17 @@ export function Craftsmanship() {
             <div className="relative p-3 bg-white border border-[#E5E3DF] rounded-2xl shadow-sm">
               <div className="aspect-4/5 w-full overflow-hidden bg-[#14213D] relative rounded-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1200&auto=format&fit=crop"
-                  alt="Master Karigar Goldsmith at Work"
+                  src="/shop/store-entrance-drj.jpg"
+                  alt="Devrani Jewellers (DRJ) Showroom Entrance"
                   className="w-full h-full object-cover filter contrast-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#14213D]/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#14213D]/85 via-[#14213D]/20 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 text-white">
                   <span className="text-[10px] uppercase tracking-widest text-[#B89B72] font-semibold block">
-                    Johari Bazaar Atelier
+                    Devrani Jewellers • Sona Patti Road
                   </span>
                   <p className="font-serif text-lg font-light mt-1">
-                    "Every strike of the goldsmith's hammer is an homage to timeless eternity."
+                    "हॉलमार्क जेवर उपलब्ध है — शुद्धता और विश्वास की अटूट परंपरा।"
                   </p>
                 </div>
               </div>

@@ -22,17 +22,17 @@ export function SectionHeading({
       )}
       
       {title && (
-        <h2 className={`font-cinzel text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight ${
+        <h2 className={`font-cinzel text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-semibold tracking-[0.06em] sm:tracking-[0.1em] uppercase ${
           dark ? 'text-white' : 'text-[#14213D]'
-        } leading-tight`}>
+        } leading-[1.2]`}>
           {title}
         </h2>
       )}
 
       {subtitle && (
-        <p className={`mt-3 text-sm sm:text-base max-w-2xl font-serif font-light leading-relaxed italic ${
+        <p className={`mt-3.5 text-sm sm:text-base max-w-2xl font-serif font-normal leading-relaxed ${
           centered ? 'mx-auto' : ''
-        } ${dark ? 'text-white/75' : 'text-[#6B7280]'}`}>
+        } ${dark ? 'text-slate-200' : 'text-[#6B7280]'}`}>
           {subtitle}
         </p>
       )}

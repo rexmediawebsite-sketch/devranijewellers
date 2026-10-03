@@ -124,7 +124,7 @@ export const PRODUCTS = [
     approxPriceTier: 'above75k',
     priceDisplay: 'Bespoke Bridal Consultation',
     occasion: 'wedding',
-    description: 'The crowning jewel of the Aurelia atelier: A grand double-tier Polki Raani Haar, matching choker, heavy Maang Tikka, Nath, and matching Chandelier earrings.',
+    description: 'The crowning jewel of the DRJ atelier: A grand double-tier Polki Raani Haar, matching choker, heavy Maang Tikka, Nath, and matching Chandelier earrings.',
     image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=900&auto=format&fit=crop',
     gallery: [
       'https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=900&auto=format&fit=crop',
@@ -350,7 +350,7 @@ export const PRODUCTS = [
   },
   {
     id: 'aur-16',
-    name: 'Aurelia Little Cherub Gold Charm & Nazariya',
+    name: 'DRJ Little Cherub Gold Charm & Nazariya',
     category: 'bangles',
     categoryName: 'Bangles',
     purity: '22K Yellow Gold & Protective Black Beads',

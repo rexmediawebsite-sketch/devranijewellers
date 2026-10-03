@@ -87,7 +87,6 @@ export function Navbar() {
     { label: t.nav.home, to: '/' },
     { label: t.nav.collections, to: '/collections' },
     { label: t.nav.craftsmanship, to: '/heritage' },
-    { label: t.nav.customDesign, to: '/bespoke' },
     { label: t.nav.visitUs, to: '/visit' },
     { label: lang === 'hi' ? 'साइज़ व देखभाल' : 'Care & FAQ', to: '/care-guide' },
   ];
@@ -105,11 +104,11 @@ export function Navbar() {
             to="/"
             className="flex flex-col group"
           >
-            <span className="font-cinzel text-xl sm:text-2xl tracking-[0.2em] uppercase transition-colors font-medium text-[#14213D] group-hover:text-[#B89B72]">
+            <span className="font-cinzel text-xl sm:text-2xl tracking-[0.16em] uppercase transition-colors font-medium text-[#14213D] group-hover:text-[#B89B72]">
               {CONFIG.shopName}
             </span>
-            <span className="text-[9px] uppercase tracking-[0.28em] font-sans font-medium text-[#B89B72]">
-              Haute Joaillerie
+            <span className="text-[9px] uppercase tracking-[0.26em] font-sans font-semibold text-[#B89B72] mt-0.5">
+              Pure Gold & Silver
             </span>
           </Link>
 
@@ -120,10 +119,10 @@ export function Navbar() {
                 key={link.to}
                 to={link.to}
                 className={({ isActive }) =>
-                  `text-xs uppercase tracking-widest transition-all font-sans relative py-1 hover:text-[#B89B72] ${
+                  `text-xs uppercase tracking-[0.18em] transition-all font-sans relative py-1 hover:text-[#B89B72] ${
                     isActive
                       ? 'text-[#14213D] font-bold'
-                      : 'text-[#14213D]/85 font-medium'
+                      : 'text-[#14213D]/80 font-medium'
                   }`
                 }
               >
@@ -170,9 +169,9 @@ export function Navbar() {
             {/* WhatsApp CTA Button */}
             <button
               onClick={() => openWhatsApp()}
-              className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#25D366] text-white hover:bg-[#20ba59] active:scale-95 transition-all text-xs uppercase tracking-[0.16em] font-semibold shadow-md"
+              className="btn-gold-action hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-white active:scale-95 transition-all text-xs uppercase tracking-[0.16em] font-semibold shadow-md"
             >
-              <MessageCircle className="w-3.5 h-3.5 fill-current" />
+              <MessageCircle className="w-3.5 h-3.5 fill-white text-white" />
               <span>{t.nav.enquireWhatsapp}</span>
             </button>
 
@@ -218,7 +217,7 @@ export function Navbar() {
                       {CONFIG.shopName}
                     </span>
                     <span className="text-[10px] text-[#B89B72] uppercase tracking-widest font-sans">
-                      Haute Joaillerie
+                      Pure Gold & Silver
                     </span>
                   </div>
                   <button
@@ -263,9 +262,9 @@ export function Navbar() {
                       setMobileMenuOpen(false);
                       openWhatsApp();
                     }}
-                    className="w-full py-3.5 bg-[#25D366] text-white flex items-center justify-center gap-2 text-xs uppercase tracking-widest font-semibold rounded-full hover:bg-[#20ba59] active:scale-98 transition-all shadow-md"
+                    className="btn-gold-action w-full py-3.5 text-white flex items-center justify-center gap-2 text-xs uppercase tracking-[0.18em] font-semibold rounded-full active:scale-98 transition-all shadow-md"
                   >
-                    <MessageCircle className="w-4 h-4 fill-current text-white" />
+                    <MessageCircle className="w-4 h-4 fill-white text-white" />
                     <span>{t.nav.enquireWhatsapp}</span>
                   </button>
 
@@ -279,8 +278,8 @@ export function Navbar() {
                     </button>
                   </div>
 
-                  <div className="text-[11px] text-[#F5F4F2]/50 text-center pt-2 font-sans">
-                    {CONFIG.locations[0].city} • {CONFIG.phoneDisplay}
+                  <div className="text-[11px] text-[#F5F4F2]/60 text-center pt-2 font-sans">
+                    Sona Patti Road, Badi Bazar • {CONFIG.phonePrimary}
                   </div>
                 </div>
               </motion.div>

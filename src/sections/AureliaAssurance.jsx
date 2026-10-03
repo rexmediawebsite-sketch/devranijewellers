@@ -21,10 +21,10 @@ export function AureliaAssurance() {
             className="text-center lg:text-left shrink-0 max-w-lg"
           >
             <span className="text-[11px] font-sans font-semibold uppercase tracking-[0.28em] text-[#B89B72] block mb-2">
-              The Aurelia Standard
+              The DRJ Standard
             </span>
             <h2 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-normal text-[#14213D] tracking-tight">
-              <span>Aurelia </span>
+              <span>DRJ </span>
               <span className="text-[#B89B72] font-cinzel font-medium">Assurance</span>
             </h2>
             <p className="mt-3 font-serif text-lg sm:text-xl text-[#6B7280] font-light italic">

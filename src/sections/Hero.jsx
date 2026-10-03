@@ -34,23 +34,27 @@ export function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white border border-[#E5E3DF] text-[#B89B72] font-sans text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-widest font-semibold shadow-xs max-w-full"
+              className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-[#E5E3DF] text-[#B89B72] font-sans text-[11px] sm:text-xs uppercase tracking-[0.2em] font-semibold shadow-xs max-w-full"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[#B89B72] shrink-0" />
-              <span className="truncate sm:overflow-visible">BIS Hallmarked • 100% Ethically Sourced • Est. 1978</span>
+              <span className="truncate sm:overflow-visible">
+                {lang === 'hi' ? '100% बीआईएस हॉलमार्क सोना एवं शुद्ध चांदी • शुद्धता व विश्वास' : 'BIS Hallmarked • 100% Pure Gold & Silver • Generations of Trust'}
+              </span>
             </motion.div>
 
-            {/* Headline */}
-            <div className="space-y-3">
+            {/* Headline with Refined Typographic Placing */}
+            <div className="space-y-3 sm:space-y-4">
               <motion.h1
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.1 }}
-                className="font-serif text-3xl sm:text-5xl lg:text-[52px] lg:leading-[1.12] text-[#14213D] tracking-tight"
+                className="space-y-1 sm:space-y-2"
               >
-                <span>Timeless Heirlooms, </span>
-                <span className="italic font-light block sm:inline text-[#B89B72]">
-                  Reimagined for Modern Grace.
+                <span className="font-cinzel text-3xl sm:text-4xl lg:text-[46px] font-semibold text-[#14213D] tracking-[0.06em] uppercase block leading-[1.18]">
+                  {t.hero?.titleLine1 || 'Timeless Heirlooms,'}
+                </span>
+                <span className="font-serif italic font-normal text-3xl sm:text-5xl lg:text-[52px] text-[#B89B72] block leading-[1.16]">
+                  {t.hero?.titleLine2 || 'Sculpted in Pure Gold.'}
                 </span>
               </motion.h1>
               
@@ -58,11 +62,11 @@ export function Hero() {
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="text-sm sm:text-lg text-[#6B7280] max-w-xl font-normal leading-relaxed font-sans"
+                className="text-sm sm:text-base lg:text-[17px] text-[#6B7280] max-w-xl font-normal leading-relaxed font-sans pt-1"
               >
-                {lang === 'hi'
-                  ? 'शाही 22K व 24K सोने, बिना तराशे राजसी पोल्की हीरों और शुद्ध सर्टिफाइड सॉलिटेयर से सुसज्जित - पीढ़ियों तक संजोने के लिए।'
-                  : 'Masterfully crafted 22K and 24K gold, untreated royal uncut polki diamonds, and certified solitaires made to cherish across generations with unyielding provenance.'}
+                {t.hero?.tagline || (lang === 'hi'
+                  ? 'शाही 22K व 24K सोने, पारंपरिक राजसी आभूषणों और शुद्ध चांदी से सुसज्जित - पीढ़ियों तक संजोने के लिए।'
+                  : 'Masterfully crafted 22K and 24K gold, traditional heirloom ornaments, and certified pure silver made to cherish across generations.')}
               </motion.p>
             </div>
 
@@ -71,21 +75,21 @@ export function Hero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2"
             >
               <button
                 onClick={handleScrollDown}
-                className="w-full sm:w-auto px-8 py-3.5 bg-[#14213D] hover:bg-[#1f2f52] text-white font-sans text-xs uppercase tracking-widest font-semibold rounded-full shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all text-center justify-center"
+                className="w-full sm:w-auto px-8 py-3.5 bg-[#14213D] hover:bg-[#1f2f52] text-white font-sans text-xs uppercase tracking-[0.18em] font-semibold rounded-full shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all text-center justify-center"
               >
                 {t.hero?.exploreBtn || 'Explore Collections'}
               </button>
 
               <button
-                onClick={() => openWhatsApp({ customText: 'Hello Aurelia Stylist, I would like to explore your bridal and fine jewellery creations.' })}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#25D366] hover:bg-[#20ba59] text-white font-sans text-xs uppercase tracking-widest font-semibold rounded-full shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all text-center"
+                onClick={() => openWhatsApp({ customText: 'Hello Devrani Jewellers, I would like to explore your bridal and gold jewellery creations.' })}
+                className="btn-gold-action w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 text-white font-sans text-xs uppercase tracking-[0.18em] font-semibold rounded-full shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all text-center"
               >
-                <MessageCircle className="w-4 h-4 fill-current text-white shrink-0" />
-                <span>Chat with Stylist on WhatsApp</span>
+                <MessageCircle className="w-4 h-4 fill-white text-white shrink-0" />
+                <span>{t.hero?.chatBtn || 'Chat on WhatsApp'}</span>
               </button>
             </motion.div>
 
@@ -154,7 +158,7 @@ export function Hero() {
                 </div>
 
                 <button
-                  onClick={() => openWhatsApp({ customText: 'Hello Aurelia Concierge, I would like to enquire about the Archival Royal Kundan Choker featured on the homepage.' })}
+                  onClick={() => openWhatsApp({ customText: 'Hello Devrani Jewellers, I would like to enquire about the Archival Royal Kundan Choker featured on the homepage.' })}
                   className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#14213D] text-white flex items-center justify-center hover:bg-[#B89B72] transition-all duration-300 hover:scale-110 active:scale-95 shadow-sm shrink-0 ml-2"
                   title="Enquire on WhatsApp"
                   aria-label="Enquire on WhatsApp"

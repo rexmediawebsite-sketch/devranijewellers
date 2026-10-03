@@ -45,7 +45,7 @@ export function ProductQuickViewModal() {
   const handleShare = async () => {
     trackEvent('share_product', { id: selectedProduct.id, name: selectedProduct.name });
     const shareData = {
-      title: `${selectedProduct.name} | Aurelia Fine Jewellery`,
+      title: `${selectedProduct.name} | ${CONFIG.shopName}`,
       text: selectedProduct.description,
       url: window.location.href,
     };
@@ -205,9 +205,9 @@ export function ProductQuickViewModal() {
               <div className="mt-8 space-y-3">
                 <button
                   onClick={handleEnquire}
-                  className="w-full py-3.5 px-6 rounded-full bg-[#25D366] hover:bg-[#20ba59] active:scale-95 flex items-center justify-center gap-2.5 font-sans text-xs tracking-widest uppercase font-semibold text-white shadow-md hover:shadow-lg transition-all"
+                  className="btn-gold-action w-full py-3.5 px-6 rounded-full active:scale-95 flex items-center justify-center gap-2.5 font-sans text-xs tracking-[0.18em] uppercase font-semibold text-white shadow-md hover:shadow-lg transition-all"
                 >
-                  <MessageCircle className="w-4 h-4 fill-current text-white" />
+                  <MessageCircle className="w-4 h-4 fill-white text-white" />
                   <span>Enquire Price on WhatsApp</span>
                 </button>
 

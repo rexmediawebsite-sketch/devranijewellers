@@ -29,29 +29,57 @@ export function StoreVisit() {
               >
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-[10px] uppercase tracking-widest text-[#B89B72] font-semibold bg-[#B89B72]/10 px-3 py-1 rounded-full">
-                    {idx === 0 ? 'Primary Flagship' : 'Heritage Atelier'}
+                    {lang === 'hi' ? 'मुख्य प्रतिष्ठान' : 'Main Showroom'}
                   </span>
                   <MapPin className="w-5 h-5 text-[#B89B72]" />
                 </div>
 
                 <h3 className="font-serif text-2xl text-[#14213D] font-normal">
-                  {loc.city}
+                  {loc.name || CONFIG.shopName}
                 </h3>
 
-                <p className="mt-2 text-xs sm:text-sm text-[#6B7280] leading-relaxed">
+                <p className="mt-2 text-xs sm:text-sm text-[#14213D]/90 font-medium leading-relaxed">
                   {loc.address}
                 </p>
 
-                <div className="mt-4 pt-4 border-t border-[#E5E3DF] space-y-2 text-xs text-[#6B7280]">
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4 text-[#B89B72]" />
-                    <span>{loc.hours}</span>
+                {loc.landmark && (
+                  <p className="mt-1 text-xs text-[#B89B72] font-medium">
+                    📍 {loc.landmark}
+                  </p>
+                )}
+
+                {/* Real Showroom Photo Preview */}
+                <div className="mt-4 mb-2 relative aspect-[16/9] rounded-xl overflow-hidden border border-[#E5E3DF] shadow-xs">
+                  <img
+                    src="/shop/storefront-night.jpg"
+                    alt="Devrani Jewellers Storefront on Sona Patti Road"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute bottom-2.5 left-2.5 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] text-white font-sans uppercase tracking-wider font-semibold border border-white/20">
+                    {lang === 'hi' ? 'वास्तविक शोरूम • सोना पट्टी रोड' : 'Original Storefront • Sona Patti Road'}
                   </div>
+                </div>
+
+                <div className="mt-5 pt-4 border-t border-[#E5E3DF] space-y-2.5 text-xs text-[#6B7280]">
                   <div className="flex items-center gap-2">
-                    <Phone className="w-4 h-4 text-[#B89B72]" />
-                    <a href={`tel:${loc.phone}`} className="hover:text-[#14213D] transition-colors">
-                      {loc.phone}
-                    </a>
+                    <Clock className="w-4 h-4 text-[#B89B72] shrink-0" />
+                    <span className="font-medium text-[#14213D]">{loc.hours}</span>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+                    <div className="flex items-center gap-2">
+                      <Phone className="w-4 h-4 text-[#B89B72] shrink-0" />
+                      <a href={`tel:${loc.phone}`} className="hover:text-[#14213D] font-semibold text-[#14213D] transition-colors">
+                        {loc.phone}
+                      </a>
+                    </div>
+                    {loc.phoneSecondary && (
+                      <div className="flex items-center gap-1.5 text-slate-500">
+                        <span>•</span>
+                        <a href={`tel:${loc.phoneSecondary}`} className="hover:text-[#14213D] font-semibold text-[#14213D] transition-colors">
+                          {loc.phoneSecondary}
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -60,19 +88,27 @@ export function StoreVisit() {
                     href={loc.mapUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-4 py-2 border border-[#E5E3DF] hover:border-[#14213D] bg-white text-xs uppercase tracking-wider text-[#14213D] transition-colors rounded-full font-medium"
+                    className="inline-flex items-center gap-1.5 px-4 py-2.5 border border-[#E5E3DF] hover:border-[#14213D] bg-white text-xs uppercase tracking-wider text-[#14213D] transition-colors rounded-full font-medium shadow-xs"
                   >
                     <Navigation className="w-3.5 h-3.5 text-[#B89B72]" />
                     <span>{t.visit.getDirections}</span>
                   </a>
 
                   <button
-                    onClick={() => openWhatsApp({ customText: `Hello Aurelia, I would like to visit your ${loc.city} showroom. Could you provide parking or valet guidance?` })}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#25D366] hover:bg-[#20ba59] active:scale-95 text-white text-xs uppercase tracking-wider font-semibold shadow-sm transition-all rounded-full"
+                    onClick={() => openWhatsApp({ customText: `Hello Devrani Jewellers, I would like to visit your showroom on Sona Patti Road, Badi Bazar. Could you guide me?` })}
+                    className="btn-gold-action inline-flex items-center gap-1.5 px-5 py-2.5 active:scale-95 text-white text-xs uppercase tracking-[0.16em] font-semibold shadow-sm transition-all rounded-full"
                   >
-                    <MessageCircle className="w-3.5 h-3.5 fill-current text-white" />
+                    <MessageCircle className="w-3.5 h-3.5 fill-white text-white" />
                     <span>WhatsApp Showroom</span>
                   </button>
+                  
+                  <a
+                    href={`tel:${CONFIG.phoneCall}`}
+                    className="inline-flex items-center gap-1.5 px-4 py-2.5 bg-[#14213D] hover:bg-[#1f2f52] active:scale-95 text-white text-xs uppercase tracking-wider font-semibold shadow-sm transition-all rounded-full"
+                  >
+                    <Phone className="w-3.5 h-3.5 text-[#B89B72]" />
+                    <span>Call Now</span>
+                  </a>
                 </div>
               </div>
             ))}
@@ -81,10 +117,10 @@ export function StoreVisit() {
             <div className="p-6 bg-[#14213D] text-[#F5F4F2] border border-[#E5E3DF]/20 shadow-xl rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
                 <h4 className="font-serif text-xl text-white">
-                  {lang === 'hi' ? 'वीआईपी प्राइवेट विज़िट' : 'Private VIP Salon Appointment'}
+                  {lang === 'hi' ? 'विशेष मुलाकात एवं सेवा' : 'Dedicated In-Store Consultation'}
                 </h4>
                 <p className="text-xs text-[#F5F4F2]/75 mt-1">
-                  {lang === 'hi' ? 'बिना प्रतीक्षा किए समर्पित आभूषण विशेषज्ञ से मिलें।' : 'Zero waiting time, curated jewel vaults & complimentary styling.'}
+                  {lang === 'hi' ? 'बिना प्रतीक्षा किए शुद्धता जांच और मनपसंद आभूषण चयन।' : 'Zero waiting time, custom design discussions & genuine bullion rates.'}
                 </p>
               </div>
 
@@ -101,7 +137,7 @@ export function StoreVisit() {
           {/* Right: Google Maps Embed Iframe */}
           <div className="lg:col-span-6 min-h-[400px] bg-white border border-[#E5E3DF] shadow-sm rounded-2xl overflow-hidden relative">
             <iframe
-              title="Aurelia Fine Jewellery Showroom Map"
+              title="Devrani Jewellers Showroom Map"
               src={CONFIG.mapEmbedUrl}
               width="100%"
               height="100%"

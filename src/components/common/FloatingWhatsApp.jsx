@@ -33,17 +33,17 @@ export function FloatingWhatsApp() {
         </div>
       )}
 
-      {/* Floating Button with WhatsApp #25D366 styling */}
+      {/* Floating Button - Royal Navy & Champagne Gold Haute Joaillerie Seal */}
       <button
         onClick={handleClick}
         aria-label="Direct WhatsApp Concierge"
-        className="relative group w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_8px_25px_rgba(37,211,102,0.4)] hover:shadow-[0_12px_32px_rgba(37,211,102,0.55)] hover:bg-[#20bd5a] hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 border border-white/40"
+        className="relative group w-14 h-14 rounded-full bg-gradient-to-br from-[#14213D] via-[#1A294A] to-[#0C1527] text-white flex items-center justify-center shadow-[0_8px_30px_rgba(20,33,61,0.35)] hover:shadow-[0_12px_40px_rgba(184,155,114,0.45)] hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#B89B72] focus:ring-offset-2 border-2 border-[#B89B72] hover:border-[#D4BE9B]"
       >
-        {/* Soft pulse ring */}
-        <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-35 animate-ping pointer-events-none" />
-        <span className="absolute -inset-1 rounded-full border border-[#25D366]/60 opacity-80 group-hover:opacity-100 transition-opacity pointer-events-none" />
+        {/* Soft champagne gold pulse ring */}
+        <span className="absolute inset-0 rounded-full bg-[#B89B72] opacity-25 animate-ping pointer-events-none" />
+        <span className="absolute -inset-1 rounded-full border border-[#B89B72]/50 opacity-70 group-hover:opacity-100 transition-opacity pointer-events-none" />
         
-        <WhatsAppIcon className="w-7 h-7 relative z-10 text-white" />
+        <WhatsAppIcon className="w-7 h-7 relative z-10 text-[#B89B72] group-hover:text-white group-hover:scale-110 transition-all duration-300" />
       </button>
     </div>
   );

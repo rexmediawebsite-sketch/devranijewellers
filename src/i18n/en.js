@@ -19,26 +19,26 @@ export const en = {
     dismiss: "Dismiss",
   },
   hero: {
-    subtitle: "HAUTE JOAILLERIE • SINCE 1978",
+    subtitle: "FINE JEWELLERY • DEVRAINI JEWELLERS (DRJ)",
     titleLine1: "Timeless Heirlooms,",
     titleLine2: "Sculpted in Pure Gold.",
-    tagline: "Handcrafted Indian bridal polki, 22K hallmarked gold, and conflict-free diamond solitaires designed to transcend generations.",
+    tagline: "Handcrafted bridal jewellery, 22K BIS hallmarked gold, and pure silver ornaments designed to transcend generations.",
     exploreBtn: "Explore Collections",
     chatBtn: "Chat on WhatsApp",
     scrollPrompt: "Scroll to Discover",
   },
   marquee: [
     "100% BIS 916 HALLMARKED GOLD",
-    "GIA & IGI CERTIFIED DIAMONDS",
-    "HANDCRAFTED SYNDICATE POLKI",
-    "LIFETIME BUYBACK & EXCHANGE GUARANTEE",
-    "INSURED ALL-INDIA & WORLDWIDE DELIVERY",
-    "BESPOKE BRIDAL APPOINTMENTS"
+    "PURE SILVER ORNAMENTS & UTENSILS",
+    "HANDCRAFTED BRIDAL & WEDDING JEWELLERY",
+    "TRANSPARENT BUYBACK & EXCHANGE ASSURANCE",
+    "CUSTOM KARIGAR DESIGNS & RESTORATION",
+    "GENUINE RATES & ACCURATE WEIGHING"
   ],
   collections: {
     eyebrow: "OUR REPERTOIRE",
     heading: "Curated Collections",
-    subheading: "Each piece reflects five decades of Rajasthani and Chettinad artisanal mastery.",
+    subheading: "Fine gold and silver ornaments crafted with love and meticulous care.",
     viewAll: "Explore All Pieces",
     cards: {
       necklaces: { title: "Necklaces & Chokers", desc: "Regal chokers, multi-strand polki haars, and delicate daily pendants." },
@@ -102,61 +102,61 @@ export const en = {
   },
   craftsmanship: {
     eyebrow: "OUR HERITAGE",
-    heading: "Five Decades of Revered Craftsmanship",
-    lead: "At Aurelia, jewellery is not simply fashioned—it is breathed to life through ancient Indian metalworking traditions preserved across generations.",
-    p1: "From the legendary gem-cutters of Johari Bazaar in Jaipur to the master filigree artisans of Bengal, every Aurelia creation is touched by master hands holding an ancestral lineage of fine craftsmanship.",
-    p2: "We guarantee uncompromised purity with state-of-the-art Karatmeter testing and 100% BIS 916 hallmarking on every gram of gold.",
+    heading: "Generations of Revered Craftsmanship",
+    lead: "At Devrani Jewellers (DRJ), jewellery is not simply fashioned—it is breathed to life through sacred Indian metalworking traditions preserved across generations.",
+    p1: "From classic gold chains and bridal sets to timeless silver ornaments, every Devrani Jewellers creation represents uncompromising trust, authentic purity, and dedicated karigar craftsmanship.",
+    p2: "We guarantee uncompromised purity with state-of-the-art Karatmeter testing and 100% BIS hallmarking on every gram of gold.",
     statsLabels: {
-      years: "Years of Heritage",
-      purity: "BIS 916 Hallmarked",
-      patrons: "Connoisseurs Served",
-      designs: "Bespoke Creations",
+      years: "Purity & Trust",
+      purity: "BIS Hallmarked",
+      patrons: "Families Served",
+      designs: "Unique Creations",
     }
   },
   whyChooseUs: {
-    eyebrow: "THE AURELIA PROMISE",
-    heading: "Why Connoisseurs Choose Aurelia",
+    eyebrow: "THE DRJ PROMISE",
+    heading: "Why Families Choose Devrani Jewellers",
     features: [
       {
         title: "100% Certified Hallmarked",
-        desc: "Every single creation carries laser-inscribed BIS Hallmarks and recognized laboratory diamond certificates."
+        desc: "Every single creation carries laser-inscribed BIS Hallmarks guaranteeing authentic gold purity."
       },
       {
         title: "Bespoke Artisanal Craft",
-        desc: "No mass casting. Our pieces are hand-forged by skilled master karigars with meticulous attention to detail."
+        desc: "Hand-forged by skilled master karigars with meticulous attention to detail and traditional beauty."
       },
       {
         title: "Lifetime Exchange & Buyback",
-        desc: "Transparent lifetime buyback and exchange terms based on real-time bullion rates at any of our ateliers."
+        desc: "Transparent lifetime buyback and exchange terms based on real-time bullion market rates."
       },
       {
-        title: "Private VIP Consultations",
-        desc: "Enjoy one-on-one private viewings at our South Mumbai or Jaipur salons, or via private high-definition video."
+        title: "Warm Showroom Hospitality",
+        desc: "Enjoy dedicated in-person consultations at our Sona Patti Road, Badi Bazar showroom, or connect via WhatsApp."
       }
     ]
   },
   lookbook: {
     eyebrow: "EDITORIAL LOOKBOOK",
-    heading: "The Aurelia Editorial",
+    heading: "The DRJ Collection",
     subheading: "A visual celebration of regal grace, royal palettes, and eternal gold.",
   },
   testimonials: {
     eyebrow: "TESTIMONIALS & REPUTATION",
     heading: "Words from Our Patrons",
-    subheading: "Verified Google reviews from families who have entrusted us with their bridal and anniversary milestones.",
-    instagramTitle: "Follow Our Journey @aureliafinejewels",
+    subheading: "Verified reviews from families who have entrusted us with their bridal and festive celebrations.",
+    instagramTitle: "Connect With Us & Follow Devrani Jewellers",
     viewInstagram: "View on Instagram",
   },
   visit: {
-    eyebrow: "FLAGSHIP SHOWROOMS",
-    heading: "Experience Our Ateliers in Person",
-    subheading: "We invite you to step into our sanctuary of fine jewellery. Enjoy warm chai, private salon viewing, and personalized styling advice.",
-    mumbaiTitle: "South Mumbai Flagship",
-    jaipurTitle: "Jaipur Heritage Atelier",
-    hoursLabel: "Salon Timings",
-    phoneLabel: "Concierge Line",
+    eyebrow: "OUR SHOWROOM",
+    heading: "Experience Devrani Jewellers in Person",
+    subheading: "We invite you to step into our jewellery showroom on Sona Patti Road. Enjoy warm hospitality, explore pure gold & silver ornaments, and receive personalized advice.",
+    mumbaiTitle: "Badi Bazar Showroom",
+    jaipurTitle: "Devrani Jewellers",
+    hoursLabel: "Showroom Timings: 10:00 AM – 8:00 PM",
+    phoneLabel: "Contact Numbers",
     getDirections: "Get Google Directions",
-    bookVisitBtn: "Book a Private Appointment",
+    bookVisitBtn: "Book a Showroom Visit",
   },
   faq: {
     eyebrow: "ASSISTANCE & CARE",
@@ -164,9 +164,9 @@ export const en = {
     careHeading: "Heirloom Jewellery Care Guide",
     careTips: [
       { title: "Avoid Perfumes & Chemicals", text: "Always wear your jewellery after applying cosmetics, hairspray, and perfume." },
-      { title: "Individual Velvet Storage", text: "Store each piece in its original Aurelia velvet vault box to prevent friction between gemstones." },
+      { title: "Individual Velvet Storage", text: "Store each piece in its original jewellery box to prevent friction between gemstones." },
       { title: "Gentle Lukewarm Cleansing", text: "Clean gold with mild soapy water and a soft camel-hair brush; dry thoroughly with a micro-fibre cloth." },
-      { title: "Complimentary Annual Polish", text: "Bring your Aurelia jewellery to our atelier anytime for lifetime complimentary cleaning and claw checks." }
+      { title: "Complimentary Annual Polish", text: "Bring your jewellery to our showroom anytime for lifetime complimentary cleaning and checking." }
     ]
   },
   wishlistDrawer: {
@@ -197,17 +197,17 @@ export const en = {
     similarTitle: "Complementary Creations You May Admire",
   },
   footer: {
-    tagline: "Crafting timeless heirlooms with certified purity since 1978.",
+    tagline: "Pure Gold & Silver Jewellery Crafted with Trust and Generations of Heritage.",
     quickLinks: "Quick Navigation",
     services: "Privileges",
     serviceList: [
       "Custom Bridal Design",
       "Gold Purity Karatmeter",
-      "Diamond Certification",
-      "Private Video Viewing",
+      "BIS Hallmark Verification",
+      "Silver Articles & Utensils",
       "Lifetime Jewellery Maintenance"
     ],
-    stayConnected: "Concierge Line",
-    copyright: "© 2026 Aurelia Fine Jewellery. All rights reserved. Handcrafted with reverence in India.",
+    stayConnected: "Contact Showroom",
+    copyright: "© 2026 Devrani Jewellers (DRJ). All rights reserved. Sona Patti Road, Badi Bazar.",
   }
 };

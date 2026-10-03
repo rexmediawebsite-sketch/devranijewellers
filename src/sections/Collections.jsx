@@ -299,12 +299,12 @@ export function Collections({ onSelectCategory }) {
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
-                          openWhatsApp({ customText: `Hello Aurelia Concierge, I am interested in viewing pieces from the ${item.title} collection.` });
+                          openWhatsApp({ customText: `Hello Devrani Jewellers, I am interested in viewing pieces from the ${item.title} collection.` });
                         }}
-                        className="p-2 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white active:scale-95 transition-all shadow-md"
+                        className="btn-gold-action p-2 rounded-full text-white active:scale-95 transition-all shadow-md"
                         title="Enquire on WhatsApp"
                       >
-                        <MessageCircle className="w-3.5 h-3.5 fill-current text-white" />
+                        <MessageCircle className="w-3.5 h-3.5 fill-white text-white" />
                       </button>
                     </div>
                   </div>

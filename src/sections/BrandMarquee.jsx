@@ -5,24 +5,25 @@ import { LuxuryDiamondIcon } from '../components/common/BrandIcons';
 
 export function BrandMarquee() {
   const rateItems = [
-    `LIVE 24K GOLD: ${CONFIG.rates.gold24k}`,
-    `LIVE 22K GOLD: ${CONFIG.rates.gold22k}`,
-    `LIVE 18K GOLD: ${CONFIG.rates.gold18k}`,
-    `LIVE SILVER 999: ${CONFIG.rates.silver999}`,
-    `DAILY BULLION BENCHMARK (${CONFIG.rates.lastUpdated.toUpperCase()})`,
+    { label: 'LIVE 24K GOLD', value: CONFIG.rates.gold24k },
+    { label: 'LIVE 22K GOLD', value: CONFIG.rates.gold22k },
+    { label: 'LIVE 18K GOLD', value: CONFIG.rates.gold18k },
+    { label: 'LIVE SILVER 999', value: CONFIG.rates.silver999 },
+    { label: 'BULLION BENCHMARK', value: `TODAY • ${CONFIG.rates.lastUpdated.toUpperCase()}` },
   ];
 
   return (
-    <div className="relative py-3.5 bg-[#14213D] border-y border-[#E5E3DF]/25 overflow-hidden text-[#F5F4F2] select-none">
+    <div className="relative py-3 bg-[#14213D] border-y border-[#E5E3DF]/20 overflow-hidden text-[#F5F4F2] select-none shadow-inner">
       {/* Infinite marquee ticker */}
-      <div className="flex w-max animate-marquee space-x-8 items-center">
-        {rateItems.concat(rateItems, rateItems).map((text, index) => (
+      <div className="flex w-max animate-marquee space-x-10 items-center">
+        {rateItems.concat(rateItems, rateItems).map((item, index) => (
           <div key={index} className="flex items-center space-x-6 flex-shrink-0">
-            <span className="font-serif text-xs md:text-sm tracking-[0.22em] text-[#F5F4F2] font-medium uppercase flex items-center gap-2">
-              <TrendingUp className="w-3.5 h-3.5 text-[#B89B72] inline" />
-              <span>{text}</span>
+            <span className="font-sans text-[11px] sm:text-xs tracking-[0.14em] uppercase font-semibold flex items-center gap-2">
+              <TrendingUp className="w-3.5 h-3.5 text-[#B89B72] shrink-0" />
+              <span className="text-white/75">{item.label}:</span>
+              <span className="text-[#D4BE9B] font-bold tabular-nums">{item.value}</span>
             </span>
-            <LuxuryDiamondIcon className="w-3 h-3 text-[#B89B72]/60" />
+            <LuxuryDiamondIcon className="w-2.5 h-2.5 text-[#B89B72]/60" />
           </div>
         ))}
       </div>

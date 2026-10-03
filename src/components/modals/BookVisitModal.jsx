@@ -83,7 +83,7 @@ export function BookVisitModal() {
               <label className="block text-[11px] uppercase tracking-wider text-[#6B7280] mb-1.5 font-medium">
                 Select Atelier / Showroom
               </label>
-              <div className="grid grid-cols-2 gap-2">
+              <div className={CONFIG.locations.length > 1 ? "grid grid-cols-2 gap-2" : "grid grid-cols-1 gap-2"}>
                 {CONFIG.locations.map((loc) => (
                   <button
                     type="button"
@@ -181,9 +181,9 @@ export function BookVisitModal() {
             <div className="pt-3">
               <button
                 type="submit"
-                className="w-full py-3.5 px-6 rounded-full bg-[#25D366] hover:bg-[#20ba59] active:scale-95 flex items-center justify-center gap-2 font-sans text-xs tracking-widest uppercase font-semibold text-white shadow-md transition-all"
+                className="btn-gold-action w-full py-3.5 px-6 rounded-full active:scale-95 flex items-center justify-center gap-2 font-sans text-xs tracking-[0.18em] uppercase font-semibold text-white shadow-md transition-all"
               >
-                <MessageCircle className="w-4 h-4 fill-current text-white" />
+                <MessageCircle className="w-4 h-4 fill-white text-white" />
                 <span>Confirm & Send on WhatsApp</span>
               </button>
               <p className="text-[10px] text-[#6B7280] text-center mt-2">

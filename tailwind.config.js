@@ -38,9 +38,10 @@ export default {
           dark: '#D5D2CC',
         },
         whatsapp: {
-          DEFAULT: '#25D366',
-          hover: '#20bd5a',
-          dark: '#1ea951',
+          DEFAULT: '#B89B72',
+          hover: '#9A7D55',
+          dark: '#14213D',
+          gold: '#C5A880',
         },
         // Semantic mappings for consistent theme application
         ivory: {
@@ -79,9 +80,10 @@ export default {
         },
       },
       fontFamily: {
-        cinzel: ['"Cinzel"', 'serif'],
-        playfair: ['"Playfair Display"', 'Georgia', 'serif'],
-        serif: ['"Playfair Display"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+        cinzel: ['"Cinzel"', '"Noto Serif Devanagari"', 'serif'],
+        playfair: ['"Playfair Display"', '"Noto Serif Devanagari"', 'Georgia', 'serif'],
+        serif: ['"Playfair Display"', '"Noto Serif Devanagari"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+        cormorant: ['"Cormorant Garamond"', '"Noto Serif Devanagari"', 'serif'],
         inter: ['"Inter"', 'sans-serif'],
         sans: ['"Inter"', '"Plus Jakarta Sans"', '"Jost"', '-apple-system', 'sans-serif'],
       },

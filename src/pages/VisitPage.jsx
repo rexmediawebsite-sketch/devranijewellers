@@ -1,6 +1,7 @@
 import React from 'react';
 import { PageBanner } from '../components/common/PageBanner';
 import { StoreVisit } from '../sections/StoreVisit';
+import { ShopGallery } from '../components/common/ShopGallery';
 import { useModals } from '../context/ModalContext';
 import { openWhatsApp } from '../utils/whatsapp';
 import { Calendar, MessageCircle, MapPin, Coffee, ShieldCheck } from 'lucide-react';
@@ -13,32 +14,32 @@ export function VisitPage() {
   const perks = [
     {
       icon: Coffee,
-      title: "Royal Hospitality",
-      titleHi: "शाही आतिथ्य",
-      desc: "Traditional Indian hospitality with gourmet beverages and private vault viewings in South Mumbai and Jaipur.",
+      title: "Warm Hospitality",
+      titleHi: "आत्मीय आतिथ्य",
+      desc: "Traditional warm hospitality and personalized jewellery consultations at our Sona Patti Road, Badi Bazar showroom.",
     },
     {
       icon: Calendar,
-      title: "Zero Waiting Time",
-      titleHi: "बिना प्रतीक्षा",
-      desc: "Reserved VIP viewing salons dedicated solely to you and your family.",
+      title: "Personalized Consultation",
+      titleHi: "व्यक्तिगत सेवा",
+      desc: "Dedicated attention to help you choose the perfect bridal set, daily gold wear, or silver gift.",
     },
     {
       icon: ShieldCheck,
-      title: "Live Karatmeter Testing",
-      titleHi: "लाइव कैरेटमीटर जांच",
-      desc: "Bring your old jewellery for complimentary on-the-spot purity testing and trade-in appraisals.",
+      title: "Live Karatmeter & Hallmark",
+      titleHi: "हॉलमार्क एवं शुद्धता जांच",
+      desc: "100% BIS hallmarked jewellery and accurate electronic weighing for complete peace of mind.",
     },
   ];
 
   return (
     <div>
       <PageBanner
-        eyebrow="FLAGSHIP ATELIERS"
-        title={lang === 'hi' ? 'हमारे शोरूम पधारें' : 'Experience Our Salons in Person'}
+        eyebrow="SHOWROOM VISIT"
+        title={lang === 'hi' ? 'हमारे शोरूम पधारें' : 'Visit Devrani Jewellers in Person'}
         subtitle={lang === 'hi'
-          ? 'दक्षिण मुंबई और जयपुर स्थित हमारे शोरूम में आपका सादर अभिनन्दन है।'
-          : 'Step into a world of pure gold and rare gemstones. Private viewing salons curated for families and brides.'}
+          ? 'सोना पट्टी रोड, बड़ी बाज़ार (आलू गद्दी व जानकी मंदिर के निकट) स्थित हमारे शोरूम में आपका सादर अभिनन्दन है।'
+          : 'Located at Sona Patti Road, Near Aloo Gaddi, Badi Bazar (Near Janki Mandir). Open Mon - Sun: 10:00 AM – 8:00 PM.'}
         breadcrumbCurrent="Visit Us"
       />
 
@@ -68,7 +69,10 @@ export function VisitPage() {
         </div>
       </section>
 
-      {/* Flagship Showrooms & Interactive Map */}
+      {/* Real Showroom Photo Gallery */}
+      <ShopGallery />
+
+      {/* Flagship Showroom Details & Interactive Map */}
       <StoreVisit />
     </div>
   );

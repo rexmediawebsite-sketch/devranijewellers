@@ -28,7 +28,6 @@ import { Footer } from './sections/Footer';
 import { HomePage } from './pages/HomePage';
 import { CollectionsPage } from './pages/CollectionsPage';
 import { HeritagePage } from './pages/HeritagePage';
-import { BespokePage } from './pages/BespokePage';
 import { VisitPage } from './pages/VisitPage';
 import { CareGuidePage } from './pages/CareGuidePage';
 
@@ -59,7 +58,7 @@ function AppLayout() {
           <Route path="/" element={<HomePage />} />
           <Route path="/collections" element={<CollectionsPage />} />
           <Route path="/heritage" element={<HeritagePage />} />
-          <Route path="/bespoke" element={<BespokePage />} />
+          <Route path="/bespoke" element={<Navigate to="/collections" replace />} />
           <Route path="/visit" element={<VisitPage />} />
           <Route path="/care-guide" element={<CareGuidePage />} />
           {/* Fallback to Home */}

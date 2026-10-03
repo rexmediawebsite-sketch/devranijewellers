@@ -12,7 +12,8 @@
     --color-champagne-light: #D4BE9B;
     --color-champagne-dark: #9A7D55;
     --color-border: #E5E3DF;
-    --color-whatsapp: #25D366;
+    --color-whatsapp: #B89B72;
+    --color-whatsapp-gold: #C5A880;
 
     /* Legacy semantic aliases */
     --color-ivory: #F5F4F2;
@@ -112,6 +113,40 @@
   transition: left 0.85s ease-in-out;
 }
 
+/* Luxury Gold & Navy Action Buttons */
+.btn-gold-action {
+  background: linear-gradient(135deg, #B89B72 0%, #C5A880 50%, #9A7D55 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(184, 155, 114, 0.3);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-gold-action:hover {
+  background: linear-gradient(135deg, #C5A880 0%, #D4BE9B 50%, #B89B72 100%);
+  box-shadow: 0 8px 28px rgba(184, 155, 114, 0.48);
+  transform: translateY(-1px);
+}
+.btn-gold-action:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+.btn-navy-gold {
+  background-color: #14213D;
+  color: #FAF7F2;
+  border: 1px solid rgba(184, 155, 114, 0.6);
+  box-shadow: 0 4px 18px rgba(20, 33, 61, 0.15);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-navy-gold:hover {
+  background-color: #B89B72;
+  color: #14213D;
+  border-color: #B89B72;
+  box-shadow: 0 6px 24px rgba(184, 155, 114, 0.35);
+  transform: translateY(-1px);
+}
+.btn-navy-gold:active {
+  transform: translateY(0px) scale(0.98);
+}
+
 /* Safe area padding for mobile bottom bar */
 .safe-area-pb {
   padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
@@ -126,3 +161,4 @@ html {
 body {
   overflow-x: hidden;
 }
+

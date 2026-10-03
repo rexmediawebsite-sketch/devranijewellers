@@ -44,7 +44,7 @@ export function AureliaWorld() {
             Signature Ensembles
           </span>
           <h2 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-normal text-[#14213D] tracking-tight">
-            Aurelia World
+            Devrani Jewellers Collections
           </h2>
           <p className="mt-2.5 font-serif text-lg sm:text-xl text-[#6B7280] font-light italic">
             A companion for every occasion

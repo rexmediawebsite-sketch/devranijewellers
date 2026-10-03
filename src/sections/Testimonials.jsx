@@ -17,26 +17,26 @@ export function Testimonials() {
       city: "Mumbai",
       rating: 5,
       date: "3 weeks ago",
-      text: "We ordered our entire daughter's bridal Polki set from Aurelia. The precision of the jadau work, the hallmark certificates, and their personalized salon experience exceeded every expectation. An absolute family heirloom we will treasure for generations.",
-      source: "Google Review • Verified Bride",
+      text: "We ordered our entire daughter's bridal set from Devrani Jewellers. The purity of the gold, the hallmarking transparency, and their warm hospitality exceeded every expectation. An absolute family heirloom we will treasure for generations.",
+      source: "Verified Family Review",
     },
     {
       id: 2,
-      author: "Vikramaditya & Sanjana Mehta",
-      city: "Jaipur & London",
+      author: "Vikramaditya & Sanjana",
+      city: "Badi Bazar",
       rating: 5,
       date: "1 month ago",
-      text: "I was purchasing an anniversary solitaire ring remotely from London. The master jeweller arranged a 4K video consultation, walked me through the GIA diamond cut grades, and delivered insured to our family home in Mumbai right on time.",
-      source: "Google Review • Verified Patron",
+      text: "We have been purchasing gold and silver ornaments from Devrani Jewellers for family weddings. The karigari and honest weighing makes them our most trusted jeweller.",
+      source: "Verified Patron",
     },
     {
       id: 3,
-      author: "Meenakshi Sundaram",
-      city: "Chennai",
+      author: "Meenakshi Devi",
+      city: "Nearby Town",
       rating: 5,
       date: "2 months ago",
-      text: "Their Chettinad temple antique gold necklace has an unmatched depth of relief work. Even my grandmother, who has collected temple jewellery for 60 years, praised the Karatmeter purity and detailing.",
-      source: "Google Review • Heritage Connoisseur",
+      text: "Their antique necklace and silver utensils have an unmatched finish. The staff is polite, rates are genuine, and purity is 100% hallmarked.",
+      source: "Trusted Patron",
     },
   ];
 
@@ -44,7 +44,7 @@ export function Testimonials() {
     {
       id: 1,
       image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
-      tag: "#AureliaBrides",
+      tag: "#DevraniJewellers",
     },
     {
       id: 2,
@@ -176,7 +176,7 @@ export function Testimonials() {
               >
                 <img
                   src={post.image}
-                  alt="Aurelia Instagram Story"
+                  alt="Devrani Jewellers Story"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 brightness-95 group-hover:brightness-105"
                 />
                 <div className="absolute inset-0 bg-[#14213D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white backdrop-blur-[1px]">

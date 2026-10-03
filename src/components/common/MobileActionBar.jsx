@@ -27,7 +27,7 @@ export function MobileActionBar() {
         onClick={() => openWhatsApp()}
         className="flex flex-col items-center justify-center text-slate-300 hover:text-white transition-colors py-1 px-2 text-center"
       >
-        <MessageCircle className="w-5 h-5 text-[#25D366] fill-[#25D366]/20" />
+        <MessageCircle className="w-5 h-5 text-[#B89B72] fill-[#B89B72]/20" />
         <span className="text-[10px] tracking-wider uppercase mt-1 font-sans">
           {lang === 'hi' ? 'व्हाट्सएप' : 'WhatsApp'}
         </span>

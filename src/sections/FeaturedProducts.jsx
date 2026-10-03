@@ -287,12 +287,12 @@ export function FeaturedProducts({
                   {/* Card Body */}
                   <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
                     <div>
-                      <div className="flex items-center justify-between text-[10px] uppercase tracking-wider text-[#B89B72] font-semibold mb-1">
+                      <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.18em] text-[#B89B72] font-semibold mb-1">
                         <span>{product.categoryName || product.category}</span>
-                        {product.weight && <span className="text-[#6B7280] font-sans">{product.weight}</span>}
+                        {product.weight && <span className="text-[#6B7280] font-sans font-medium tracking-normal">{product.weight}</span>}
                       </div>
 
-                      <h3 className="font-serif text-lg font-normal text-[#14213D] group-hover:text-[#B89B72] transition-colors line-clamp-1">
+                      <h3 className="font-serif text-lg font-medium text-[#14213D] group-hover:text-[#B89B72] transition-colors line-clamp-1 leading-snug">
                         {product.name}
                       </h3>
 
@@ -303,16 +303,16 @@ export function FeaturedProducts({
 
                     {/* Price & Direct WhatsApp CTA */}
                     <div className="mt-4 pt-3 border-t border-[#E5E3DF] flex items-center justify-between gap-2">
-                      <span className="font-serif text-sm sm:text-base font-semibold text-[#14213D]">
+                      <span className="font-sans text-sm sm:text-base font-bold text-[#14213D] tabular-nums tracking-tight">
                         {product.priceDisplay}
                       </span>
 
                       <button
                         onClick={(e) => handleWhatsAppEnquire(e, product)}
-                        className="px-4 py-2 rounded-full bg-[#25D366] hover:bg-[#20ba59] active:scale-95 text-white text-[11px] uppercase tracking-wider font-semibold flex items-center gap-1.5 transition-all shadow-sm"
+                        className="btn-gold-action px-4 py-2 rounded-full text-white text-[11px] uppercase tracking-[0.14em] font-semibold flex items-center gap-1.5 transition-all shadow-sm active:scale-95"
                         title="Enquire on WhatsApp"
                       >
-                        <MessageCircle className="w-3.5 h-3.5 fill-current text-white" />
+                        <MessageCircle className="w-3.5 h-3.5 fill-white text-white" />
                         <span>Enquire</span>
                       </button>
                     </div>
@@ -327,17 +327,17 @@ export function FeaturedProducts({
         {filteredProducts.length === 0 && (
           <div className="py-20 text-center bg-white border border-[#E5E3DF] p-8 shadow-sm rounded-2xl">
             <LuxuryDiamondIcon className="w-10 h-10 text-[#B89B72]/50 mx-auto mb-3" />
-            <h3 className="font-serif text-2xl text-[#14213D] mb-2">
+            <h3 className="font-cinzel text-xl sm:text-2xl text-[#14213D] mb-2 uppercase tracking-[0.06em]">
               {t.featured.emptyHeading}
             </h3>
             <p className="text-xs sm:text-sm text-[#6B7280] max-w-md mx-auto mb-6">
               {t.featured.emptySubheading}
             </p>
             <button
-              onClick={() => openWhatsApp({ customText: `Hello Aurelia Concierge, I searched for "${searchQuery}" in your showcase. Could you help me with custom design availability?` })}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#25D366] hover:bg-[#20ba59] active:scale-95 text-white text-xs uppercase tracking-widest font-semibold shadow-md transition-all"
+              onClick={() => openWhatsApp({ customText: `Hello Devrani Jewellers, I searched for "${searchQuery}" in your showcase. Could you help me with design availability?` })}
+              className="btn-gold-action inline-flex items-center gap-2 px-6 py-3 rounded-full text-white text-xs uppercase tracking-[0.18em] font-semibold shadow-md transition-all active:scale-95"
             >
-              <MessageCircle className="w-4 h-4 fill-current text-white" />
+              <MessageCircle className="w-4 h-4 fill-white text-white" />
               <span>{t.featured.emptyCta}</span>
             </button>
           </div>

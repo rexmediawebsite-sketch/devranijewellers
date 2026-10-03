@@ -10,6 +10,7 @@ import { CuratedForYou } from '../sections/CuratedForYou';
 import { AureliaAssurance } from '../sections/AureliaAssurance';
 import { WhyChooseUs } from '../sections/WhyChooseUs';
 import { Testimonials } from '../sections/Testimonials';
+import { ShopGallery } from '../components/common/ShopGallery';
 import { openWhatsApp } from '../utils/whatsapp';
 import { useLanguage } from '../i18n/LanguageContext';
 
@@ -45,30 +46,33 @@ export function HomePage() {
       {/* Testimonials */}
       <Testimonials />
 
+      {/* Real Showroom Photo Gallery - Devrani Jewellers (DRJ) */}
+      <ShopGallery />
+
       {/* Store Visit Prompt Bar */}
       <section className="py-16 bg-[#F5F4F2] border-t border-[#E5E3DF] text-center">
         <div className="max-w-4xl mx-auto px-4">
-          <span className="text-xs uppercase tracking-widest text-[#B89B72] font-semibold font-sans">
-            Private Atelier Viewing
+          <span className="text-xs uppercase tracking-[0.24em] text-[#B89B72] font-semibold font-sans">
+            Showroom Experience
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl text-[#14213D] mt-2">
-            Experience Aurelia in South Mumbai & Jaipur
+          <h2 className="font-cinzel text-2xl sm:text-3xl lg:text-4xl text-[#14213D] mt-2 uppercase tracking-[0.06em] leading-snug">
+            Visit Devrani Jewellers (DRJ) at Sona Patti Road, Badi Bazar
           </h2>
-          <p className="mt-3 text-xs sm:text-sm text-[#6B7280] max-w-xl mx-auto">
-            Book a private salon viewing with a dedicated jewellery connoisseur. Complimentary chai, private vault viewing, and personalized bridal styling.
+          <p className="mt-3 text-xs sm:text-sm text-[#6B7280] max-w-xl mx-auto leading-relaxed font-sans">
+            Located near Aloo Gaddi & Janki Mandir. Experience pure 22K/24K gold, fine silver ornaments, transparent pricing, and personalized service.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
               to="/visit"
-              className="px-8 py-3.5 bg-[#14213D] hover:bg-[#1a2d54] text-white text-xs uppercase tracking-widest font-medium transition-colors rounded-full shadow-sm"
+              className="px-8 py-3.5 bg-[#14213D] hover:bg-[#1a2d54] text-white text-xs uppercase tracking-[0.18em] font-semibold transition-colors rounded-full shadow-sm"
             >
-              View Showroom Locations & Hours
+              View Showroom Location & Hours
             </Link>
             <button
-              onClick={() => openWhatsApp({ customText: 'Hello Aurelia Concierge, I would like to enquire about visiting your showroom this week.' })}
-              className="px-8 py-3.5 bg-[#25D366] hover:bg-[#20ba59] active:scale-95 text-white text-xs uppercase tracking-widest font-semibold transition-all shadow-md flex items-center gap-2 rounded-full"
+              onClick={() => openWhatsApp({ customText: 'Hello Devrani Jewellers, I would like to enquire about visiting your showroom at Sona Patti Road.' })}
+              className="btn-gold-action px-8 py-3.5 active:scale-95 text-white text-xs uppercase tracking-[0.18em] font-semibold transition-all shadow-md flex items-center gap-2 rounded-full"
             >
-              <MessageCircle className="w-4 h-4 fill-current text-white" />
+              <MessageCircle className="w-4 h-4 fill-white text-white" />
               <span>Connect on WhatsApp</span>
             </button>
           </div>

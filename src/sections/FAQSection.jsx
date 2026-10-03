@@ -14,8 +14,8 @@ export function FAQSection() {
     {
       q: "Are all gold ornaments 100% BIS Hallmarked?",
       qHi: "क्या सभी सोने के आभूषण 100% बीआईएस हॉलमार्क हैं?",
-      a: "Yes. Every single piece crafted at Aurelia carries the laser-inscribed Bureau of Indian Standards (BIS 916) triangular hallmark, the Karat purity mark (22K or 18K), and our unique jeweller identification stamp. We provide physical hallmarking authentication cards with every purchase.",
-      aHi: "हाँ। ऑरेलिया का प्रत्येक आभूषण लेज़र बीआईएस 916 हॉलमार्क, शुद्धता चिह्न और हमारे अद्वितीय कारीगर कोड के साथ आता है। हम हर खरीद के साथ आधिकारिक प्रमाण पत्र प्रदान करते हैं।"
+      a: "Yes. Every single piece crafted at Devrani Jewellers (DRJ) carries the laser-inscribed Bureau of Indian Standards (BIS 916) hallmark, Karat purity mark, and genuine jeweller identification stamp. We provide physical hallmarking authentication cards and authentic invoices with every purchase.",
+      aHi: "हाँ। देवरानी ज्वैलर्स (DRJ) का प्रत्येक आभूषण लेज़र बीआईएस 916 हॉलमार्क, शुद्धता चिह्न और सरकारी मानकों के साथ आता है। हम हर खरीद के साथ पक्का बिल और प्रमाण पत्र प्रदान करते हैं।"
     },
     {
       q: "What is your lifetime exchange and buyback policy?",

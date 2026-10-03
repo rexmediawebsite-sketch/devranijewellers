@@ -37,7 +37,7 @@ export function whatsappLink(options = {}) {
   // 4. Store Visit VIP Appointment
   else if (storeVisit) {
     const { name, phone, date, slot, showroom, guestCount } = storeVisit;
-    message = `Hello ${shop},\n\nI would like to reserve a *Private In-Store Appointment*.\n\n• Name: ${name}\n• Phone: ${phone}\n• Preferred Showroom: ${showroom || 'Mumbai Flagship'}\n• Date: ${date}\n• Time Slot: ${slot}\n• Number of Guests: ${guestCount || 1}\n\nPlease confirm availability for my visit. Thank you!`;
+    message = `Hello ${shop},\n\nI would like to reserve a *Store Visit / Appointment*.\n\n• Name: ${name}\n• Phone: ${phone}\n• Preferred Showroom: ${showroom || 'Badi Bazar Showroom'}\n• Date: ${date}\n• Time Slot: ${slot}\n• Number of Guests: ${guestCount || 1}\n\nPlease confirm availability for my visit. Thank you!`;
   }
   // 5. Custom text override
   else if (customText) {

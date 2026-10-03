@@ -306,13 +306,13 @@ export function BestDesignsShowcase() {
 
                     {/* Bottom Row: Name, Category, Price & WhatsApp Action */}
                     <div className="transform sm:translate-y-3 sm:group-hover:translate-y-0 transition-transform duration-300">
-                      <span className="text-[10px] uppercase tracking-wider text-[#B89B72] font-medium block mb-0.5 sm:mb-1">
+                      <span className="text-[10px] uppercase tracking-[0.2em] text-[#D4BE9B] font-semibold font-sans block mb-1">
                         {item.categoryName}
                       </span>
-                      <h3 className="font-serif text-base sm:text-lg text-white font-normal line-clamp-1 group-hover:text-[#B89B72] transition-colors">
+                      <h3 className="font-serif text-base sm:text-lg text-white font-medium line-clamp-1 group-hover:text-[#D4BE9B] transition-colors leading-snug">
                         {item.name}
                       </h3>
-                      <p className="font-serif text-xs sm:text-sm text-slate-200 mt-0.5 font-medium">
+                      <p className="font-sans text-xs sm:text-sm text-[#FAF6F0] font-semibold tabular-nums mt-0.5 tracking-wide">
                         {item.priceDisplay}
                       </p>
 
@@ -322,9 +322,9 @@ export function BestDesignsShowcase() {
                             e.stopPropagation();
                             openWhatsApp({ product: item });
                           }}
-                          className="flex-1 py-2 rounded-full bg-[#25D366] hover:bg-[#20ba59] active:scale-95 text-white text-[10px] sm:text-[11px] uppercase tracking-wider font-semibold flex items-center justify-center gap-1.5 transition-all shadow-md"
+                          className="btn-gold-action flex-1 py-2 rounded-full text-white text-[10px] sm:text-[11px] uppercase tracking-[0.16em] font-semibold flex items-center justify-center gap-1.5 transition-all shadow-md active:scale-95"
                         >
-                          <MessageCircle className="w-3.5 h-3.5 fill-current text-white" />
+                          <MessageCircle className="w-3.5 h-3.5 fill-white text-white" />
                           <span>Enquire</span>
                         </button>
 

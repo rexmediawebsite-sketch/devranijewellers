@@ -153,9 +153,9 @@ export function CustomDesign() {
             <div className="pt-2 text-center">
               <button
                 type="submit"
-                className="w-full sm:w-auto px-10 py-4 rounded-full bg-[#25D366] hover:bg-[#20ba59] active:scale-95 text-white font-sans text-xs uppercase tracking-[0.2em] font-semibold shadow-md hover:scale-[1.02] transition-all inline-flex items-center justify-center gap-3"
+                className="btn-gold-action w-full sm:w-auto px-10 py-4 rounded-full active:scale-95 text-white font-sans text-xs uppercase tracking-[0.2em] font-semibold shadow-md hover:scale-[1.02] transition-all inline-flex items-center justify-center gap-3"
               >
-                <MessageCircle className="w-4 h-4 fill-current text-white" />
+                <MessageCircle className="w-4 h-4 fill-white text-white" />
                 <span>{t.custom.form.submitBtn}</span>
               </button>
             </div>

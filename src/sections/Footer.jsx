@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Phone, Mail, ArrowUp } from 'lucide-react';
+import { MessageCircle, Phone, ArrowUp } from 'lucide-react';
 import { InstagramIcon, FacebookIcon } from '../components/common/BrandIcons';
 import { CONFIG } from '../config';
 import { openWhatsApp } from '../utils/whatsapp';
@@ -17,7 +17,6 @@ export function Footer() {
     { label: t.nav.home, to: '/' },
     { label: t.nav.collections, to: '/collections' },
     { label: t.nav.craftsmanship, to: '/heritage' },
-    { label: t.nav.customDesign, to: '/bespoke' },
     { label: t.nav.visitUs, to: '/visit' },
     { label: lang === 'hi' ? 'साइज़ व देखभाल' : 'Care & FAQ', to: '/care-guide' },
   ];
@@ -36,12 +35,12 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-4">
             <Link to="/" className="inline-block">
-              <h3 className="font-cinzel text-2xl sm:text-3xl text-white tracking-[0.2em] uppercase font-medium hover:text-[#B89B72] transition-colors">
+              <h3 className="font-cinzel text-2xl sm:text-3xl text-white tracking-[0.16em] uppercase font-medium hover:text-[#B89B72] transition-colors">
                 {CONFIG.shopName}
               </h3>
             </Link>
-            <p className="text-xs uppercase tracking-[0.25em] text-[#B89B72] font-medium font-sans">
-              Haute Joaillerie • Since 1978
+            <p className="text-xs uppercase tracking-[0.22em] text-[#B89B72] font-semibold font-sans">
+              Purity & Trust • BIS Hallmarked
             </p>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-light font-sans max-w-sm">
               {t.footer.tagline}
@@ -50,9 +49,9 @@ export function Footer() {
             <div className="pt-2">
               <button
                 onClick={() => openWhatsApp()}
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#25D366] text-white hover:bg-[#20ba59] active:scale-95 text-xs uppercase tracking-widest font-semibold shadow-md transition-all"
+                className="btn-gold-action inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-white active:scale-95 text-xs uppercase tracking-[0.18em] font-semibold shadow-md transition-all"
               >
-                <MessageCircle className="w-4 h-4 fill-current text-white" />
+                <MessageCircle className="w-4 h-4 fill-white text-white" />
                 <span>{t.nav.enquireWhatsapp}</span>
               </button>
             </div>
@@ -97,18 +96,26 @@ export function Footer() {
             <h4 className="text-xs uppercase tracking-widest text-[#B89B72] font-semibold font-sans">
               {t.footer.stayConnected}
             </h4>
-            <div className="space-y-3 text-xs text-slate-300">
+            <div className="space-y-2.5 text-xs text-slate-300">
               <div className="flex items-start gap-2.5">
                 <Phone className="w-4 h-4 text-[#B89B72] flex-shrink-0 mt-0.5" />
-                <a href={`tel:${CONFIG.phoneCall}`} className="hover:text-white transition-colors">
-                  {CONFIG.phoneDisplay}
-                </a>
+                <div className="space-y-1">
+                  <a href={`tel:${CONFIG.phoneCall}`} className="block hover:text-white transition-colors font-medium">
+                    {CONFIG.phonePrimary} (Call / WhatsApp)
+                  </a>
+                  <a href={`tel:${CONFIG.phoneSecondaryCall}`} className="block hover:text-white transition-colors text-slate-400">
+                    {CONFIG.phoneSecondary}
+                  </a>
+                </div>
               </div>
-              <div className="flex items-start gap-2.5">
-                <Mail className="w-4 h-4 text-[#B89B72] flex-shrink-0 mt-0.5" />
-                <a href={`mailto:${CONFIG.email}`} className="hover:text-white transition-colors">
-                  {CONFIG.email}
-                </a>
+              <div className="pt-1 text-slate-300">
+                <p className="text-[#B89B72] font-medium text-[11px] uppercase tracking-wider">Showroom Address:</p>
+                <p className="mt-0.5 text-xs leading-relaxed text-slate-300">
+                  {CONFIG.locations[0].address}
+                </p>
+                <p className="mt-1 text-[11px] text-slate-400">
+                  Hours: {CONFIG.locations[0].hours}
+                </p>
               </div>
             </div>
 
