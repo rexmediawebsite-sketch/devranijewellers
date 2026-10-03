@@ -44,11 +44,11 @@ export const CONFIG = {
   // Official Google Maps Embed for Devrani Jewellers (DRJ)
   mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3568.1723145452294!2d85.482006!3d26.5938809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ecf110659e6e5d%3A0x8349e01d9753e40b!2sDevrani%20Jewellers%20(DRJ)!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin",
 
-  // Real Showroom Gallery Photos (Added by User)
+  // Real Showroom Gallery Photos (Extracted from devrani-jewellers.in.at.center)
   shopGallery: [
     {
       id: 1,
-      image: "/shop/storefront-night.jpg",
+      image: "/extracted/showroom/showroom-1.avif",
       title: "Main Storefront & Golden 3D Signboard",
       titleHi: "मुख्य शोरूम प्रवेश द्वार एवं 3D स्वर्ण बोर्ड",
       desc: "Illuminated 3D golden signage with official BIS Hallmark logo at Sona Patti Road.",
@@ -58,33 +58,43 @@ export const CONFIG = {
     },
     {
       id: 2,
-      image: "/shop/store-entrance-drj.jpg",
-      title: "Golden DRJ Emblem & Hallmark Counter",
-      titleHi: "स्वर्ण DRJ प्रतीक एवं हॉलमार्क काउंटर",
+      image: "/extracted/showroom/showroom-2.avif",
+      title: "Showroom Interior & Jewellery Counter",
+      titleHi: "शोरूम आंतरिक दृश्य एवं जेवर काउंटर",
       desc: "Warm welcoming entrance showcasing certified BIS hallmark jewellery and consultation counters.",
       descHi: "ग्राहकों के लिए समर्पित स्वच्छ, आधुनिक एवं आरामदायक हॉलमार्क जेवर काउंटर।",
-      badge: "Interior & Emblem",
+      badge: "Interior Counter",
       badgeHi: "शोरूम आंतरिक दृश्य",
     },
     {
       id: 3,
-      image: "/shop/store-banner-pillar.jpg",
-      title: "Festive Welcome at Janki Sthan, Sitamarhi",
-      titleHi: "जानकी स्थान, सीतामढ़ी स्थित प्रतिष्ठान",
+      image: "/extracted/showroom/showroom-3.avif",
+      title: "Festive Garland Welcome at Sona Patti Road",
+      titleHi: "त्यौहारी स्वागत एवं आधिकारिक प्रतिष्ठान",
       desc: "Traditional marigold garland welcome and official Devrani Jewellers firm banner.",
       descHi: "देवरानी ज्वेलर्स (फर्म: देवरानी ट्रेडर्स) - बड़ी बाजार, जानकी स्थान, सीतामढ़ी।",
-      badge: "Official Banner",
-      badgeHi: "आधिकारिक बैनर",
+      badge: "Festive Welcome",
+      badgeHi: "आधिकारिक स्वागत",
     },
     {
       id: 4,
-      image: "/shop/store-facade.jpg",
-      title: "Night View on Sona Patti Road",
+      image: "/extracted/showroom/showroom-4.avif",
+      title: "Night Storefront Illumination",
       titleHi: "सोना पट्टी रोड का रात्रि दृश्य",
       desc: "Spot our brightly lit showroom easily while arriving from Badi Bazar or Janki Mandir.",
       descHi: "आलू गद्दी या जानकी मंदिर की तरफ से आते समय आसानी से पहचानी जाने वाली दुकान।",
-      badge: "Street View",
+      badge: "Night View",
       badgeHi: "बाज़ार से दृश्य",
+    },
+    {
+      id: 5,
+      image: "/extracted/showroom/showroom-5.avif",
+      title: "Gold & Diamond Ornaments Showcase",
+      titleHi: "स्वर्ण व हीरा आभूषण शोकेस",
+      desc: "Carefully curated display cases presenting certified pure 22K and 18K jewellery sets.",
+      descHi: "शुद्धता और पारदर्शिता के साथ प्रदर्शित मनमोहक सोने व चांदी के जेवर।",
+      badge: "Jewellery Showcase",
+      badgeHi: "जेवर शोकेस",
     },
   ],
 
@@ -100,8 +110,8 @@ export const CONFIG = {
   // Announcement Bar Announcement
   announcement: {
     badge: "PURITY & TRUST",
-    text: "Devrani Jewellers (DRJ) • 100% Hallmarked Pure Gold & Silver Ornaments at Sona Patti Road, Badi Bazar, Sitamarhi.",
-    code: "DRJ2026",
+    text: "Devrani Jewellers • 100% Hallmarked Pure Gold & Silver Ornaments at Sona Patti Road, Badi Bazar, Sitamarhi.",
+    code: "DEVRANI2026",
   },
 
   // Store Visit Slots (10 AM to 8 PM)
