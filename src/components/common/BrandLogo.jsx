@@ -18,45 +18,31 @@ export function BrandLogo({
   // Fine-tuned typography sizing (proportional and balanced)
   const sizeStyles = {
     sm: {
-      name: 'text-sm sm:text-base tracking-[0.06em]',
-      drj: 'text-xs sm:text-sm tracking-[0.05em] ml-1.5',
-      tagline: 'text-[8px] sm:text-[8.5px] tracking-[0.18em]',
+      name: 'text-base sm:text-lg tracking-[0.1em]',
+      tagline: 'text-[8px] sm:text-[8.5px] tracking-[0.2em]',
     },
     md: {
-      name: 'text-base sm:text-lg lg:text-xl tracking-[0.06em] sm:tracking-[0.08em]',
-      drj: 'text-xs sm:text-sm lg:text-base tracking-[0.06em] ml-1.5 sm:ml-2',
-      tagline: 'text-[8.5px] sm:text-[9.5px] tracking-[0.2em]',
+      name: 'text-lg sm:text-xl lg:text-2xl tracking-[0.12em]',
+      tagline: 'text-[8.5px] sm:text-[9.5px] tracking-[0.22em]',
     },
     lg: {
-      name: 'text-xl sm:text-2xl lg:text-3xl tracking-[0.08em]',
-      drj: 'text-base sm:text-xl tracking-[0.06em] ml-2',
-      tagline: 'text-[9.5px] sm:text-xs tracking-[0.22em]',
+      name: 'text-2xl sm:text-3xl lg:text-4xl tracking-[0.14em]',
+      tagline: 'text-[10px] sm:text-xs tracking-[0.26em]',
     },
   }[size] || sizeStyles.md;
 
   const content = (
     <div className={`flex flex-col group select-none ${className}`}>
-      {/* Brand Name & (DRJ) on a single seamless luxury baseline */}
-      <div className="flex items-baseline whitespace-nowrap leading-tight">
-        <span
-          className={`font-cinzel font-bold uppercase transition-colors duration-200 ${sizeStyles.name} ${
-            isDark
-              ? 'text-white group-hover:text-[#D4BE9B]'
-              : 'text-[#14213D] group-hover:text-[#B89B72]'
-          }`}
-        >
-          Devrani Jewellers
-        </span>
-        <span
-          className={`font-cinzel font-bold transition-colors duration-200 ${sizeStyles.drj} ${
-            isDark
-              ? 'text-[#D4BE9B] group-hover:text-white'
-              : 'text-[#B89B72] group-hover:text-[#9A7D55]'
-          }`}
-        >
-          (DRJ)
-        </span>
-      </div>
+      {/* Brand Name */}
+      <span
+        className={`font-cinzel font-bold uppercase whitespace-nowrap leading-tight transition-colors duration-200 ${sizeStyles.name} ${
+          isDark
+            ? 'text-white group-hover:text-[#D4BE9B]'
+            : 'text-[#14213D] group-hover:text-[#B89B72]'
+        }`}
+      >
+        Devrani Jewellers
+      </span>
 
       {/* Aesthetic High-Jewellery Subtitle */}
       {showTagline && (
