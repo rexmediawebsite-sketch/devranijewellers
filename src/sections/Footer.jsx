@@ -190,16 +190,22 @@ export function Footer() {
           </div>
 
           <div className="flex flex-wrap items-center justify-center md:justify-end gap-4 sm:gap-6">
-            {/* Rex Media Agency / Developer Credit */}
-            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/[0.05] border border-white/10 text-[11px] text-slate-300 shadow-2xs hover:border-[#B89B72]/50 hover:bg-white/[0.08] transition-all">
+            {/* Rex Media Agency / Developer Credit linked to GitHub */}
+            <a
+              href="https://github.com/rexmediawebsite-sketch"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/[0.05] border border-white/10 text-[11px] text-slate-300 shadow-2xs hover:border-[#B89B72]/60 hover:bg-white/[0.08] hover:scale-[1.02] active:scale-[0.98] transition-all group"
+              title="Visit Rex Media on GitHub"
+            >
               <span className="text-slate-400 font-light">Designed & Crafted by</span>
               <span className="font-bold text-white tracking-wide font-sans flex items-center gap-1.5">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#FAF6F0] to-[#D4BE9B]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#FAF6F0] to-[#D4BE9B] group-hover:text-[#B89B72]">
                   Rex Media
                 </span>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#B89B72] animate-pulse" />
               </span>
-            </div>
+            </a>
 
             <button
               onClick={scrollToTop}
