@@ -15,30 +15,31 @@ export function BrandLogo({
 }) {
   const isDark = variant === 'dark';
 
-  // Fine-tuned typography sizing (proportional and balanced)
+  // Proportional typography sizing that fits within grid columns without overflowing
   const sizeStyles = {
     sm: {
-      name: 'text-base sm:text-lg tracking-[0.1em]',
-      tagline: 'text-[8px] sm:text-[8.5px] tracking-[0.2em]',
+      name: 'text-sm sm:text-base tracking-[0.08em]',
+      tagline: 'text-[8px] sm:text-[8.5px] tracking-[0.18em]',
     },
     md: {
-      name: 'text-lg sm:text-xl lg:text-2xl tracking-[0.12em]',
-      tagline: 'text-[8.5px] sm:text-[9.5px] tracking-[0.22em]',
+      name: 'text-base sm:text-lg lg:text-xl tracking-[0.08em] sm:tracking-[0.1em]',
+      tagline: 'text-[8.5px] sm:text-[9.5px] tracking-[0.2em]',
     },
     lg: {
-      name: 'text-2xl sm:text-3xl lg:text-4xl tracking-[0.14em]',
-      tagline: 'text-[10px] sm:text-xs tracking-[0.26em]',
+      name: 'text-xl sm:text-2xl tracking-[0.08em] sm:tracking-[0.1em]',
+      tagline: 'text-[9px] sm:text-[10px] tracking-[0.22em]',
     },
   }[size] || sizeStyles.md;
 
   const content = (
-    <div className={`flex flex-col group select-none ${className}`}>
+    <div className={`flex flex-col group select-none max-w-full ${className}`}>
       {/* Brand Name */}
       <span
-        className={`font-cinzel font-bold uppercase whitespace-nowrap leading-tight transition-colors duration-200 ${sizeStyles.name} ${isDark
+        className={`font-cinzel font-bold uppercase leading-tight transition-colors duration-200 ${sizeStyles.name} ${
+          isDark
             ? 'text-white group-hover:text-[#D4BE9B]'
             : 'text-[#14213D] group-hover:text-[#B89B72]'
-          }`}
+        }`}
       >
         Devrani Jewellers
       </span>
@@ -46,8 +47,9 @@ export function BrandLogo({
       {/* Aesthetic High-Jewellery Subtitle */}
       {showTagline && (
         <span
-          className={`font-sans font-semibold uppercase mt-0.5 whitespace-nowrap transition-colors duration-200 ${sizeStyles.tagline} ${isDark ? 'text-[#D4BE9B]' : 'text-[#B89B72]'
-            }`}
+          className={`font-sans font-semibold uppercase mt-0.5 transition-colors duration-200 ${sizeStyles.tagline} ${
+            isDark ? 'text-[#D4BE9B]' : 'text-[#B89B72]'
+          }`}
         >
           Pure Gold & Silver • Sitamarhi
         </span>
