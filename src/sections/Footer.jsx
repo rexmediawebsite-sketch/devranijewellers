@@ -5,6 +5,7 @@ import { InstagramIcon, FacebookIcon } from '../components/common/BrandIcons';
 import { CONFIG } from '../config';
 import { openWhatsApp } from '../utils/whatsapp';
 import { useLanguage } from '../i18n/LanguageContext';
+import { BrandLogo } from '../components/common/BrandLogo';
 
 export function Footer() {
   const { t, lang } = useLanguage();
@@ -34,14 +35,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-[#E5E3DF]/20">
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-4">
-            <Link to="/" className="inline-block">
-              <h3 className="font-cinzel text-2xl sm:text-3xl text-white tracking-[0.16em] uppercase font-medium hover:text-[#B89B72] transition-colors">
-                {CONFIG.shopName}
-              </h3>
-            </Link>
-            <p className="text-xs uppercase tracking-[0.22em] text-gold-shine font-semibold font-sans">
-              Purity & Trust • BIS Hallmarked
-            </p>
+            <BrandLogo variant="dark" size="lg" />
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-light font-sans max-w-sm">
               {t.footer.tagline}
             </p>
@@ -184,9 +178,9 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom Copyright & Back to top */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-center sm:text-left">
+        {/* Bottom Copyright, Rex Media Credit & Back to top */}
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-2 text-center md:text-left">
             <p>{t.footer.copyright}</p>
             <span className="hidden sm:inline text-slate-600">•</span>
             <Link to="/privacy" className="hover:text-white transition-colors">Privacy</Link>
@@ -194,16 +188,26 @@ export function Footer() {
             <Link to="/returns" className="hover:text-white transition-colors">Returns</Link>
             <Link to="/security" className="hover:text-white transition-colors">Security</Link>
           </div>
-          <div className="flex items-center gap-6">
-            <span className="text-[11px] text-[#B89B72]">
-              Crafted with Love for Fine Jewels
-            </span>
+
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-4 sm:gap-6">
+            {/* Rex Media Agency / Developer Credit */}
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/[0.05] border border-white/10 text-[11px] text-slate-300 shadow-2xs hover:border-[#B89B72]/50 hover:bg-white/[0.08] transition-all">
+              <span className="text-slate-400 font-light">Designed & Crafted by</span>
+              <span className="font-bold text-white tracking-wide font-sans flex items-center gap-1.5">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#FAF6F0] to-[#D4BE9B]">
+                  Rex Media
+                </span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B89B72] animate-pulse" />
+              </span>
+            </div>
+
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-1.5 hover:text-white transition-colors text-slate-300"
+              className="flex items-center gap-1.5 hover:text-white transition-colors text-slate-300 group"
+              aria-label="Scroll back to top"
             >
               <span>Back to Top</span>
-              <ArrowUp className="w-3.5 h-3.5 text-[#B89B72]" />
+              <ArrowUp className="w-3.5 h-3.5 text-[#B89B72] group-hover:-translate-y-0.5 transition-transform" />
             </button>
           </div>
         </div>

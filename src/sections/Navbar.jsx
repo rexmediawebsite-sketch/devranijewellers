@@ -8,6 +8,7 @@ import { openWhatsApp } from '../utils/whatsapp';
 import { useWishlist } from '../context/WishlistContext';
 import { useLanguage } from '../i18n/LanguageContext';
 import { useModals } from '../context/ModalContext';
+import { BrandLogo } from '../components/common/BrandLogo';
 
 export function Navbar() {
   const location = useLocation();
@@ -101,18 +102,8 @@ export function Navbar() {
         } bg-white/95 backdrop-blur-md shadow-xs border-b border-[#E5E3DF] py-3.5`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Left: Brand Logo */}
-          <Link
-            to="/"
-            className="flex flex-col group"
-          >
-            <span className="font-cinzel text-xl sm:text-2xl tracking-[0.16em] uppercase transition-colors font-medium text-[#14213D] group-hover:text-[#B89B72]">
-              {CONFIG.shopName}
-            </span>
-            <span className="text-[9px] uppercase tracking-[0.26em] font-sans font-semibold text-gold-shine mt-0.5">
-              Pure Gold & Silver
-            </span>
-          </Link>
+          {/* Left: Luxury Brand Logo & Emblem */}
+          <BrandLogo variant="light" size="md" />
 
           {/* Center: Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center gap-7">
@@ -226,14 +217,11 @@ export function Navbar() {
               >
                 {/* Drawer Header */}
                 <div className="flex items-center justify-between border-b border-[#E5E3DF]/20 pb-5">
-                  <div>
-                    <span className="font-cinzel text-xl sm:text-2xl tracking-[0.18em] text-white block uppercase">
-                      {CONFIG.shopName}
-                    </span>
-                    <span className="text-[10px] text-[#B89B72] uppercase tracking-widest font-sans">
-                      Pure Gold & Silver
-                    </span>
-                  </div>
+                  <BrandLogo
+                    variant="dark"
+                    size="md"
+                    onClick={() => setMobileMenuOpen(false)}
+                  />
                   <button
                     onClick={() => setMobileMenuOpen(false)}
                     className="w-10 h-10 rounded-full border border-[#E5E3DF]/30 flex items-center justify-center text-white hover:text-[#B89B72] hover:border-[#B89B72] transition-colors"

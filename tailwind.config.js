@@ -81,6 +81,8 @@ export default {
       },
       fontFamily: {
         cinzel: ['"Cinzel"', '"Noto Serif Devanagari"', 'serif'],
+        'cinzel-decorative': ['"Cinzel Decorative"', '"Cinzel"', 'serif'],
+        marcellus: ['"Marcellus"', '"Cinzel"', 'serif'],
         playfair: ['"Playfair Display"', '"Noto Serif Devanagari"', 'Georgia', 'serif'],
         serif: ['"Playfair Display"', '"Noto Serif Devanagari"', '"Cormorant Garamond"', 'Georgia', 'serif'],
         cormorant: ['"Cormorant Garamond"', '"Noto Serif Devanagari"', 'serif'],
