@@ -101,12 +101,14 @@ export function Navbar() {
           isVisible ? 'translate-y-0' : '-translate-y-full'
         } bg-white/95 backdrop-blur-md shadow-xs border-b border-[#E5E3DF] py-3.5`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Left: Luxury Brand Logo & Emblem */}
-          <BrandLogo variant="light" size="md" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 sm:gap-6 lg:gap-10">
+          {/* Left: Luxury Brand Typography */}
+          <div className="shrink-0">
+            <BrandLogo variant="light" size="md" />
+          </div>
 
           {/* Center: Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-7">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-7 shrink-0">
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}

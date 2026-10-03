@@ -15,22 +15,22 @@ export function BrandLogo({
 }) {
   const isDark = variant === 'dark';
 
-  // Fine-tuned typography sizing (no awkward line wraps)
+  // Fine-tuned typography sizing (proportional and balanced)
   const sizeStyles = {
     sm: {
-      name: 'text-base sm:text-lg tracking-[0.12em]',
-      drj: 'text-xs sm:text-sm tracking-[0.1em] ml-1.5',
-      tagline: 'text-[8px] sm:text-[9px] tracking-[0.22em]',
+      name: 'text-sm sm:text-base tracking-[0.06em]',
+      drj: 'text-xs sm:text-sm tracking-[0.05em] ml-1.5',
+      tagline: 'text-[8px] sm:text-[8.5px] tracking-[0.18em]',
     },
     md: {
-      name: 'text-lg sm:text-2xl lg:text-[25px] tracking-[0.14em]',
-      drj: 'text-sm sm:text-lg lg:text-xl tracking-[0.12em] ml-1.5 sm:ml-2',
-      tagline: 'text-[9px] sm:text-[10px] tracking-[0.26em]',
+      name: 'text-base sm:text-lg lg:text-xl tracking-[0.06em] sm:tracking-[0.08em]',
+      drj: 'text-xs sm:text-sm lg:text-base tracking-[0.06em] ml-1.5 sm:ml-2',
+      tagline: 'text-[8.5px] sm:text-[9.5px] tracking-[0.2em]',
     },
     lg: {
-      name: 'text-2xl sm:text-3xl lg:text-4xl tracking-[0.16em]',
-      drj: 'text-lg sm:text-2xl tracking-[0.14em] ml-2 sm:ml-2.5',
-      tagline: 'text-[10px] sm:text-xs tracking-[0.28em]',
+      name: 'text-xl sm:text-2xl lg:text-3xl tracking-[0.08em]',
+      drj: 'text-base sm:text-xl tracking-[0.06em] ml-2',
+      tagline: 'text-[9.5px] sm:text-xs tracking-[0.22em]',
     },
   }[size] || sizeStyles.md;
 
