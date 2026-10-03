@@ -106,7 +106,7 @@ export function Hero() {
                 </span>
                 <div>
                   <p className="font-sans text-sm font-semibold text-[#14213D]">4.9 / 5.0 Rating</p>
-                  <p className="font-sans text-xs text-[#6B7280]">Over 4,200+ patrons nationwide</p>
+                  <p className="font-sans text-xs text-[#6B7280]">Over 4,200+ Happy Customers</p>
                 </div>
               </div>
 
@@ -115,8 +115,8 @@ export function Hero() {
                   <ShieldCheck className="w-5 h-5 text-[#14213D]" />
                 </div>
                 <div>
-                  <p className="font-sans text-sm font-semibold text-[#14213D]">Insured Pan-India</p>
-                  <p className="font-sans text-xs text-[#6B7280]">Complimentary express transit</p>
+                  <p className="font-sans text-sm font-semibold text-[#14213D]">100% Hallmarked</p>
+                  <p className="font-sans text-xs text-[#6B7280]">Accurate Weight & Fair Price</p>
                 </div>
               </div>
             </motion.div>
@@ -133,7 +133,7 @@ export function Hero() {
               {/* High-res Archival Bridal Model from Stitch */}
               <img
                 src="/stitch/stitch_image_3.png"
-                alt="Haute couture Indian bridal model adorned in 22K Kundan choker and polki earrings"
+                alt="Devrani Jewellers bridal model wearing 22K gold necklace"
                 onError={(e) => {
                   e.currentTarget.src = "https://lh3.googleusercontent.com/aida/AEtjO1VbtbOlg-EiQ1x56rX_gi9Su6pZDj1cqBZ57oLcmQl9cbf2eNF1EjLPiWxJm-2HLX7eN7-lrlb2Rg_y4VcRB-VLRyM8_IN0g38hUhBYswt5CNTe22GWg742NlB1da8fT5Uk6lb9toLHA1spAd_3ncnFKeehDmCK0WqxJ60E6Mrn2f4wxc6rxdA07YD-ys_YdKMS3XDkf1J3_L0XoiR_tcw4ISFmMx0_fyiNma6rKq7ScR4eQ7wr61D4uMY";
                 }}
@@ -147,7 +147,7 @@ export function Hero() {
               <div className="absolute bottom-3 sm:bottom-6 left-3 sm:left-6 right-3 sm:right-6 p-3.5 sm:p-5 rounded-xl sm:rounded-2xl bg-white/95 backdrop-blur-md shadow-lg border border-[#E5E3DF] flex items-center justify-between transition-all duration-300 group-hover:bg-white">
                 <div className="space-y-0.5 min-w-0 pr-2">
                   <span className="text-[9px] sm:text-[10px] uppercase tracking-widest text-[#B89B72] font-semibold font-sans block truncate">
-                    Archival Edition
+                    Bridal Special
                   </span>
                   <h3 className="font-serif text-base sm:text-xl text-[#14213D] font-medium leading-snug truncate">
                     Royal Kundan Choker
