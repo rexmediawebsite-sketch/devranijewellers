@@ -35,11 +35,10 @@ export function BrandLogo({
     <div className={`flex flex-col group select-none ${className}`}>
       {/* Brand Name */}
       <span
-        className={`font-cinzel font-bold uppercase whitespace-nowrap leading-tight transition-colors duration-200 ${sizeStyles.name} ${
-          isDark
+        className={`font-cinzel font-bold uppercase whitespace-nowrap leading-tight transition-colors duration-200 ${sizeStyles.name} ${isDark
             ? 'text-white group-hover:text-[#D4BE9B]'
             : 'text-[#14213D] group-hover:text-[#B89B72]'
-        }`}
+          }`}
       >
         Devrani Jewellers
       </span>
@@ -47,9 +46,8 @@ export function BrandLogo({
       {/* Aesthetic High-Jewellery Subtitle */}
       {showTagline && (
         <span
-          className={`font-sans font-semibold uppercase mt-0.5 whitespace-nowrap transition-colors duration-200 ${sizeStyles.tagline} ${
-            isDark ? 'text-[#D4BE9B]' : 'text-[#B89B72]'
-          }`}
+          className={`font-sans font-semibold uppercase mt-0.5 whitespace-nowrap transition-colors duration-200 ${sizeStyles.tagline} ${isDark ? 'text-[#D4BE9B]' : 'text-[#B89B72]'
+            }`}
         >
           Pure Gold & Silver • Sitamarhi
         </span>
