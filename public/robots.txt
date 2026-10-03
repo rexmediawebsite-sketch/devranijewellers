@@ -1,0 +1,40 @@
+# robots.txt for Devrani Jewellers (DRJ)
+# Website: https://jewellary-xi.vercel.app
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Explicitly allow AI Search Engines & LLMs for Generative Engine Optimization (GEO)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://jewellary-xi.vercel.app/sitemap.xml

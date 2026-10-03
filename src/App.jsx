@@ -20,6 +20,7 @@ import { ProductQuickViewModal } from './components/modals/ProductQuickViewModal
 import { WishlistDrawer } from './components/modals/WishlistDrawer';
 import { SizeGuideModal } from './components/modals/SizeGuideModal';
 import { BookVisitModal } from './components/modals/BookVisitModal';
+import { SmartSearchModal } from './components/modals/SmartSearchModal';
 
 // Shared Layout Header & Footer
 import { Navbar } from './sections/Navbar';
@@ -93,6 +94,7 @@ function AppLayout() {
       <WishlistDrawer />
       <SizeGuideModal />
       <BookVisitModal />
+      <SmartSearchModal />
     </div>
   );
 }

@@ -6,6 +6,19 @@ export function ModalProvider({ children }) {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isSizeGuideOpen, setIsSizeGuideOpen] = useState(false);
   const [isBookVisitOpen, setIsBookVisitOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  // Keyboard shortcut Ctrl+K or Cmd+K to open AI search
+  React.useEffect(() => {
+    const handleKeyDown = (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        setIsSearchOpen((prev) => !prev);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   const openQuickView = (product) => {
     setSelectedProduct(product);
@@ -31,6 +44,14 @@ export function ModalProvider({ children }) {
     setIsBookVisitOpen(false);
   };
 
+  const openSearch = () => {
+    setIsSearchOpen(true);
+  };
+
+  const closeSearch = () => {
+    setIsSearchOpen(false);
+  };
+
   return (
     <ModalContext.Provider
       value={{
@@ -43,6 +64,9 @@ export function ModalProvider({ children }) {
         isBookVisitOpen,
         openBookVisit,
         closeBookVisit,
+        isSearchOpen,
+        openSearch,
+        closeSearch,
       }}
     >
       {children}

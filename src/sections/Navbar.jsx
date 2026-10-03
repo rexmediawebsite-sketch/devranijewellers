@@ -2,16 +2,18 @@ import React, { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Heart, MessageCircle, Menu, X, Globe } from 'lucide-react';
+import { Heart, MessageCircle, Menu, X, Globe, Search } from 'lucide-react';
 import { CONFIG } from '../config';
 import { openWhatsApp } from '../utils/whatsapp';
 import { useWishlist } from '../context/WishlistContext';
 import { useLanguage } from '../i18n/LanguageContext';
+import { useModals } from '../context/ModalContext';
 
 export function Navbar() {
   const location = useLocation();
   const { count, openWishlist } = useWishlist();
   const { lang, toggleLang, t } = useLanguage();
+  const { openSearch } = useModals();
 
   const isHomePage = location.pathname === '/';
   const [isScrolled, setIsScrolled] = useState(!isHomePage);
@@ -140,8 +142,20 @@ export function Navbar() {
             ))}
           </nav>
 
-          {/* Right: Actions (Language toggle, Wishlist, WhatsApp button) */}
-          <div className="flex items-center gap-3 sm:gap-4">
+          {/* Right: Actions (Search, Language toggle, Wishlist, WhatsApp button) */}
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            {/* AI Smart Search Trigger */}
+            <button
+              onClick={openSearch}
+              className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 text-xs border border-[#E5E3DF] bg-[#F5F4F2] text-[#14213D] hover:border-[#B89B72] hover:text-[#B89B72] rounded-full transition-all group"
+              title="Search jewellery (Ctrl + K)"
+              aria-label="Search jewellery"
+            >
+              <Search className="w-3.5 h-3.5 text-[#B89B72] group-hover:scale-110 transition-transform" />
+              <span className="hidden sm:inline font-medium text-[11px] text-slate-600 group-hover:text-[#14213D]">Search</span>
+              <kbd className="hidden md:inline-block text-[9px] font-mono bg-white border border-[#E5E3DF] px-1 py-0.2 rounded text-slate-400">⌘K</kbd>
+            </button>
+
             {/* Language Toggle */}
             <button
               onClick={toggleLang}
@@ -229,8 +243,25 @@ export function Navbar() {
                   </button>
                 </div>
 
+                {/* Mobile Search Input Button */}
+                <div className="pt-4">
+                  <button
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      openSearch();
+                    }}
+                    className="w-full flex items-center justify-between px-4 py-3 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/15 text-slate-200 text-xs font-medium transition-all"
+                  >
+                    <span className="flex items-center gap-2.5">
+                      <Search className="w-4 h-4 text-[#B89B72]" />
+                      <span>Search jewellery & gold...</span>
+                    </span>
+                    <span className="text-[10px] text-slate-400 font-mono bg-white/10 px-2 py-0.5 rounded">Tap</span>
+                  </button>
+                </div>
+
                 {/* Navigation Links */}
-                <div className="py-8 space-y-5 flex flex-col">
+                <div className="py-6 space-y-4 flex flex-col">
                   {navLinks.map((link, idx) => (
                     <motion.div
                       key={link.to}
