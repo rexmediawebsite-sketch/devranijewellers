@@ -135,7 +135,7 @@ export function StoreVisit() {
           </div>
 
           {/* Right: Google Maps Embed Iframe */}
-          <div className="lg:col-span-6 min-h-[400px] bg-white border border-[#E5E3DF] shadow-sm rounded-2xl overflow-hidden relative">
+          <div className="lg:col-span-6 min-h-[420px] bg-white border border-[#E5E3DF] shadow-md rounded-2xl overflow-hidden relative">
             <iframe
               title="Devrani Jewellers Showroom Map"
               src={CONFIG.mapEmbedUrl}
@@ -145,7 +145,7 @@ export function StoreVisit() {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-full filter saturate-[0.85] contrast-[1.05]"
+              className="w-full h-full"
             />
           </div>
         </div>

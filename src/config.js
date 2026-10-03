@@ -37,12 +37,12 @@ export const CONFIG = {
       hoursHi: "प्रतिदिन (सोम - रवि): सुबह 10:00 AM से रात 8:00 PM",
       phone: "+91 98350 75841",
       phoneSecondary: "+91 92048 58261",
-      mapUrl: "https://maps.google.com/?q=Devrani+Jewellers+Sona+patti+Road+Near+aloo+gaddi+badi+bazar+Janki+mandir+Sitamarhi",
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=Sonapatti+Road+Badi+Bazar+Sitamarhi+Bihar+843302",
     }
   ],
   
-  // Google Maps Embed Iframe URL for Sona Patti Road, Near Aloo Gaddi, Badi Bazar, Janki Mandir, Sitamarhi
-  mapEmbedUrl: "https://maps.google.com/maps?q=Sona%20Patti%20Road%20Near%20Aloo%20Gaddi%20Badi%20Bazar%20Janki%20Mandir%20Sitamarhi&t=&z=16&ie=UTF8&iwloc=&output=embed",
+  // Google Maps Embed Iframe URL for Sonapatti Road, Badi Bazar, Sitamarhi
+  mapEmbedUrl: "https://maps.google.com/maps?q=Sonapatti%20Road,%20Badi%20Bazar,%20Sitamarhi,%20Bihar%20843302&t=&z=16&ie=UTF8&iwloc=&output=embed",
 
   // Real Showroom Gallery Photos (Added by User)
   shopGallery: [
