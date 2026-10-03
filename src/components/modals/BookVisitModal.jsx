@@ -189,6 +189,9 @@ export function BookVisitModal() {
               <p className="text-[10px] text-[#6B7280] text-center mt-2">
                 Opens directly in WhatsApp with your reserved appointment details.
               </p>
+              <p className="text-[10px] text-slate-500 text-center mt-1">
+                🔒 100% Privacy Guarantee: Your contact info is strictly confidential and never shared.
+              </p>
             </div>
           </form>
         </motion.div>

@@ -76,18 +76,40 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Privileges & Services */}
+          {/* Legal & Security Policies */}
           <div className="lg:col-span-3 space-y-4">
             <h4 className="text-xs uppercase tracking-widest text-[#B89B72] font-semibold font-sans">
-              {t.footer.services}
+              Trust & Policies
             </h4>
             <ul className="space-y-2.5 text-xs text-slate-300">
-              {t.footer.serviceList.map((service, i) => (
-                <li key={i} className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rotate-45 border border-[#B89B72]" />
-                  <span>{service}</span>
-                </li>
-              ))}
+              <li>
+                <Link to="/security" className="hover:text-white transition-colors inline-block py-0.5">
+                  Security & Purity Guarantee
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms" className="hover:text-white transition-colors inline-block py-0.5">
+                  Terms & Conditions
+                </Link>
+              </li>
+              <li>
+                <Link to="/privacy" className="hover:text-white transition-colors inline-block py-0.5">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/returns" className="hover:text-white transition-colors inline-block py-0.5">
+                  Return & Exchange Policy
+                </Link>
+              </li>
+              <li>
+                <button
+                  onClick={() => window.dispatchEvent(new CustomEvent('open-cookie-banner'))}
+                  className="hover:text-white transition-colors inline-block py-0.5 text-slate-300 text-left"
+                >
+                  Cookie Settings & Policy
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -142,9 +164,36 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Security & Purity Trust Badges Bar */}
+        <div className="py-6 border-b border-[#E5E3DF]/15 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+          <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+            <span className="text-[11px] font-semibold text-white uppercase tracking-wider block">🛡️ BIS 916 Hallmarked</span>
+            <span className="text-[10px] text-slate-400 block">Unique 6-Digit HUID on every jewel</span>
+          </div>
+          <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+            <span className="text-[11px] font-semibold text-white uppercase tracking-wider block">🔒 256-Bit SSL Secured</span>
+            <span className="text-[10px] text-slate-400 block">Encrypted & private customer data</span>
+          </div>
+          <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+            <span className="text-[11px] font-semibold text-white uppercase tracking-wider block">⚖️ Precision Digital Scales</span>
+            <span className="text-[10px] text-slate-400 block">100% net gold weight transparency</span>
+          </div>
+          <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
+            <span className="text-[11px] font-semibold text-white uppercase tracking-wider block">🏛️ Sitamarhi Showroom</span>
+            <span className="text-[10px] text-slate-400 block">Visit our verified physical store</span>
+          </div>
+        </div>
+
         {/* Bottom Copyright & Back to top */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>{t.footer.copyright}</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-center sm:text-left">
+            <p>{t.footer.copyright}</p>
+            <span className="hidden sm:inline text-slate-600">•</span>
+            <Link to="/privacy" className="hover:text-white transition-colors">Privacy</Link>
+            <Link to="/terms" className="hover:text-white transition-colors">Terms</Link>
+            <Link to="/returns" className="hover:text-white transition-colors">Returns</Link>
+            <Link to="/security" className="hover:text-white transition-colors">Security</Link>
+          </div>
           <div className="flex items-center gap-6">
             <span className="text-[11px] text-[#B89B72]">
               Crafted with Love for Fine Jewels

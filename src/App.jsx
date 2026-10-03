@@ -13,6 +13,7 @@ import { ScrollToTop } from './components/common/ScrollToTop';
 import { FloatingWhatsApp } from './components/common/FloatingWhatsApp';
 import { MobileActionBar } from './components/common/MobileActionBar';
 import { BackToTop } from './components/common/BackToTop';
+import { CookieBanner } from './components/common/CookieBanner';
 
 // Modals & Drawers
 import { ProductQuickViewModal } from './components/modals/ProductQuickViewModal';
@@ -30,6 +31,7 @@ import { CollectionsPage } from './pages/CollectionsPage';
 import { HeritagePage } from './pages/HeritagePage';
 import { VisitPage } from './pages/VisitPage';
 import { CareGuidePage } from './pages/CareGuidePage';
+import { LegalPage } from './pages/LegalPage';
 
 function AppLayout() {
   // Smooth scroll sync
@@ -61,6 +63,17 @@ function AppLayout() {
           <Route path="/bespoke" element={<Navigate to="/collections" replace />} />
           <Route path="/visit" element={<VisitPage />} />
           <Route path="/care-guide" element={<CareGuidePage />} />
+          
+          {/* Legal, Security & Policies */}
+          <Route path="/legal" element={<LegalPage />} />
+          <Route path="/terms" element={<LegalPage initialTab="terms" />} />
+          <Route path="/terms-and-conditions" element={<LegalPage initialTab="terms" />} />
+          <Route path="/privacy" element={<LegalPage initialTab="privacy" />} />
+          <Route path="/privacy-policy" element={<LegalPage initialTab="privacy" />} />
+          <Route path="/security" element={<LegalPage initialTab="security" />} />
+          <Route path="/returns" element={<LegalPage initialTab="returns" />} />
+          <Route path="/cookies" element={<LegalPage initialTab="cookies" />} />
+
           {/* Fallback to Home */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
@@ -69,10 +82,11 @@ function AppLayout() {
       {/* Global Luxury Footer */}
       <Footer />
 
-      {/* Global Actions */}
+      {/* Global Actions & Banners */}
       <FloatingWhatsApp />
       <MobileActionBar />
       <BackToTop />
+      <CookieBanner />
 
       {/* Global Modals & Drawers */}
       <ProductQuickViewModal />
