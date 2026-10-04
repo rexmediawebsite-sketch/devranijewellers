@@ -33,7 +33,7 @@ export function ShopGallery() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="font-cinzel text-2xl sm:text-3xl lg:text-4xl text-[#14213D] font-semibold tracking-[0.08em] uppercase leading-[1.2]"
           >
-            {lang === 'hi' ? 'देवरानी ज्वेलर्स शोरूम' : 'Inside Devrani Jewellers'}
+            {lang === 'hi' ? 'देवरानी ज्वेलर्स (DRJ) शोरूम' : 'Inside Devrani Jewellers'}
           </motion.h2>
 
           <motion.p
@@ -49,8 +49,8 @@ export function ShopGallery() {
           </motion.p>
         </div>
 
-        {/* 5 Shop Photos Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 sm:gap-6">
+        {/* 4 Shop Photos Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7">
           {CONFIG.shopGallery.map((item, index) => (
             <motion.div
               key={item.id}
