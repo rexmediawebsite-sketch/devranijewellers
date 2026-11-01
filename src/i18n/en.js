@@ -131,7 +131,7 @@ export const en = {
       },
       {
         title: "Friendly In-Store Service",
-        desc: "Visit our shop at Sona Patti Road, Badi Bazar, Sitamarhi or connect with us on WhatsApp."
+        desc: "Visit our shop at Sector 18, Noida or connect with us on WhatsApp."
       }
     ]
   },
@@ -150,8 +150,8 @@ export const en = {
   visit: {
     eyebrow: "VISIT OUR SHOP",
     heading: "Visit Devrani Jewellers in Person",
-    subheading: "Visit our showroom on Sona Patti Road, Badi Bazar (near Aloo Gaddi & Janki Mandir), Sitamarhi. See our pure gold and silver jewellery in person with honest guidance.",
-    mumbaiTitle: "Badi Bazar Showroom",
+    subheading: "Visit our showroom in Sector 18 (near Metro Station), Noida. See our pure gold and silver jewellery in person with honest guidance.",
+    mumbaiTitle: "Sector 18 Showroom",
     jaipurTitle: "Devrani Jewellers",
     hoursLabel: "Shop Timings: 10:00 AM – 8:00 PM (All 7 Days)",
     phoneLabel: "Phone Numbers",
@@ -208,6 +208,6 @@ export const en = {
       "Free Lifetime Cleaning & Checking"
     ],
     stayConnected: "Contact Our Shop",
-    copyright: "© 2026 Devrani Jewellers (DRJ). Sona Patti Road, Badi Bazar, Sitamarhi.",
+    copyright: "© 2026 Devrani Jewellers (DRJ). Sector 18, Noida, Uttar Pradesh.",
   }
 };

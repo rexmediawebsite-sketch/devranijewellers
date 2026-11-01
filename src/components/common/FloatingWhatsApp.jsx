@@ -15,7 +15,7 @@ export function FloatingWhatsApp() {
   };
 
   return (
-    <div className="fixed bottom-20 md:bottom-8 right-5 md:right-8 z-50 flex items-center gap-3">
+    <div className="hidden md:flex fixed bottom-8 right-8 z-50 items-center gap-3">
       {/* Tooltip speech bubble */}
       {showTooltip && (
         <div className="hidden sm:flex items-center gap-2 bg-[#14213D] text-white text-xs px-3.5 py-2 rounded-full shadow-lg border border-[#E5E3DF]/25 animate-fade-in">

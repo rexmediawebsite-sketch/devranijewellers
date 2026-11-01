@@ -227,8 +227,8 @@ export function FeaturedProducts({
           )}
         </div>
 
-        {/* Product Grid with Animated Reflow */}
-        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {/* Product Grid with Animated Reflow (2-column on mobile, responsive up to 4 columns) */}
+        <motion.div layout className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
           <AnimatePresence>
             {filteredProducts.map((product) => {
               const saved = isInWishlist(product.id);
@@ -242,7 +242,7 @@ export function FeaturedProducts({
                   transition={{ duration: 0.4 }}
                   key={product.id}
                   onClick={() => openQuickView(product)}
-                  className="group bg-white rounded-2xl border border-[#E5E3DF] hover:border-[#B89B72] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between cursor-pointer relative overflow-hidden"
+                  className="group bg-white rounded-xl sm:rounded-2xl border border-[#E5E3DF] hover:border-[#B89B72] shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between cursor-pointer relative overflow-hidden"
                 >
                   {/* Top Image Container with Skeleton Placeholder */}
                   <div className="relative aspect-4/5 w-full overflow-hidden bg-[#F5F4F2]">
@@ -254,8 +254,8 @@ export function FeaturedProducts({
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out relative z-0"
                     />
 
-                    {/* Quick View Button overlay on hover */}
-                    <div className="absolute inset-0 bg-[#14213D]/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[1px]">
+                    {/* Quick View Button overlay on hover (Desktop) */}
+                    <div className="hidden sm:flex absolute inset-0 bg-[#14213D]/25 opacity-0 group-hover:opacity-100 transition-opacity items-center justify-center backdrop-blur-[1px]">
                       <span className="px-4 py-2 rounded-full bg-[#14213D]/90 text-white text-xs uppercase tracking-widest font-sans flex items-center gap-1.5 shadow-md border border-white/20">
                         <Eye className="w-3.5 h-3.5 text-[#B89B72]" />
                         <span>{t.featured.quickView}</span>
@@ -263,13 +263,13 @@ export function FeaturedProducts({
                     </div>
 
                     {/* Badges */}
-                    <div className="absolute top-3 left-3 flex flex-col gap-1.5 pointer-events-none">
+                    <div className="absolute top-2 sm:top-3 left-2 sm:left-3 flex flex-col gap-1 sm:gap-1.5 pointer-events-none">
                       {product.isNew && (
-                        <span className="bg-[#14213D]/90 backdrop-blur-sm text-white text-[9px] uppercase tracking-widest px-2.5 py-0.5 rounded-full font-sans font-medium border border-white/20 shadow-xs">
-                          New Atelier
+                        <span className="bg-[#14213D]/90 backdrop-blur-sm text-white text-[8px] sm:text-[9px] uppercase tracking-wider sm:tracking-widest px-2 sm:px-2.5 py-0.5 rounded-full font-sans font-medium border border-white/20 shadow-xs">
+                          New
                         </span>
                       )}
-                      <span className="bg-white/95 backdrop-blur-sm text-[#14213D] text-[9px] uppercase tracking-wider px-2.5 py-0.5 rounded-full border border-[#E5E3DF] font-medium shadow-xs">
+                      <span className="bg-white/95 backdrop-blur-sm text-[#14213D] text-[8px] sm:text-[9px] uppercase tracking-wider px-2 sm:px-2.5 py-0.5 rounded-full border border-[#E5E3DF] font-medium shadow-xs">
                         {product.purity}
                       </span>
                     </div>
@@ -278,41 +278,41 @@ export function FeaturedProducts({
                     <button
                       onClick={(e) => handleWishlistToggle(e, product)}
                       aria-label="Toggle Wishlist"
-                      className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/95 backdrop-blur-sm text-[#14213D] hover:text-[#B89B72] flex items-center justify-center shadow-sm border border-[#E5E3DF] hover:border-[#B89B72] transition-all hover:scale-110 active:scale-95 z-10"
+                      className="absolute top-2 sm:top-3 right-2 sm:right-3 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/95 backdrop-blur-sm text-[#14213D] hover:text-[#B89B72] flex items-center justify-center shadow-xs border border-[#E5E3DF] hover:border-[#B89B72] transition-all hover:scale-110 active:scale-95 z-10"
                     >
-                      <Heart className={`w-4 h-4 ${saved ? 'fill-[#B89B72] text-[#B89B72]' : 'text-[#14213D]'}`} />
+                      <Heart className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${saved ? 'fill-[#B89B72] text-[#B89B72]' : 'text-[#14213D]'}`} />
                     </button>
                   </div>
 
                   {/* Card Body */}
-                  <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
+                  <div className="p-2.5 xs:p-3 sm:p-5 flex-1 flex flex-col justify-between">
                     <div>
-                      <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.18em] text-[#B89B72] font-semibold mb-1">
-                        <span>{product.categoryName || product.category}</span>
-                        {product.weight && <span className="text-[#6B7280] font-sans font-medium tracking-normal">{product.weight}</span>}
+                      <div className="flex items-center justify-between text-[8px] xs:text-[9px] sm:text-[10px] uppercase tracking-wider sm:tracking-[0.18em] text-[#B89B72] font-semibold mb-0.5 sm:mb-1">
+                        <span className="truncate">{product.categoryName || product.category}</span>
+                        {product.weight && <span className="text-[#6B7280] font-sans font-medium tracking-normal shrink-0 ml-1">{product.weight}</span>}
                       </div>
 
-                      <h3 className="font-serif text-lg font-medium text-[#14213D] group-hover:text-[#B89B72] transition-colors line-clamp-1 leading-snug">
+                      <h3 className="font-serif text-xs xs:text-sm sm:text-lg font-medium text-[#14213D] group-hover:text-[#B89B72] transition-colors line-clamp-1 leading-snug">
                         {product.name}
                       </h3>
 
-                      <p className="mt-1 text-xs text-[#6B7280] font-sans line-clamp-2 leading-relaxed">
+                      <p className="hidden sm:block mt-1 text-xs text-[#6B7280] font-sans line-clamp-2 leading-relaxed">
                         {product.description}
                       </p>
                     </div>
 
                     {/* Price & Direct WhatsApp CTA */}
-                    <div className="mt-4 pt-3 border-t border-[#E5E3DF] flex items-center justify-between gap-2">
-                      <span className="font-sans text-sm sm:text-base font-bold text-[#14213D] tabular-nums tracking-tight">
+                    <div className="mt-2.5 sm:mt-4 pt-2 sm:pt-3 border-t border-[#E5E3DF] flex flex-col xs:flex-row items-stretch xs:items-center justify-between gap-1.5 sm:gap-2">
+                      <span className="font-sans text-xs sm:text-base font-bold text-[#14213D] tabular-nums tracking-tight">
                         {product.priceDisplay}
                       </span>
 
                       <button
                         onClick={(e) => handleWhatsAppEnquire(e, product)}
-                        className="btn-gold-action px-4 py-2 rounded-full text-white text-[11px] uppercase tracking-[0.14em] font-semibold flex items-center gap-1.5 transition-all shadow-sm active:scale-95"
+                        className="btn-gold-action px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-white text-[10px] sm:text-[11px] uppercase tracking-wider sm:tracking-[0.14em] font-semibold flex items-center justify-center gap-1 sm:gap-1.5 transition-all shadow-xs active:scale-95"
                         title="Enquire on WhatsApp"
                       >
-                        <MessageCircle className="w-3.5 h-3.5 fill-white text-white" />
+                        <MessageCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-white text-white shrink-0" />
                         <span>Enquire</span>
                       </button>
                     </div>

@@ -29,7 +29,7 @@ export function Craftsmanship() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#14213D]/85 via-[#14213D]/20 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 text-white">
                   <span className="text-[10px] uppercase tracking-widest text-[#B89B72] font-semibold block">
-                    Devrani Jewellers • Sona Patti Road
+                    Devrani Jewellers • Sector 18, Noida
                   </span>
                   <p className="font-serif text-lg font-light mt-1">
                     "हॉलमार्क जेवर उपलब्ध है — शुद्धता और विश्वास की अटूट परंपरा।"

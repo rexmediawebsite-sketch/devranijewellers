@@ -100,7 +100,7 @@ export function CollectionsPage() {
             Looking for a Specific Design or Weight?
           </h3>
           <p className="mt-3 text-xs sm:text-sm text-[#6B7280] max-w-xl mx-auto leading-relaxed font-sans">
-            Visit our showroom at Sona Patti Road, Badi Bazar, Sitamarhi to view hundreds of designs in pure 22K/24K gold and silver, or connect with our Master Jeweller directly.
+            Visit our showroom at Sector 18, Noida to view hundreds of designs in pure 22K/24K gold and silver, or connect with our Master Jeweller directly.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link

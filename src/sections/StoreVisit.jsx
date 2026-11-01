@@ -52,11 +52,11 @@ export function StoreVisit() {
                 <div className="mt-4 mb-2 relative aspect-[16/9] rounded-xl overflow-hidden border border-[#E5E3DF] shadow-xs">
                   <img
                     src="/shop/storefront-night.jpg"
-                    alt="Devrani Jewellers Storefront on Sona Patti Road"
+                    alt="Devrani Jewellers Storefront in Sector 18, Noida"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute bottom-2.5 left-2.5 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] text-white font-sans uppercase tracking-wider font-semibold border border-white/20">
-                    {lang === 'hi' ? 'वास्तविक शोरूम • सोना पट्टी रोड' : 'Original Storefront • Sona Patti Road'}
+                    {lang === 'hi' ? 'वास्तविक शोरूम • सेक्टर 18, नोएडा' : 'Original Storefront • Sector 18, Noida'}
                   </div>
                 </div>
 
@@ -97,7 +97,7 @@ export function StoreVisit() {
                   </a>
 
                   <button
-                    onClick={() => openWhatsApp({ customText: `Namaste Devrani Jewellers, I would like to visit your showroom on Sona Patti Road, Badi Bazar.` })}
+                    onClick={() => openWhatsApp({ customText: `Namaste Devrani Jewellers, I would like to visit your showroom in Sector 18, Noida.` })}
                     className="btn-gold-action inline-flex items-center gap-1.5 px-5 py-2.5 active:scale-95 text-white text-xs uppercase tracking-[0.16em] font-semibold shadow-sm transition-all rounded-full"
                   >
                     <MessageCircle className="w-3.5 h-3.5 fill-white text-white" />
@@ -137,11 +137,11 @@ export function StoreVisit() {
           </div>
 
           {/* Right: Google Maps Embed Iframe */}
-          <div className="lg:col-span-6 min-h-[440px] bg-white border border-[#E5E3DF] shadow-md rounded-2xl overflow-hidden relative flex flex-col">
+          <div className="lg:col-span-6 min-h-[300px] sm:min-h-[440px] bg-white border border-[#E5E3DF] shadow-md rounded-2xl overflow-hidden relative flex flex-col">
             <div className="py-2.5 px-4 bg-[#14213D] text-white flex items-center justify-between text-xs border-b border-[#E5E3DF]/20">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-[#B89B72]" />
-                <span className="font-medium font-sans">Devrani Jewellers (DRJ) • Sitamarhi</span>
+                <span className="font-medium font-sans">Devrani Jewellers (DRJ) • Noida</span>
               </div>
               <a
                 href={CONFIG.locations[0].mapUrl}
@@ -158,7 +158,7 @@ export function StoreVisit() {
               src={CONFIG.mapEmbedUrl}
               width="100%"
               height="100%"
-              style={{ border: 0, minHeight: '440px' }}
+              style={{ border: 0, minHeight: '300px' }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

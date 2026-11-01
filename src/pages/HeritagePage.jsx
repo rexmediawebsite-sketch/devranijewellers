@@ -16,7 +16,7 @@ export function HeritagePage() {
         eyebrow="ANCESTRAL ROOTS • TRUST & PURITY"
         title={lang === 'hi' ? 'पीढ़ियों का अटूट विश्वास और शुद्धता' : 'Generations of Revered Heritage & Trust'}
         subtitle={lang === 'hi'
-          ? 'सोना पट्टी रोड, बड़ी बाज़ार (जानकी मंदिर के निकट) स्थित हमारे प्रतिष्ठान पर शुद्धता की पूर्ण गारंटी।'
+          ? 'मुख्य बाज़ार, सेक्टर 18 (नोएडा) स्थित हमारे प्रतिष्ठान पर शुद्धता की पूर्ण गारंटी।'
           : 'Preserving authentic gold artistry, traditional bridal sets, and timeless pure silver ornaments.'}
         breadcrumbCurrent="Our Heritage"
       />

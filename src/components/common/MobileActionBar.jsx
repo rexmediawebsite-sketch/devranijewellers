@@ -12,14 +12,15 @@ export function MobileActionBar() {
   const { openSearch } = useModals();
 
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#14213D]/95 backdrop-blur-md border-t border-[#E5E3DF]/20 px-2 py-2 flex items-center justify-around shadow-2xl safe-area-pb">
+    <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#14213D]/95 backdrop-blur-md border-t border-[#E5E3DF]/20 px-1 py-1 flex items-center justify-around shadow-2xl safe-area-pb">
       {/* Search */}
       <button
         onClick={openSearch}
-        className="flex flex-col items-center justify-center text-slate-300 hover:text-white transition-colors py-1 px-1.5 text-center"
+        className="flex-1 flex flex-col items-center justify-center text-slate-300 hover:text-white active:scale-95 transition-all py-1 px-0.5 text-center"
+        aria-label="Search jewellery"
       >
-        <Search className="w-5 h-5 text-[#B89B72]" />
-        <span className="text-[10px] tracking-wider uppercase mt-1 font-sans">
+        <Search className="w-4 h-4 xs:w-5 xs:h-5 text-[#B89B72]" />
+        <span className="text-[9px] xs:text-[10px] tracking-wider uppercase mt-1 font-sans">
           {lang === 'hi' ? 'सर्च' : 'Search'}
         </span>
       </button>
@@ -27,21 +28,25 @@ export function MobileActionBar() {
       {/* Direct Call */}
       <a
         href={`tel:${CONFIG.phoneCall}`}
-        className="flex flex-col items-center justify-center text-slate-300 hover:text-white transition-colors py-1 px-1.5 text-center"
+        className="flex-1 flex flex-col items-center justify-center text-slate-300 hover:text-white active:scale-95 transition-all py-1 px-0.5 text-center"
+        aria-label="Call store"
       >
-        <Phone className="w-5 h-5 text-[#B89B72]" />
-        <span className="text-[10px] tracking-wider uppercase mt-1 font-sans">
-          {lang === 'hi' ? 'कॉल करें' : 'Call'}
+        <Phone className="w-4 h-4 xs:w-5 xs:h-5 text-[#B89B72]" />
+        <span className="text-[9px] xs:text-[10px] tracking-wider uppercase mt-1 font-sans">
+          {lang === 'hi' ? 'कॉल' : 'Call'}
         </span>
       </a>
 
-      {/* WhatsApp */}
+      {/* WhatsApp - Standout Center Action */}
       <button
         onClick={() => openWhatsApp()}
-        className="flex flex-col items-center justify-center text-slate-300 hover:text-white transition-colors py-1 px-1.5 text-center"
+        className="flex-1 flex flex-col items-center justify-center text-white active:scale-95 transition-all py-0.5 px-0.5 text-center group"
+        aria-label="Chat on WhatsApp"
       >
-        <MessageCircle className="w-5 h-5 text-[#B89B72] fill-[#B89B72]/20" />
-        <span className="text-[10px] tracking-wider uppercase mt-1 font-sans">
+        <div className="w-10 h-10 -mt-3.5 rounded-full bg-gradient-to-tr from-[#9A7D55] via-[#B89B72] to-[#D4BE9B] flex items-center justify-center shadow-lg border-2 border-[#14213D] group-hover:scale-105 transition-transform">
+          <MessageCircle className="w-5 h-5 text-[#14213D] fill-[#14213D]" />
+        </div>
+        <span className="text-[9px] xs:text-[10px] tracking-wider uppercase mt-0.5 font-sans font-semibold text-[#D4BE9B]">
           {lang === 'hi' ? 'व्हाट्सएप' : 'WhatsApp'}
         </span>
       </button>
@@ -51,29 +56,31 @@ export function MobileActionBar() {
         href={CONFIG.locations[0].mapUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex flex-col items-center justify-center text-slate-300 hover:text-white transition-colors py-1 px-2 text-center"
+        className="flex-1 flex flex-col items-center justify-center text-slate-300 hover:text-white active:scale-95 transition-all py-1 px-0.5 text-center"
+        aria-label="Store directions"
       >
-        <Navigation className="w-5 h-5 text-[#B89B72]" />
-        <span className="text-[10px] tracking-wider uppercase mt-1 font-sans">
-          {lang === 'hi' ? 'दिशा-निर्देश' : 'Directions'}
+        <Navigation className="w-4 h-4 xs:w-5 xs:h-5 text-[#B89B72]" />
+        <span className="text-[9px] xs:text-[10px] tracking-wider uppercase mt-1 font-sans truncate max-w-full">
+          {lang === 'hi' ? 'मैप' : 'Map'}
         </span>
       </a>
 
       {/* Wishlist */}
       <button
         onClick={openWishlist}
-        className="flex flex-col items-center justify-center text-slate-300 hover:text-white transition-colors py-1 px-2 relative text-center"
+        className="flex-1 flex flex-col items-center justify-center text-slate-300 hover:text-white active:scale-95 transition-all py-1 px-0.5 relative text-center"
+        aria-label="View wishlist"
       >
         <div className="relative">
-          <Heart className="w-5 h-5 text-[#B89B72]" />
+          <Heart className="w-4 h-4 xs:w-5 xs:h-5 text-[#B89B72]" />
           {count > 0 && (
-            <span className="absolute -top-1.5 -right-2 bg-[#B89B72] text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center shadow-xs">
+            <span className="absolute -top-1.5 -right-2 bg-[#B89B72] text-white text-[8px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center shadow-xs">
               {count}
             </span>
           )}
         </div>
-        <span className="text-[10px] tracking-wider uppercase mt-1 font-sans">
-          {lang === 'hi' ? 'पसंदीदा' : 'Wishlist'}
+        <span className="text-[9px] xs:text-[10px] tracking-wider uppercase mt-1 font-sans">
+          {lang === 'hi' ? 'पसंदीदा' : 'Saved'}
         </span>
       </button>
     </div>

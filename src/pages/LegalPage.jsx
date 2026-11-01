@@ -143,7 +143,7 @@ export function LegalPage({ initialTab = 'terms' }) {
                     3. Safe Showroom & Locker Facility
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    Our physical showroom at Sona Patti Road, Badi Bazar is protected 24/7 with high-definition CCTV surveillance, secure vault lockers, and trained security personnel. Your physical visit and private viewings are 100% safe and private.
+                    Our physical showroom in Sector 18, Noida is protected 24/7 with high-definition CCTV surveillance, secure vault lockers, and trained security personnel. Your physical visit and private viewings are 100% safe and private.
                   </p>
                 </div>
 
@@ -223,7 +223,7 @@ export function LegalPage({ initialTab = 'terms' }) {
                     4. In-Store Pickup & Security
                   </h3>
                   <p>
-                    For high-value purchases ordered or booked in advance, jewellery must be collected in person at our showroom located at Sona Patti Road, Badi Bazar, Sitamarhi. Please bring a valid government ID (Aadhaar or PAN) for verification and billing compliance.
+                    For high-value purchases ordered or booked in advance, jewellery must be collected in person at our showroom located in Sector 18, Noida, Uttar Pradesh. Please bring a valid government ID (Aadhaar or PAN) for verification and billing compliance.
                   </p>
                 </div>
 
@@ -443,7 +443,7 @@ export function LegalPage({ initialTab = 'terms' }) {
                 Have a question about our policies?
               </h4>
               <p className="text-xs text-slate-500">
-                Talk directly with our showroom team in Sitamarhi. We are here to help 7 days a week.
+                Talk directly with our showroom team in Noida. We are here to help 7 days a week.
               </p>
             </div>
 

@@ -173,13 +173,13 @@ export function SmartSearchModal() {
                     {CONFIG.shopName}
                   </span>
                   <span className="text-[10px] text-gold-shine font-semibold uppercase tracking-wider">
-                    Showroom In Sitamarhi
+                    Showroom In Noida
                   </span>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600 pt-1">
                   <div className="flex items-center gap-2">
                     <MapPin className="w-3.5 h-3.5 text-[#B89B72] shrink-0" />
-                    <span className="truncate">Sona Patti Road, Badi Bazar</span>
+                    <span className="truncate">Sector 18, Noida</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Clock className="w-3.5 h-3.5 text-[#B89B72] shrink-0" />

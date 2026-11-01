@@ -39,7 +39,7 @@ function AppLayout() {
   useLenis(true);
 
   return (
-    <div className="relative min-h-screen bg-white text-[#14213D] font-sans selection:bg-[#B89B72] selection:text-white pb-16 md:pb-0 flex flex-col justify-between">
+    <div className="relative min-h-screen bg-white text-[#14213D] font-sans selection:bg-[#B89B72] selection:text-white pb-20 md:pb-0 flex flex-col justify-between">
       {/* Scroll restoration */}
       <ScrollToTop />
 

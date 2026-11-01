@@ -18,16 +18,16 @@ export function BrandLogo({
   // Proportional typography sizing that fits within grid columns without overflowing
   const sizeStyles = {
     sm: {
-      name: 'text-sm sm:text-base tracking-[0.08em]',
-      tagline: 'text-[8px] sm:text-[8.5px] tracking-[0.18em]',
+      name: 'text-xs xs:text-sm sm:text-base tracking-[0.06em] sm:tracking-[0.08em]',
+      tagline: 'text-[7.5px] xs:text-[8px] sm:text-[8.5px] tracking-[0.14em] sm:tracking-[0.18em]',
     },
     md: {
-      name: 'text-base sm:text-lg lg:text-xl tracking-[0.08em] sm:tracking-[0.1em]',
-      tagline: 'text-[8.5px] sm:text-[9.5px] tracking-[0.2em]',
+      name: 'text-[15px] sm:text-lg lg:text-xl tracking-[0.06em] sm:tracking-[0.1em]',
+      tagline: 'text-[7.5px] sm:text-[9.5px] tracking-[0.14em] sm:tracking-[0.2em]',
     },
     lg: {
-      name: 'text-xl sm:text-2xl tracking-[0.08em] sm:tracking-[0.1em]',
-      tagline: 'text-[9px] sm:text-[10px] tracking-[0.22em]',
+      name: 'text-lg sm:text-2xl tracking-[0.06em] sm:tracking-[0.1em]',
+      tagline: 'text-[8.5px] sm:text-[10px] tracking-[0.18em] sm:tracking-[0.22em]',
     },
   }[size] || sizeStyles.md;
 
@@ -51,7 +51,7 @@ export function BrandLogo({
             isDark ? 'text-[#D4BE9B]' : 'text-[#B89B72]'
           }`}
         >
-          Pure Gold & Silver • Sitamarhi
+          Pure Gold & Silver • Noida
         </span>
       )}
     </div>

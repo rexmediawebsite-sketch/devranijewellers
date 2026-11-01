@@ -23,7 +23,7 @@ export function ShopGallery() {
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#B89B72]/10 border border-[#B89B72]/30 text-[#B89B72] text-[11px] font-sans font-semibold uppercase tracking-[0.25em] mb-3"
           >
             <MapPin className="w-3.5 h-3.5" />
-            <span>{lang === 'hi' ? 'दुकान की वास्तविक झलक' : 'Showroom Glimpse • Sona Patti Road'}</span>
+            <span>{lang === 'hi' ? 'दुकान की वास्तविक झलक' : 'Showroom Glimpse • Sector 18, Noida'}</span>
           </motion.div>
 
           <motion.h2
@@ -44,8 +44,8 @@ export function ShopGallery() {
             className="mt-3 text-xs sm:text-sm text-[#6B7280] leading-relaxed font-sans max-w-2xl mx-auto"
           >
             {lang === 'hi'
-              ? 'आलू गद्दी व जानकी स्थान (सीतामढ़ी) के निकट स्थित हमारा जगमगाता प्रतिष्ठान। शुद्ध हॉलमार्क जेवर व आत्मीय सेवा के लिए आपका स्वागत है।'
-              : 'Spot our 3D illuminated golden signage and BIS Hallmark emblem easily on Sona Patti Road, near Aloo Gaddi and Janki Mandir, Sitamarhi.'}
+              ? 'सेक्टर 18 (नोएडा) स्थित हमारा जगमगाता प्रतिष्ठान। शुद्ध हॉलमार्क जेवर व आत्मीय सेवा के लिए आपका स्वागत है।'
+              : 'Spot our 3D illuminated golden signage and BIS Hallmark emblem easily in Sector 18, near Metro Station, Noida.'}
           </motion.p>
         </div>
 
@@ -131,13 +131,13 @@ export function ShopGallery() {
             </span>
             <h3 className="font-cinzel text-xl sm:text-2xl text-white">
               {lang === 'hi'
-                ? 'सोना पट्टी रोड, बड़ी बाजार (जानकी मंदिर / आलू गद्दी के निकट)'
-                : 'Sona Patti Road, Near Aloo Gaddi & Janki Mandir'}
+                ? 'मुख्य बाज़ार, सेक्टर 18 (मेट्रो स्टेशन के निकट)'
+                : 'Main Market, Sector 18 (Near Metro Station)'}
             </h3>
             <p className="text-xs text-[#F5F4F2]/75 max-w-xl font-sans">
               {lang === 'hi'
-                ? 'सीतामढ़ी, बिहार 843302 • प्रतिदिन खुला: सुबह 10:00 बजे से रात 8:00 बजे तक'
-                : 'Sitamarhi, Bihar 843302 • Open 7 Days: 10:00 AM – 8:00 PM'}
+                ? 'नोएडा, उत्तर प्रदेश 201301 • प्रतिदिन खुला: सुबह 10:00 बजे से रात 8:00 बजे तक'
+                : 'Sector 18, Noida, Uttar Pradesh 201301 • Open 7 Days: 10:00 AM – 8:00 PM'}
             </p>
           </div>
 
@@ -161,7 +161,7 @@ export function ShopGallery() {
             </a>
 
             <button
-              onClick={() => openWhatsApp({ customText: 'Hello Devrani Jewellers, I am on the way to your showroom on Sona Patti Road, Badi Bazar.' })}
+              onClick={() => openWhatsApp({ customText: 'Hello Devrani Jewellers, I am on the way to your showroom in Sector 18, Noida.' })}
               className="btn-gold-action inline-flex items-center gap-2 px-5 py-3 rounded-full text-white text-xs uppercase tracking-[0.16em] font-semibold shadow-md transition-all active:scale-95"
             >
               <MessageCircle className="w-3.5 h-3.5 fill-white text-white" />

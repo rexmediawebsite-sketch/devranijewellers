@@ -263,8 +263,8 @@ export function Collections({ onSelectCategory }) {
                   className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out pointer-events-none brightness-100"
                 />
 
-                {/* HOVER OVERLAY: Details appear ONLY when placing cursor on the photo */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#14213D]/95 via-[#14213D]/40 to-[#14213D]/20 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-between p-5 pointer-events-none group-hover:pointer-events-auto backdrop-blur-[2px]">
+                {/* HOVER / TOUCH OVERLAY: Always accessible on mobile touch, revealed on desktop hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#14213D]/95 via-[#14213D]/40 to-[#14213D]/20 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex flex-col justify-between p-4 sm:p-5 pointer-events-auto sm:pointer-events-none sm:group-hover:pointer-events-auto backdrop-blur-[1px] sm:backdrop-blur-[2px]">
                   {/* Top: Tag Badge & Action Arrow */}
                   <div className="flex items-center justify-between transform -translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                     <span className="bg-[#14213D]/90 backdrop-blur-sm text-white text-[9px] uppercase tracking-widest px-3 py-1 border border-white/20 font-medium rounded-full shadow-xs">

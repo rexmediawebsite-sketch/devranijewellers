@@ -15,7 +15,7 @@ export function VisitPage() {
       icon: Coffee,
       title: "Warm Hospitality",
       titleHi: "आत्मीय आतिथ्य",
-      desc: "Traditional warm hospitality and personalized jewellery consultations at our Sona Patti Road, Badi Bazar showroom.",
+      desc: "Traditional warm hospitality and personalized jewellery consultations at our Sector 18, Noida showroom.",
     },
     {
       icon: Calendar,
@@ -37,8 +37,8 @@ export function VisitPage() {
         eyebrow="SHOWROOM VISIT"
         title={lang === 'hi' ? 'हमारे शोरूम पधारें' : 'Visit Devrani Jewellers in Person'}
         subtitle={lang === 'hi'
-          ? 'सोना पट्टी रोड, बड़ी बाज़ार (आलू गद्दी व जानकी मंदिर के निकट) स्थित हमारे शोरूम में आपका सादर अभिनन्दन है।'
-          : 'Located at Sona Patti Road, Near Aloo Gaddi, Badi Bazar (Near Janki Mandir). Open Mon - Sun: 10:00 AM – 8:00 PM.'}
+          ? 'मुख्य बाज़ार, सेक्टर 18 (नोएडा) स्थित हमारे शोरूम में आपका सादर अभिनन्दन है।'
+          : 'Located at Sector 18 (Near Metro Station), Noida. Open Mon - Sun: 10:00 AM – 8:00 PM.'}
         breadcrumbCurrent="Visit Us"
       />
 

@@ -101,9 +101,9 @@ export function Navbar() {
           isVisible ? 'translate-y-0' : '-translate-y-full'
         } bg-white/95 backdrop-blur-md shadow-xs border-b border-[#E5E3DF] py-3.5`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 sm:gap-6 lg:gap-10">
+        <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 flex items-center justify-between gap-2.5 sm:gap-6 lg:gap-10">
           {/* Left: Luxury Brand Typography */}
-          <div className="shrink-0">
+          <div className="shrink-0 min-w-0">
             <BrandLogo variant="light" size="md" />
           </div>
 
@@ -135,12 +135,12 @@ export function Navbar() {
             ))}
           </nav>
 
-          {/* Right: Actions (Search, Language toggle, Wishlist, WhatsApp button) */}
-          <div className="flex items-center gap-2.5 sm:gap-3">
-            {/* AI Smart Search Trigger */}
+          {/* Right: Actions */}
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            {/* AI Smart Search Trigger (Desktop/Tablet; Mobile has Search in bottom dock) */}
             <button
               onClick={openSearch}
-              className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 text-xs border border-[#E5E3DF] bg-[#F5F4F2] text-[#14213D] hover:border-[#B89B72] hover:text-[#B89B72] rounded-full transition-all group"
+              className="hidden sm:flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 text-xs border border-[#E5E3DF] bg-[#F5F4F2] text-[#14213D] hover:border-[#B89B72] hover:text-[#B89B72] rounded-full transition-all group"
               title="Search jewellery (Ctrl + K)"
               aria-label="Search jewellery"
             >
@@ -152,17 +152,17 @@ export function Navbar() {
             {/* Language Toggle */}
             <button
               onClick={toggleLang}
-              className="flex items-center gap-1.5 px-3 py-1.5 text-xs border border-[#E5E3DF] bg-[#F5F4F2] text-[#14213D] hover:border-[#B89B72] hover:text-[#B89B72] rounded-full transition-all"
+              className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 text-xs border border-[#E5E3DF] bg-[#F5F4F2] text-[#14213D] hover:border-[#B89B72] hover:text-[#B89B72] rounded-full transition-all active:scale-95"
               title="Toggle English / Hindi"
             >
-              <Globe className="w-3.5 h-3.5 text-[#B89B72]" />
+              <Globe className="w-3.5 h-3.5 text-[#B89B72] shrink-0" />
               <span className="font-semibold text-[11px] tracking-wider">{lang === 'en' ? 'हिन्दी' : 'EN'}</span>
             </button>
 
-            {/* Wishlist Button with Badge */}
+            {/* Wishlist Button with Badge (Desktop/Tablet; Mobile has Wishlist in bottom dock) */}
             <button
               onClick={openWishlist}
-              className="relative p-2 rounded-full text-[#14213D] hover:text-[#B89B72] hover:bg-[#F5F4F2] transition-all"
+              className="hidden sm:inline-flex relative p-2 rounded-full text-[#14213D] hover:text-[#B89B72] hover:bg-[#F5F4F2] transition-all"
               aria-label="View Wishlist"
             >
               <Heart className="w-5 h-5" />
@@ -185,7 +185,7 @@ export function Navbar() {
             {/* Mobile Hamburger Trigger (3 lines) */}
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="lg:hidden p-2 text-[#14213D] hover:text-[#B89B72] transition-colors"
+              className="lg:hidden p-1.5 sm:p-2 text-[#14213D] hover:text-[#B89B72] transition-colors rounded-lg active:bg-slate-100"
               aria-label="Open navigation menu"
             >
               <Menu className="w-6 h-6" />
@@ -300,7 +300,7 @@ export function Navbar() {
                   </div>
 
                   <div className="text-[11px] text-[#F5F4F2]/60 text-center pt-2 font-sans">
-                    Sona Patti Road, Badi Bazar • {CONFIG.phonePrimary}
+                    Sector 18, Noida • {CONFIG.phonePrimary}
                   </div>
                 </div>
               </motion.div>

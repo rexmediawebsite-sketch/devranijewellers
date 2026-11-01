@@ -56,10 +56,10 @@ export function HomePage() {
             Showroom Experience
           </span>
           <h2 className="font-cinzel text-2xl sm:text-3xl lg:text-4xl text-[#14213D] mt-2 uppercase tracking-[0.06em] leading-snug">
-            Visit Devrani Jewellers (DRJ) at Sona Patti Road, Badi Bazar
+            Visit Devrani Jewellers (DRJ) in Sector 18, Noida
           </h2>
           <p className="mt-3 text-xs sm:text-sm text-[#6B7280] max-w-xl mx-auto leading-relaxed font-sans">
-            Located near Aloo Gaddi & Janki Mandir. Experience pure 22K/24K gold, fine silver ornaments, transparent pricing, and personalized service.
+            Located in Sector 18 (near Metro Station). Experience pure 22K/24K gold, fine silver ornaments, transparent pricing, and personalized service.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
@@ -69,7 +69,7 @@ export function HomePage() {
               View Showroom Location & Hours
             </Link>
             <button
-              onClick={() => openWhatsApp({ customText: 'Hello Devrani Jewellers, I would like to enquire about visiting your showroom at Sona Patti Road.' })}
+              onClick={() => openWhatsApp({ customText: 'Hello Devrani Jewellers, I would like to enquire about visiting your showroom in Sector 18, Noida.' })}
               className="btn-gold-action px-8 py-3.5 active:scale-95 text-white text-xs uppercase tracking-[0.18em] font-semibold transition-all shadow-md flex items-center gap-2 rounded-full"
             >
               <MessageCircle className="w-4 h-4 fill-white text-white" />

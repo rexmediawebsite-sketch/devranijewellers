@@ -173,7 +173,7 @@ export function Footer() {
             <span className="text-[10px] text-slate-400 block">100% net gold weight transparency</span>
           </div>
           <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5 space-y-1">
-            <span className="text-[11px] font-semibold text-white uppercase tracking-wider block">🏛️ Sitamarhi Showroom</span>
+            <span className="text-[11px] font-semibold text-white uppercase tracking-wider block">🏛️ Noida Showroom</span>
             <span className="text-[10px] text-slate-400 block">Visit our verified physical store</span>
           </div>
         </div>
